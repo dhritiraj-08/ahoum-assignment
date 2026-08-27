@@ -1,0 +1,184 @@
+{
+  "conversation_snippet": "I quit my stable corporate job last week to backpack solo through South America with no itinerary and barely any savings left. I have always been the one jumping off cliffs before checking the depth o",
+  "total_facets_retrieved": 25,
+  "scored": 9,
+  "abstained": 16,
+  "results": [
+    {
+      "facet": "Eco-tourism trips",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of eco-tourism trips in the conversation."
+    },
+    {
+      "facet": "Volunteer Work",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of volunteer work in the conversation."
+    },
+    {
+      "facet": "Risktaking",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker describes themselves as 'the one jumping off cliffs before checking the depth of the water'."
+    },
+    {
+      "facet": "Perseverance",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of perseverance in the conversation."
+    },
+    {
+      "facet": "Digital-nomad months",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of digital nomad months in the conversation."
+    },
+    {
+      "facet": "Withdrawnness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The speaker is planning to travel solo, but this does not necessarily indicate withdrawnness."
+    },
+    {
+      "facet": "Travel-companions diversity",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The speaker is traveling solo, so there is no diversity of travel companions."
+    },
+    {
+      "facet": "Creative resilience",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of creative resilience in the conversation."
+    },
+    {
+      "facet": "Sustainable-transport usage",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of sustainable transport usage in the conversation."
+    },
+    {
+      "facet": "Casual lifestyle",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker has quit their job and is planning to travel with 'no itinerary and barely any savings left', indicating a casual lifestyle."
+    },
+    {
+      "facet": "Creative risk-taking tendency",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person describes themselves as 'the one jumping off cliffs before checking the depth of the water'."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of boredom or any related emotions."
+    },
+    {
+      "facet": "Courageousness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person has quit a stable corporate job to travel solo through South America, indicating a high level of courage."
+    },
+    {
+      "facet": "Adventure-Seeking Behavior",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person is backpacking solo through South America with no itinerary, indicating a strong desire for adventure."
+    },
+    {
+      "facet": "Desperation",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The person mentions having 'barely any savings left', suggesting a moderate level of desperation."
+    },
+    {
+      "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of Buddhist practice or the Eightfold Path."
+    },
+    {
+      "facet": "Burnout Symptoms",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of burnout or related symptoms."
+    },
+    {
+      "facet": "Participation in Community Activities",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of community activities or participation in them."
+    },
+    {
+      "facet": "Collectedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of collectedness or related traits."
+    },
+    {
+      "facet": "Organized lifestyle",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person mentions having 'no itinerary', indicating a lack of organization in their travel plans."
+    },
+    {
+      "facet": "Hardworking",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker has quit their job and is now backpacking with 'barely any savings left'."
+    },
+    {
+      "facet": "Gamified-finance-app usage",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of gamified finance apps in the conversation."
+    },
+    {
+      "facet": "Encouraging participation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not contain any language that encourages participation."
+    },
+    {
+      "facet": "Rebelliousness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker describes themselves as 'the one jumping off cliffs before checking the depth of the water'."
+    },
+    {
+      "facet": "Choir participation years",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of choir participation in the conversation."
+    }
+  ],
+  "parse_errors": 0
+}

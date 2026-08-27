@@ -1,0 +1,2256 @@
+[
+  {
+    "facet_normalized": "Risktaking",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Risktaking, or the opposite trait is expressed; 3=Moderate/average Risktaking; 5=Very high Risktaking clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Naivety",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Naivety, or the opposite trait is expressed; 3=Moderate/average Naivety; 5=Very high Naivety clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Acidity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Acidity, or the opposite trait is expressed; 3=Moderate/average Acidity; 5=Very high Acidity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Common-sense",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Common-sense, or the opposite trait is expressed; 3=Moderate/average Common-sense; 5=Very high Common-sense clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Hesitation",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Hesitation, or the opposite trait is expressed; 3=Moderate/average Hesitation; 5=Very high Hesitation clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Discontentment",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Discontentment, or the opposite trait is expressed; 3=Moderate/average Discontentment; 5=Very high Discontentment clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Overprotectiveness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Overprotectiveness, or the opposite trait is expressed; 3=Moderate/average Overprotectiveness; 5=Very high Overprotectiveness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Merriness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Merriness, or the opposite trait is expressed; 3=Moderate/average Merriness; 5=Very high Merriness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Emotionalism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Emotionalism, or the opposite trait is expressed; 3=Moderate/average Emotionalism; 5=Very high Emotionalism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Self-improvement",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Self-improvement, or the opposite trait is expressed; 3=Moderate/average Self-improvement; 5=Very high Self-improvement clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Statistical Reasoning",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Statistical Reasoning in the conversation; 3=Average/typical evidence of Statistical Reasoning; 5=Strong, clear evidence of high Statistical Reasoning demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Assertiveness and control in relationships",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Assertiveness and control in relationships, or the opposite trait is expressed; 3=Moderate/average Assertiveness and control in relationships; 5=Very high Assertiveness and control in relationships clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Cunningness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Cunningness, or the opposite trait is expressed; 3=Moderate/average Cunningness; 5=Very high Cunningness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Adventure-Seeking Behavior",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Adventure-Seeking Behavior in what the person says or describes; 3=Occasional or moderate indication of Adventure-Seeking Behavior; 5=Strong, repeated indication of Adventure-Seeking Behavior in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Compassion Fatigue",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Compassion Fatigue, or the opposite trait is expressed; 3=Moderate/average Compassion Fatigue; 5=Very high Compassion Fatigue clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Moroseness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Moroseness, or the opposite trait is expressed; 3=Moderate/average Moroseness; 5=Very high Moroseness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Specialist",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Specialist, or the opposite trait is expressed; 3=Moderate/average Specialist; 5=Very high Specialist clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Aloofness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Aloofness, or the opposite trait is expressed; 3=Moderate/average Aloofness; 5=Very high Aloofness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Genuine",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Genuine, or the opposite trait is expressed; 3=Moderate/average Genuine; 5=Very high Genuine clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Determinedness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Determinedness, or the opposite trait is expressed; 3=Moderate/average Determinedness; 5=Very high Determinedness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Pure Challenge",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Pure Challenge, or the opposite trait is expressed; 3=Moderate/average Pure Challenge; 5=Very high Pure Challenge clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Openness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Openness, or the opposite trait is expressed; 3=Moderate/average Openness; 5=Very high Openness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "SelfEsteem",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low SelfEsteem, or the opposite trait is expressed; 3=Moderate/average SelfEsteem; 5=Very high SelfEsteem clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Comparing alphanumeric data",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Comparing alphanumeric data, or the opposite trait is expressed; 3=Moderate/average Comparing alphanumeric data; 5=Very high Comparing alphanumeric data clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Big-heartedness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Big-heartedness, or the opposite trait is expressed; 3=Moderate/average Big-heartedness; 5=Very high Big-heartedness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Compulsive activities",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Compulsive activities in what the person says or describes; 3=Occasional or moderate indication of Compulsive activities; 5=Strong, repeated indication of Compulsive activities in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Disrespect",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Disrespect, or the opposite trait is expressed; 3=Moderate/average Disrespect; 5=Very high Disrespect clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Self Perspective",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Self Perspective, or the opposite trait is expressed; 3=Moderate/average Self Perspective; 5=Very high Self Perspective clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Desperation",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Desperation, or the opposite trait is expressed; 3=Moderate/average Desperation; 5=Very high Desperation clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Anatomy knowledge",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Anatomy knowledge, or the opposite trait is expressed; 3=Moderate/average Anatomy knowledge; 5=Very high Anatomy knowledge clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Passive-Aggressive",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Passive-Aggressive, or the opposite trait is expressed; 3=Moderate/average Passive-Aggressive; 5=Very high Passive-Aggressive clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Structure",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Structure, or the opposite trait is expressed; 3=Moderate/average Structure; 5=Very high Structure clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Eco-tourism trips",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Eco-tourism trips, or the opposite trait is expressed; 3=Moderate/average Eco-tourism trips; 5=Very high Eco-tourism trips clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Chivalrousness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Chivalrousness, or the opposite trait is expressed; 3=Moderate/average Chivalrousness; 5=Very high Chivalrousness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Mindfulness facet: Observing",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Mindfulness facet: Observing, or the opposite trait is expressed; 3=Moderate/average Mindfulness facet: Observing; 5=Very high Mindfulness facet: Observing clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Training-cycle length",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Training-cycle length, or the opposite trait is expressed; 3=Moderate/average Training-cycle length; 5=Very high Training-cycle length clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Sensitiveness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Sensitiveness, or the opposite trait is expressed; 3=Moderate/average Sensitiveness; 5=Very high Sensitiveness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Negative Affect Frequency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Negative Affect Frequency, or the opposite trait is expressed; 3=Moderate/average Negative Affect Frequency; 5=Very high Negative Affect Frequency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Feedback-giving frequency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Feedback-giving frequency, or the opposite trait is expressed; 3=Moderate/average Feedback-giving frequency; 5=Very high Feedback-giving frequency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Dance-cardio sessions",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Dance-cardio sessions, or the opposite trait is expressed; 3=Moderate/average Dance-cardio sessions; 5=Very high Dance-cardio sessions clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Enthusiasm",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Enthusiasm, or the opposite trait is expressed; 3=Moderate/average Enthusiasm; 5=Very high Enthusiasm clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Social Desirability tendency",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Psychological construct: Social Desirability tendency in what the person says or describes; 3=Occasional or moderate indication of Psychological construct: Social Desirability tendency; 5=Strong, repeated indication of Psychological construct: Social Desirability tendency in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Inattentiveness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Inattentiveness, or the opposite trait is expressed; 3=Moderate/average Inattentiveness; 5=Very high Inattentiveness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Unassertiveness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Unassertiveness, or the opposite trait is expressed; 3=Moderate/average Unassertiveness; 5=Very high Unassertiveness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Decision-making decisiveness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Decision-making decisiveness, or the opposite trait is expressed; 3=Moderate/average Decision-making decisiveness; 5=Very high Decision-making decisiveness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Sense-of-coherence score",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Sense-of-coherence score, or the opposite trait is expressed; 3=Moderate/average Sense-of-coherence score; 5=Very high Sense-of-coherence score clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Justice-mindedness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Justice-mindedness, or the opposite trait is expressed; 3=Moderate/average Justice-mindedness; 5=Very high Justice-mindedness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Depression Symptoms",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Depression Symptoms, or the opposite trait is expressed; 3=Moderate/average Depression Symptoms; 5=Very high Depression Symptoms clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Spatial perception",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Spatial perception, or the opposite trait is expressed; 3=Moderate/average Spatial perception; 5=Very high Spatial perception clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Brevity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Brevity, or the opposite trait is expressed; 3=Moderate/average Brevity; 5=Very high Brevity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Orderliness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Orderliness, or the opposite trait is expressed; 3=Moderate/average Orderliness; 5=Very high Orderliness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Multiculturalism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Multiculturalism, or the opposite trait is expressed; 3=Moderate/average Multiculturalism; 5=Very high Multiculturalism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Creative risk-taking tendency",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Creative risk-taking tendency in what the person says or describes; 3=Occasional or moderate indication of Creative risk-taking tendency; 5=Strong, repeated indication of Creative risk-taking tendency in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Inefficiency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Inefficiency, or the opposite trait is expressed; 3=Moderate/average Inefficiency; 5=Very high Inefficiency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Network basics",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Network basics, or the opposite trait is expressed; 3=Moderate/average Network basics; 5=Very high Network basics clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Alphabetical filing skills",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Alphabetical filing skills, or the opposite trait is expressed; 3=Moderate/average Alphabetical filing skills; 5=Very high Alphabetical filing skills clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Work Styles",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Work Styles, or the opposite trait is expressed; 3=Moderate/average Work Styles; 5=Very high Work Styles clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Character strength: Perseverance",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Character strength: Perseverance, or the opposite trait is expressed; 3=Moderate/average Character strength: Perseverance; 5=Very high Character strength: Perseverance clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Competition",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Competition, or the opposite trait is expressed; 3=Moderate/average Competition; 5=Very high Competition clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Logical Sequence Identification",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Logical Sequence Identification, or the opposite trait is expressed; 3=Moderate/average Logical Sequence Identification; 5=Very high Logical Sequence Identification clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Sustainable-transport usage",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Sustainable-transport usage, or the opposite trait is expressed; 3=Moderate/average Sustainable-transport usage; 5=Very high Sustainable-transport usage clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Hardworking",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Hardworking, or the opposite trait is expressed; 3=Moderate/average Hardworking; 5=Very high Hardworking clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Emotional-intelligence measure: Impulsiveness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Emotional-intelligence measure: Impulsiveness, or the opposite trait is expressed; 3=Moderate/average Emotional-intelligence measure: Impulsiveness; 5=Very high Emotional-intelligence measure: Impulsiveness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Dishonesty",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Dishonesty, or the opposite trait is expressed; 3=Moderate/average Dishonesty; 5=Very high Dishonesty clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Preferred epistemology",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Preferred epistemology, or the opposite trait is expressed; 3=Moderate/average Preferred epistemology; 5=Very high Preferred epistemology clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Memory for Sounds",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Memory for Sounds in the conversation; 3=Average/typical evidence of Memory for Sounds; 5=Strong, clear evidence of high Memory for Sounds demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Sportsmanship rating",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Sportsmanship rating, or the opposite trait is expressed; 3=Moderate/average Sportsmanship rating; 5=Very high Sportsmanship rating clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Immaturity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Immaturity, or the opposite trait is expressed; 3=Moderate/average Immaturity; 5=Very high Immaturity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Health-literacy level",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Health-literacy level, or the opposite trait is expressed; 3=Moderate/average Health-literacy level; 5=Very high Health-literacy level clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Estimating Calculations",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Estimating Calculations, or the opposite trait is expressed; 3=Moderate/average Estimating Calculations; 5=Very high Estimating Calculations clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Depression: Feelings of sadness and hopelessness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Depression: Feelings of sadness and hopelessness, or the opposite trait is expressed; 3=Moderate/average Depression: Feelings of sadness and hopelessness; 5=Very high Depression: Feelings of sadness and hopelessness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Synthesis of information",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Synthesis of information, or the opposite trait is expressed; 3=Moderate/average Synthesis of information; 5=Very high Synthesis of information clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Ethical standards",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Ethical standards, or the opposite trait is expressed; 3=Moderate/average Ethical standards; 5=Very high Ethical standards clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "High-spiritedness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low High-spiritedness, or the opposite trait is expressed; 3=Moderate/average High-spiritedness; 5=Very high High-spiritedness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Critical reasoning",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Critical reasoning in the conversation; 3=Average/typical evidence of Critical reasoning; 5=Strong, clear evidence of high Critical reasoning demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Collaboration",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Collaboration, or the opposite trait is expressed; 3=Moderate/average Collaboration; 5=Very high Collaboration clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Precision of Movements",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Precision of Movements, or the opposite trait is expressed; 3=Moderate/average Precision of Movements; 5=Very high Precision of Movements clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Social Boldness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Social Boldness, or the opposite trait is expressed; 3=Moderate/average Social Boldness; 5=Very high Social Boldness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Auditory memory",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Auditory memory in the conversation; 3=Average/typical evidence of Auditory memory; 5=Strong, clear evidence of high Auditory memory demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Organized lifestyle",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Organized lifestyle, or the opposite trait is expressed; 3=Moderate/average Organized lifestyle; 5=Very high Organized lifestyle clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Mysteriousness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Mysteriousness, or the opposite trait is expressed; 3=Moderate/average Mysteriousness; 5=Very high Mysteriousness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Cultural Identity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Cultural Identity, or the opposite trait is expressed; 3=Moderate/average Cultural Identity; 5=Very high Cultural Identity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Intrinsic Motivation",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Intrinsic Motivation, or the opposite trait is expressed; 3=Moderate/average Intrinsic Motivation; 5=Very high Intrinsic Motivation clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Impartial-mindedness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Impartial-mindedness, or the opposite trait is expressed; 3=Moderate/average Impartial-mindedness; 5=Very high Impartial-mindedness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Burnout Symptoms",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Burnout Symptoms, or the opposite trait is expressed; 3=Moderate/average Burnout Symptoms; 5=Very high Burnout Symptoms clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Holiness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Holiness, or the opposite trait is expressed; 3=Moderate/average Holiness; 5=Very high Holiness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Selfcontrol",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Selfcontrol, or the opposite trait is expressed; 3=Moderate/average Selfcontrol; 5=Very high Selfcontrol clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "SelfDirectedness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low SelfDirectedness, or the opposite trait is expressed; 3=Moderate/average SelfDirectedness; 5=Very high SelfDirectedness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Encouraging participation",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Encouraging participation, or the opposite trait is expressed; 3=Moderate/average Encouraging participation; 5=Very high Encouraging participation clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Impracticalness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Impracticalness, or the opposite trait is expressed; 3=Moderate/average Impracticalness; 5=Very high Impracticalness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Meeting Deadlines",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Meeting Deadlines, or the opposite trait is expressed; 3=Moderate/average Meeting Deadlines; 5=Very high Meeting Deadlines clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Data Analysis",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Data Analysis, or the opposite trait is expressed; 3=Moderate/average Data Analysis; 5=Very high Data Analysis clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Social Interaction Skills",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Social Interaction Skills, or the opposite trait is expressed; 3=Moderate/average Social Interaction Skills; 5=Very high Social Interaction Skills clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychoticism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychoticism, or the opposite trait is expressed; 3=Moderate/average Psychoticism; 5=Very high Psychoticism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Ethical leadership rating",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Ethical leadership rating, or the opposite trait is expressed; 3=Moderate/average Ethical leadership rating; 5=Very high Ethical leadership rating clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Slothfulness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Slothfulness, or the opposite trait is expressed; 3=Moderate/average Slothfulness; 5=Very high Slothfulness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Happiness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Happiness, or the opposite trait is expressed; 3=Moderate/average Happiness; 5=Very high Happiness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Contentment Levels",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Contentment Levels, or the opposite trait is expressed; 3=Moderate/average Contentment Levels; 5=Very high Contentment Levels clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Neuroticism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Neuroticism, or the opposite trait is expressed; 3=Moderate/average Neuroticism; 5=Very high Neuroticism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Desire for excellence",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Desire for excellence, or the opposite trait is expressed; 3=Moderate/average Desire for excellence; 5=Very high Desire for excellence clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Perceiving",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Perceiving, or the opposite trait is expressed; 3=Moderate/average Perceiving; 5=Very high Perceiving clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Liberalism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Liberalism, or the opposite trait is expressed; 3=Moderate/average Liberalism; 5=Very high Liberalism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Inversion comfort level",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Inversion comfort level, or the opposite trait is expressed; 3=Moderate/average Inversion comfort level; 5=Very high Inversion comfort level clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Affection",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Affection, or the opposite trait is expressed; 3=Moderate/average Affection; 5=Very high Affection clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Numeric Filing Skills",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Numeric Filing Skills, or the opposite trait is expressed; 3=Moderate/average Numeric Filing Skills; 5=Very high Numeric Filing Skills clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Martyrdom",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Martyrdom, or the opposite trait is expressed; 3=Moderate/average Martyrdom; 5=Very high Martyrdom clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Seeking approval",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Seeking approval, or the opposite trait is expressed; 3=Moderate/average Seeking approval; 5=Very high Seeking approval clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Big Five facet Openness – Artistic Interests",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Big Five facet Openness – Artistic Interests, or the opposite trait is expressed; 3=Moderate/average Big Five facet Openness – Artistic Interests; 5=Very high Big Five facet Openness – Artistic Interests clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Operant-Learning rate",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Operant-Learning rate, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Operant-Learning rate; 5=Very high Psychological construct: Operant-Learning rate clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Need for Achievement level",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Need for Achievement level, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Need for Achievement level; 5=Very high Psychological construct: Need for Achievement level clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Cantankerousness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Cantankerousness, or the opposite trait is expressed; 3=Moderate/average Cantankerousness; 5=Very high Cantankerousness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Material properties knowledge",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Material properties knowledge, or the opposite trait is expressed; 3=Moderate/average Material properties knowledge; 5=Very high Material properties knowledge clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Hostility",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Hostility, or the opposite trait is expressed; 3=Moderate/average Hostility; 5=Very high Hostility clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Independence",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Independence, or the opposite trait is expressed; 3=Moderate/average Independence; 5=Very high Independence clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Chromatin-accessibility score",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Chromatin-accessibility score, or the opposite trait is expressed; 3=Moderate/average Chromatin-accessibility score; 5=Very high Chromatin-accessibility score clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Well-being component: Engagement",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Well-being component: Engagement, or the opposite trait is expressed; 3=Moderate/average Well-being component: Engagement; 5=Very high Well-being component: Engagement clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Need for social interaction",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Need for social interaction, or the opposite trait is expressed; 3=Moderate/average Need for social interaction; 5=Very high Need for social interaction clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Peer-collaboration hours",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Peer-collaboration hours, or the opposite trait is expressed; 3=Moderate/average Peer-collaboration hours; 5=Very high Peer-collaboration hours clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Arts and Humanities",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Arts and Humanities, or the opposite trait is expressed; 3=Moderate/average Arts and Humanities; 5=Very high Arts and Humanities clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Religious practice: Quran khatam cycles per year",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Religious practice: Quran khatam cycles per year, or the opposite trait is expressed; 3=Moderate/average Religious practice: Quran khatam cycles per year; 5=Very high Religious practice: Quran khatam cycles per year clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Compassion",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Compassion, or the opposite trait is expressed; 3=Moderate/average Compassion; 5=Very high Compassion clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Information Retention",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Information Retention, or the opposite trait is expressed; 3=Moderate/average Information Retention; 5=Very high Information Retention clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Eye-contact duration",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Eye-contact duration, or the opposite trait is expressed; 3=Moderate/average Eye-contact duration; 5=Very high Eye-contact duration clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Self-righteousness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Self-righteousness, or the opposite trait is expressed; 3=Moderate/average Self-righteousness; 5=Very high Self-righteousness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "General Mood and Attitude",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low General Mood and Attitude, or the opposite trait is expressed; 3=Moderate/average General Mood and Attitude; 5=Very high General Mood and Attitude clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Serotonin transporter availability",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Serotonin transporter availability, or the opposite trait is expressed; 3=Moderate/average Serotonin transporter availability; 5=Very high Serotonin transporter availability clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Contribution to Group Goals",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Contribution to Group Goals, or the opposite trait is expressed; 3=Moderate/average Contribution to Group Goals; 5=Very high Contribution to Group Goals clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Dignity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Dignity, or the opposite trait is expressed; 3=Moderate/average Dignity; 5=Very high Dignity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Evaluating Solutions",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Evaluating Solutions, or the opposite trait is expressed; 3=Moderate/average Evaluating Solutions; 5=Very high Evaluating Solutions clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Input",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Input, or the opposite trait is expressed; 3=Moderate/average Input; 5=Very high Input clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Discreteness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Discreteness, or the opposite trait is expressed; 3=Moderate/average Discreteness; 5=Very high Discreteness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Character strength: Social Intelligence",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Character strength: Social Intelligence, or the opposite trait is expressed; 3=Moderate/average Character strength: Social Intelligence; 5=Very high Character strength: Social Intelligence clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Bravery",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Bravery, or the opposite trait is expressed; 3=Moderate/average Bravery; 5=Very high Bravery clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Childhood Experiences",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Childhood Experiences, or the opposite trait is expressed; 3=Moderate/average Childhood Experiences; 5=Very high Childhood Experiences clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Data-sharing consent level",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Data-sharing consent level, or the opposite trait is expressed; 3=Moderate/average Data-sharing consent level; 5=Very high Data-sharing consent level clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Vision-check frequency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Vision-check frequency, or the opposite trait is expressed; 3=Moderate/average Vision-check frequency; 5=Very high Vision-check frequency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Physical-violence exposure",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Physical-violence exposure, or the opposite trait is expressed; 3=Moderate/average Physical-violence exposure; 5=Very high Physical-violence exposure clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Macronutrient ratio: fat",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Macronutrient ratio: fat, or the opposite trait is expressed; 3=Moderate/average Macronutrient ratio: fat; 5=Very high Macronutrient ratio: fat clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Cooking and Culinary Arts",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Cooking and Culinary Arts, or the opposite trait is expressed; 3=Moderate/average Cooking and Culinary Arts; 5=Very high Cooking and Culinary Arts clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Language use",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Language use, or the opposite trait is expressed; 3=Moderate/average Language use; 5=Very high Language use clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Dance-style mastery diversity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Dance-style mastery diversity, or the opposite trait is expressed; 3=Moderate/average Dance-style mastery diversity; 5=Very high Dance-style mastery diversity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Satya Adherence",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Satya Adherence, or the opposite trait is expressed; 3=Moderate/average Satya Adherence; 5=Very high Satya Adherence clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Ethnocentrism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Ethnocentrism, or the opposite trait is expressed; 3=Moderate/average Ethnocentrism; 5=Very high Ethnocentrism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Emotional Boundaries",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Emotional Boundaries, or the opposite trait is expressed; 3=Moderate/average Emotional Boundaries; 5=Very high Emotional Boundaries clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Creativity in solutions",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Creativity in solutions, or the opposite trait is expressed; 3=Moderate/average Creativity in solutions; 5=Very high Creativity in solutions clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Hope scale",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Hope scale, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Hope scale; 5=Very high Psychological construct: Hope scale clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Practice frequency: Walking meditation",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Practice frequency: Walking meditation, or the opposite trait is expressed; 3=Moderate/average Practice frequency: Walking meditation; 5=Very high Practice frequency: Walking meditation clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Depression (DEP)",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Depression (DEP), or the opposite trait is expressed; 3=Moderate/average Depression (DEP); 5=Very high Depression (DEP) clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Understanding Mathematical Concepts",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Understanding Mathematical Concepts, or the opposite trait is expressed; 3=Moderate/average Understanding Mathematical Concepts; 5=Very high Understanding Mathematical Concepts clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Hypomania (Ma)",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Hypomania (Ma), or the opposite trait is expressed; 3=Moderate/average Hypomania (Ma); 5=Very high Hypomania (Ma) clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Goal-Directed Behavior",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Goal-Directed Behavior in what the person says or describes; 3=Occasional or moderate indication of Goal-Directed Behavior; 5=Strong, repeated indication of Goal-Directed Behavior in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Depth of Emotional Connections",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Depth of Emotional Connections, or the opposite trait is expressed; 3=Moderate/average Depth of Emotional Connections; 5=Very high Depth of Emotional Connections clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Binding foundations index",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Binding foundations index, or the opposite trait is expressed; 3=Moderate/average Binding foundations index; 5=Very high Binding foundations index clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Ego Dissolution Frequency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Ego Dissolution Frequency, or the opposite trait is expressed; 3=Moderate/average Ego Dissolution Frequency; 5=Very high Ego Dissolution Frequency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Activator: Turning thoughts into action",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Activator: Turning thoughts into action, or the opposite trait is expressed; 3=Moderate/average Activator: Turning thoughts into action; 5=Very high Activator: Turning thoughts into action clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Exemplariness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Exemplariness, or the opposite trait is expressed; 3=Moderate/average Exemplariness; 5=Very high Exemplariness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Frankness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Frankness, or the opposite trait is expressed; 3=Moderate/average Frankness; 5=Very high Frankness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Psychological Safety climate",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Psychological Safety climate, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Psychological Safety climate; 5=Very high Psychological construct: Psychological Safety climate clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Self-Compassion total",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Self-Compassion total, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Self-Compassion total; 5=Very high Psychological construct: Self-Compassion total clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Executive-Function composite",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Executive-Function composite, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Executive-Function composite; 5=Very high Psychological construct: Executive-Function composite clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Rebelliousness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Rebelliousness, or the opposite trait is expressed; 3=Moderate/average Rebelliousness; 5=Very high Rebelliousness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Volunteer Work",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Volunteer Work, or the opposite trait is expressed; 3=Moderate/average Volunteer Work; 5=Very high Volunteer Work clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Intellect",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Intellect, or the opposite trait is expressed; 3=Moderate/average Intellect; 5=Very high Intellect clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Use of Mathematical Formulas",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Use of Mathematical Formulas, or the opposite trait is expressed; 3=Moderate/average Use of Mathematical Formulas; 5=Very high Use of Mathematical Formulas clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Coarseness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Coarseness, or the opposite trait is expressed; 3=Moderate/average Coarseness; 5=Very high Coarseness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Sensitivity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Sensitivity, or the opposite trait is expressed; 3=Moderate/average Sensitivity; 5=Very high Sensitivity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Divided Attention Ability",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Divided Attention Ability, or the opposite trait is expressed; 3=Moderate/average Divided Attention Ability; 5=Very high Divided Attention Ability clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Acculturative Stress score",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Acculturative Stress score, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Acculturative Stress score; 5=Very high Psychological construct: Acculturative Stress score clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Dauntlessness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Dauntlessness, or the opposite trait is expressed; 3=Moderate/average Dauntlessness; 5=Very high Dauntlessness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Concreteness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Concreteness, or the opposite trait is expressed; 3=Moderate/average Concreteness; 5=Very high Concreteness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Hysteria (Hy)",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Hysteria (Hy), or the opposite trait is expressed; 3=Moderate/average Hysteria (Hy); 5=Very high Hysteria (Hy) clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Sentence Structure",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Sentence Structure, or the opposite trait is expressed; 3=Moderate/average Sentence Structure; 5=Very high Sentence Structure clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Esteem Needs",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Esteem Needs, or the opposite trait is expressed; 3=Moderate/average Esteem Needs; 5=Very high Esteem Needs clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Understanding mechanical concepts",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Understanding mechanical concepts, or the opposite trait is expressed; 3=Moderate/average Understanding mechanical concepts; 5=Very high Understanding mechanical concepts clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Auditory Memory Recall",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Auditory Memory Recall in the conversation; 3=Average/typical evidence of Auditory Memory Recall; 5=Strong, clear evidence of high Auditory Memory Recall demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Storytelling proficiency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Storytelling proficiency, or the opposite trait is expressed; 3=Moderate/average Storytelling proficiency; 5=Very high Storytelling proficiency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Music-lessons years",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Music-lessons years, or the opposite trait is expressed; 3=Moderate/average Music-lessons years; 5=Very high Music-lessons years clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Warmheartedness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Warmheartedness, or the opposite trait is expressed; 3=Moderate/average Warmheartedness; 5=Very high Warmheartedness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Self-effacement",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Self-effacement, or the opposite trait is expressed; 3=Moderate/average Self-effacement; 5=Very high Self-effacement clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Outspokenness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Outspokenness, or the opposite trait is expressed; 3=Moderate/average Outspokenness; 5=Very high Outspokenness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Sleep-environment temperature",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Sleep-environment temperature, or the opposite trait is expressed; 3=Moderate/average Sleep-environment temperature; 5=Very high Sleep-environment temperature clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Comprehension of spoken information",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Comprehension of spoken information in the conversation; 3=Average/typical evidence of Comprehension of spoken information; 5=Strong, clear evidence of high Comprehension of spoken information demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Blissfulness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Blissfulness, or the opposite trait is expressed; 3=Moderate/average Blissfulness; 5=Very high Blissfulness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Sequential Memory Recall",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Sequential Memory Recall in the conversation; 3=Average/typical evidence of Sequential Memory Recall; 5=Strong, clear evidence of high Sequential Memory Recall demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Withdrawnness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Withdrawnness, or the opposite trait is expressed; 3=Moderate/average Withdrawnness; 5=Very high Withdrawnness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Conservatism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Conservatism, or the opposite trait is expressed; 3=Moderate/average Conservatism; 5=Very high Conservatism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Ardency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Ardency, or the opposite trait is expressed; 3=Moderate/average Ardency; 5=Very high Ardency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Aesthetic Appreciation",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Aesthetic Appreciation, or the opposite trait is expressed; 3=Moderate/average Aesthetic Appreciation; 5=Very high Aesthetic Appreciation clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Value orientation: Universalism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Value orientation: Universalism, or the opposite trait is expressed; 3=Moderate/average Value orientation: Universalism; 5=Very high Value orientation: Universalism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Perseverance",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Perseverance, or the opposite trait is expressed; 3=Moderate/average Perseverance; 5=Very high Perseverance clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Regularity of Self-Reflection",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Regularity of Self-Reflection, or the opposite trait is expressed; 3=Moderate/average Regularity of Self-Reflection; 5=Very high Regularity of Self-Reflection clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Controlling Reactions",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Controlling Reactions, or the opposite trait is expressed; 3=Moderate/average Controlling Reactions; 5=Very high Controlling Reactions clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Cultural Intelligence – Behavioral",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Psychological construct: Cultural Intelligence – Behavioral in what the person says or describes; 3=Occasional or moderate indication of Psychological construct: Cultural Intelligence – Behavioral; 5=Strong, repeated indication of Psychological construct: Cultural Intelligence – Behavioral in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Dietary Habits",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Dietary Habits in what the person says or describes; 3=Occasional or moderate indication of Dietary Habits; 5=Strong, repeated indication of Dietary Habits in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Significance: Desire to make an impact",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Significance: Desire to make an impact, or the opposite trait is expressed; 3=Moderate/average Significance: Desire to make an impact; 5=Very high Significance: Desire to make an impact clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Resilience-Trait score",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Resilience-Trait score, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Resilience-Trait score; 5=Very high Psychological construct: Resilience-Trait score clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Boredom Susceptibility",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Boredom Susceptibility, or the opposite trait is expressed; 3=Moderate/average Boredom Susceptibility; 5=Very high Boredom Susceptibility clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Consummatory Pleasure scale",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Consummatory Pleasure scale, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Consummatory Pleasure scale; 5=Very high Psychological construct: Consummatory Pleasure scale clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Macronutrient ratio: carbs",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Macronutrient ratio: carbs, or the opposite trait is expressed; 3=Moderate/average Macronutrient ratio: carbs; 5=Very high Macronutrient ratio: carbs clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Local-food sourcing %",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Local-food sourcing %, or the opposite trait is expressed; 3=Moderate/average Local-food sourcing %; 5=Very high Local-food sourcing % clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Patient care orientation",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Patient care orientation, or the opposite trait is expressed; 3=Moderate/average Patient care orientation; 5=Very high Patient care orientation clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Soft-skill training hours",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Soft-skill training hours, or the opposite trait is expressed; 3=Moderate/average Soft-skill training hours; 5=Very high Soft-skill training hours clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Graffiti appreciation",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Graffiti appreciation, or the opposite trait is expressed; 3=Moderate/average Graffiti appreciation; 5=Very high Graffiti appreciation clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Immune-response age",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Immune-response age, or the opposite trait is expressed; 3=Moderate/average Immune-response age; 5=Very high Immune-response age clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Social-cognition variable: Cognitive Empathy",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Social-cognition variable: Cognitive Empathy in the conversation; 3=Average/typical evidence of Social-cognition variable: Cognitive Empathy; 5=Strong, clear evidence of high Social-cognition variable: Cognitive Empathy demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Kink-interest diversity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Kink-interest diversity, or the opposite trait is expressed; 3=Moderate/average Kink-interest diversity; 5=Very high Kink-interest diversity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Judging Consequences",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Judging Consequences, or the opposite trait is expressed; 3=Moderate/average Judging Consequences; 5=Very high Judging Consequences clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Harmfulness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Harmfulness, or the opposite trait is expressed; 3=Moderate/average Harmfulness; 5=Very high Harmfulness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Affinity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Affinity, or the opposite trait is expressed; 3=Moderate/average Affinity; 5=Very high Affinity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Abasement",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Abasement, or the opposite trait is expressed; 3=Moderate/average Abasement; 5=Very high Abasement clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Chronic pain presence",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Chronic pain presence, or the opposite trait is expressed; 3=Moderate/average Chronic pain presence; 5=Very high Chronic pain presence clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Discernment practice hours / week",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Discernment practice hours / week, or the opposite trait is expressed; 3=Moderate/average Discernment practice hours / week; 5=Very high Discernment practice hours / week clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Initiative",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Initiative, or the opposite trait is expressed; 3=Moderate/average Initiative; 5=Very high Initiative clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Courageousness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Courageousness, or the opposite trait is expressed; 3=Moderate/average Courageousness; 5=Very high Courageousness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Joyfulness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Joyfulness, or the opposite trait is expressed; 3=Moderate/average Joyfulness; 5=Very high Joyfulness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Suspicion",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Suspicion, or the opposite trait is expressed; 3=Moderate/average Suspicion; 5=Very high Suspicion clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Attachment avoidance score",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Attachment avoidance score in what the person says or describes; 3=Occasional or moderate indication of Attachment avoidance score; 5=Strong, repeated indication of Attachment avoidance score in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Talkativeness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Talkativeness, or the opposite trait is expressed; 3=Moderate/average Talkativeness; 5=Very high Talkativeness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Equitableness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Equitableness, or the opposite trait is expressed; 3=Moderate/average Equitableness; 5=Very high Equitableness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Ideas generated/day",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Ideas generated/day, or the opposite trait is expressed; 3=Moderate/average Ideas generated/day; 5=Very high Ideas generated/day clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Originality",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Originality, or the opposite trait is expressed; 3=Moderate/average Originality; 5=Very high Originality clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Fearfulness: Fear of physical dangers",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Fearfulness: Fear of physical dangers, or the opposite trait is expressed; 3=Moderate/average Fearfulness: Fear of physical dangers; 5=Very high Fearfulness: Fear of physical dangers clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Dance rehearsal hours/week",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Dance rehearsal hours/week, or the opposite trait is expressed; 3=Moderate/average Dance rehearsal hours/week; 5=Very high Dance rehearsal hours/week clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Public-transport km/week",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Public-transport km/week, or the opposite trait is expressed; 3=Moderate/average Public-transport km/week; 5=Very high Public-transport km/week clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Social Desirability Bias",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Social Desirability Bias, or the opposite trait is expressed; 3=Moderate/average Social Desirability Bias; 5=Very high Social Desirability Bias clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Disagreeableness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Disagreeableness, or the opposite trait is expressed; 3=Moderate/average Disagreeableness; 5=Very high Disagreeableness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Participation in Community Activities",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Participation in Community Activities, or the opposite trait is expressed; 3=Moderate/average Participation in Community Activities; 5=Very high Participation in Community Activities clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Impudence",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Impudence, or the opposite trait is expressed; 3=Moderate/average Impudence; 5=Very high Impudence clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Analogies",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Analogies, or the opposite trait is expressed; 3=Moderate/average Analogies; 5=Very high Analogies clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Clumsiness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Clumsiness, or the opposite trait is expressed; 3=Moderate/average Clumsiness; 5=Very high Clumsiness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Tendency Toward Compromise or Confrontation",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Tendency Toward Compromise or Confrontation in what the person says or describes; 3=Occasional or moderate indication of Tendency Toward Compromise or Confrontation; 5=Strong, repeated indication of Tendency Toward Compromise or Confrontation in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Robotics-interaction frequency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Robotics-interaction frequency, or the opposite trait is expressed; 3=Moderate/average Robotics-interaction frequency; 5=Very high Robotics-interaction frequency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Casual lifestyle",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Casual lifestyle, or the opposite trait is expressed; 3=Moderate/average Casual lifestyle; 5=Very high Casual lifestyle clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Collectedness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Collectedness, or the opposite trait is expressed; 3=Moderate/average Collectedness; 5=Very high Collectedness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Reliance on context",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Reliance on context, or the opposite trait is expressed; 3=Moderate/average Reliance on context; 5=Very high Reliance on context clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Delegation skills",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Delegation skills, or the opposite trait is expressed; 3=Moderate/average Delegation skills; 5=Very high Delegation skills clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Managing emotions",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Managing emotions, or the opposite trait is expressed; 3=Moderate/average Managing emotions; 5=Very high Managing emotions clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Scripture memorization verses",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Scripture memorization verses, or the opposite trait is expressed; 3=Moderate/average Scripture memorization verses; 5=Very high Scripture memorization verses clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Conventional",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Conventional, or the opposite trait is expressed; 3=Moderate/average Conventional; 5=Very high Conventional clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Open-source contributions",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Open-source contributions, or the opposite trait is expressed; 3=Moderate/average Open-source contributions; 5=Very high Open-source contributions clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Social Conformity tendency",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Psychological construct: Social Conformity tendency in what the person says or describes; 3=Occasional or moderate indication of Psychological construct: Social Conformity tendency; 5=Strong, repeated indication of Psychological construct: Social Conformity tendency in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Individuality",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Individuality, or the opposite trait is expressed; 3=Moderate/average Individuality; 5=Very high Individuality clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Attachment style: Secure",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Attachment style: Secure, or the opposite trait is expressed; 3=Moderate/average Attachment style: Secure; 5=Very high Attachment style: Secure clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Intelligence Quotient (IQ)",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Intelligence Quotient (IQ), or the opposite trait is expressed; 3=Moderate/average Intelligence Quotient (IQ); 5=Very high Intelligence Quotient (IQ) clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Non-Verbal Communication Skills",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Non-Verbal Communication Skills, or the opposite trait is expressed; 3=Moderate/average Non-Verbal Communication Skills; 5=Very high Non-Verbal Communication Skills clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Drug-use history",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Drug-use history, or the opposite trait is expressed; 3=Moderate/average Drug-use history; 5=Very high Drug-use history clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Decision-making speed",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Decision-making speed, or the opposite trait is expressed; 3=Moderate/average Decision-making speed; 5=Very high Decision-making speed clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Excuse-Making tendency",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Psychological construct: Excuse-Making tendency in what the person says or describes; 3=Occasional or moderate indication of Psychological construct: Excuse-Making tendency; 5=Strong, repeated indication of Psychological construct: Excuse-Making tendency in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Peer-to-peer lending usage",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Peer-to-peer lending usage, or the opposite trait is expressed; 3=Moderate/average Peer-to-peer lending usage; 5=Very high Peer-to-peer lending usage clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Eye-Contact avoidance score",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Psychological construct: Eye-Contact avoidance score in what the person says or describes; 3=Occasional or moderate indication of Psychological construct: Eye-Contact avoidance score; 5=Strong, repeated indication of Psychological construct: Eye-Contact avoidance score in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Social-cognition variable: Faux Pas Recognition accuracy",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Social-cognition variable: Faux Pas Recognition accuracy, or the opposite trait is expressed; 3=Moderate/average Social-cognition variable: Faux Pas Recognition accuracy; 5=Very high Social-cognition variable: Faux Pas Recognition accuracy clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Use of Nature as a Stress Reliever",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Use of Nature as a Stress Reliever, or the opposite trait is expressed; 3=Moderate/average Use of Nature as a Stress Reliever; 5=Very high Use of Nature as a Stress Reliever clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Attitude toward learning",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Attitude toward learning, or the opposite trait is expressed; 3=Moderate/average Attitude toward learning; 5=Very high Attitude toward learning clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Honesty-humility trait score",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Honesty-humility trait score, or the opposite trait is expressed; 3=Moderate/average Honesty-humility trait score; 5=Very high Honesty-humility trait score clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Digital-nomad months",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Digital-nomad months, or the opposite trait is expressed; 3=Moderate/average Digital-nomad months; 5=Very high Digital-nomad months clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Religious coping – Negative",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Religious coping – Negative, or the opposite trait is expressed; 3=Moderate/average Religious coping – Negative; 5=Very high Religious coping – Negative clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Snacking Behavior",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Snacking Behavior in what the person says or describes; 3=Occasional or moderate indication of Snacking Behavior; 5=Strong, repeated indication of Snacking Behavior in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Cloud-backup frequency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Cloud-backup frequency, or the opposite trait is expressed; 3=Moderate/average Cloud-backup frequency; 5=Very high Cloud-backup frequency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Learning Style",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Learning Style, or the opposite trait is expressed; 3=Moderate/average Learning Style; 5=Very high Learning Style clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Islamic practice: Seerah study hours",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Islamic practice: Seerah study hours, or the opposite trait is expressed; 3=Moderate/average Islamic practice: Seerah study hours; 5=Very high Islamic practice: Seerah study hours clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Safety compliance",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Safety compliance, or the opposite trait is expressed; 3=Moderate/average Safety compliance; 5=Very high Safety compliance clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Sensationalism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Sensationalism, or the opposite trait is expressed; 3=Moderate/average Sensationalism; 5=Very high Sensationalism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Nationality",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Nationality, or the opposite trait is expressed; 3=Moderate/average Nationality; 5=Very high Nationality clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Drollness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Drollness, or the opposite trait is expressed; 3=Moderate/average Drollness; 5=Very high Drollness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Cooperation",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Cooperation, or the opposite trait is expressed; 3=Moderate/average Cooperation; 5=Very high Cooperation clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Breakfast-skipping frequency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Breakfast-skipping frequency, or the opposite trait is expressed; 3=Moderate/average Breakfast-skipping frequency; 5=Very high Breakfast-skipping frequency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Impulsivity",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Impulsivity in what the person says or describes; 3=Occasional or moderate indication of Impulsivity; 5=Strong, repeated indication of Impulsivity in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Museum visits/year",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Museum visits/year, or the opposite trait is expressed; 3=Moderate/average Museum visits/year; 5=Very high Museum visits/year clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Choir participation years",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Choir participation years, or the opposite trait is expressed; 3=Moderate/average Choir participation years; 5=Very high Choir participation years clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Delegation Ability",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Delegation Ability, or the opposite trait is expressed; 3=Moderate/average Delegation Ability; 5=Very high Delegation Ability clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Desire to influence others",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Desire to influence others, or the opposite trait is expressed; 3=Moderate/average Desire to influence others; 5=Very high Desire to influence others clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Vivacity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Vivacity, or the opposite trait is expressed; 3=Moderate/average Vivacity; 5=Very high Vivacity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Genialness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Genialness, or the opposite trait is expressed; 3=Moderate/average Genialness; 5=Very high Genialness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Cognitive measure: Working Memory Index",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Cognitive measure: Working Memory Index in the conversation; 3=Average/typical evidence of Cognitive measure: Working Memory Index; 5=Strong, clear evidence of high Cognitive measure: Working Memory Index demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Ethical practices",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Ethical practices, or the opposite trait is expressed; 3=Moderate/average Ethical practices; 5=Very high Ethical practices clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Civility",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Civility, or the opposite trait is expressed; 3=Moderate/average Civility; 5=Very high Civility clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Classiness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Classiness, or the opposite trait is expressed; 3=Moderate/average Classiness; 5=Very high Classiness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Control over situations",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Control over situations, or the opposite trait is expressed; 3=Moderate/average Control over situations; 5=Very high Control over situations clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Time outdoors/day (h)",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Time outdoors/day (h), or the opposite trait is expressed; 3=Moderate/average Time outdoors/day (h); 5=Very high Time outdoors/day (h) clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Effeteness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Effeteness, or the opposite trait is expressed; 3=Moderate/average Effeteness; 5=Very high Effeteness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Identity Diffusion level",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Identity Diffusion level, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Identity Diffusion level; 5=Very high Psychological construct: Identity Diffusion level clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Learning through movement",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Learning through movement, or the opposite trait is expressed; 3=Moderate/average Learning through movement; 5=Very high Learning through movement clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Caffeine sensitivity gene",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Caffeine sensitivity gene, or the opposite trait is expressed; 3=Moderate/average Caffeine sensitivity gene; 5=Very high Caffeine sensitivity gene clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Hatefulness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Hatefulness, or the opposite trait is expressed; 3=Moderate/average Hatefulness; 5=Very high Hatefulness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Psychological construct: Perfectionistic Strivings",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Psychological construct: Perfectionistic Strivings, or the opposite trait is expressed; 3=Moderate/average Psychological construct: Perfectionistic Strivings; 5=Very high Psychological construct: Perfectionistic Strivings clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Wake-time consistency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Wake-time consistency, or the opposite trait is expressed; 3=Moderate/average Wake-time consistency; 5=Very high Wake-time consistency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Social-cognition variable: Mentalizing network activation",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Social-cognition variable: Mentalizing network activation, or the opposite trait is expressed; 3=Moderate/average Social-cognition variable: Mentalizing network activation; 5=Very high Social-cognition variable: Mentalizing network activation clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Patriotism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Patriotism, or the opposite trait is expressed; 3=Moderate/average Patriotism; 5=Very high Patriotism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Servility",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Servility, or the opposite trait is expressed; 3=Moderate/average Servility; 5=Very high Servility clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Stress Recovery Ability",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Stress Recovery Ability, or the opposite trait is expressed; 3=Moderate/average Stress Recovery Ability; 5=Very high Stress Recovery Ability clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Troubleshooting technical issues",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Troubleshooting technical issues, or the opposite trait is expressed; 3=Moderate/average Troubleshooting technical issues; 5=Very high Troubleshooting technical issues clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Defense-mechanism tendency: Introjection",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Defense-mechanism tendency: Introjection in what the person says or describes; 3=Occasional or moderate indication of Defense-mechanism tendency: Introjection; 5=Strong, repeated indication of Defense-mechanism tendency: Introjection in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Irritability",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Irritability, or the opposite trait is expressed; 3=Moderate/average Irritability; 5=Very high Irritability clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Travel-companions diversity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Travel-companions diversity, or the opposite trait is expressed; 3=Moderate/average Travel-companions diversity; 5=Very high Travel-companions diversity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Trust in others",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Trust in others, or the opposite trait is expressed; 3=Moderate/average Trust in others; 5=Very high Trust in others clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Gamified-finance-app usage",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Gamified-finance-app usage, or the opposite trait is expressed; 3=Moderate/average Gamified-finance-app usage; 5=Very high Gamified-finance-app usage clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Buddhist practice: Eightfold Path – Right Intention level",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Buddhist practice: Eightfold Path – Right Intention level, or the opposite trait is expressed; 3=Moderate/average Buddhist practice: Eightfold Path – Right Intention level; 5=Very high Buddhist practice: Eightfold Path – Right Intention level clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Caffeine intake (mg/day)",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Caffeine intake (mg/day), or the opposite trait is expressed; 3=Moderate/average Caffeine intake (mg/day); 5=Very high Caffeine intake (mg/day) clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Comfort with Vulnerability",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Comfort with Vulnerability, or the opposite trait is expressed; 3=Moderate/average Comfort with Vulnerability; 5=Very high Comfort with Vulnerability clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Anticipativeness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Anticipativeness, or the opposite trait is expressed; 3=Moderate/average Anticipativeness; 5=Very high Anticipativeness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Home-security-system presence",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Home-security-system presence, or the opposite trait is expressed; 3=Moderate/average Home-security-system presence; 5=Very high Home-security-system presence clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "HEXACO domain: Honesty-Humility",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low HEXACO domain: Honesty-Humility, or the opposite trait is expressed; 3=Moderate/average HEXACO domain: Honesty-Humility; 5=Very high HEXACO domain: Honesty-Humility clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Eating Habits (Home-Cooked vs. Eating Out)",
+    "category": "behavioral_tendency",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No indication of Eating Habits (Home-Cooked vs. Eating Out) in what the person says or describes; 3=Occasional or moderate indication of Eating Habits (Home-Cooked vs. Eating Out); 5=Strong, repeated indication of Eating Habits (Home-Cooked vs. Eating Out) in the described behavior.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Decision-Making Confidence",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Decision-Making Confidence, or the opposite trait is expressed; 3=Moderate/average Decision-Making Confidence; 5=Very high Decision-Making Confidence clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Alignment with societal roles",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Alignment with societal roles, or the opposite trait is expressed; 3=Moderate/average Alignment with societal roles; 5=Very high Alignment with societal roles clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Connectedness: Belief in interconnections",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Connectedness: Belief in interconnections, or the opposite trait is expressed; 3=Moderate/average Connectedness: Belief in interconnections; 5=Very high Connectedness: Belief in interconnections clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Quirkiness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Quirkiness, or the opposite trait is expressed; 3=Moderate/average Quirkiness; 5=Very high Quirkiness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Creative resilience",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Creative resilience, or the opposite trait is expressed; 3=Moderate/average Creative resilience; 5=Very high Creative resilience clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Rapid cognitive processing",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Rapid cognitive processing in the conversation; 3=Average/typical evidence of Rapid cognitive processing; 5=Strong, clear evidence of high Rapid cognitive processing demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Cordiality",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Cordiality, or the opposite trait is expressed; 3=Moderate/average Cordiality; 5=Very high Cordiality clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Economic reasoning",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Economic reasoning in the conversation; 3=Average/typical evidence of Economic reasoning; 5=Strong, clear evidence of high Economic reasoning demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Conformity",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Conformity, or the opposite trait is expressed; 3=Moderate/average Conformity; 5=Very high Conformity clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Aestheticism",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Aestheticism, or the opposite trait is expressed; 3=Moderate/average Aestheticism; 5=Very high Aestheticism clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Mental Arithmetic Speed",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Mental Arithmetic Speed in the conversation; 3=Average/typical evidence of Mental Arithmetic Speed; 5=Strong, clear evidence of high Mental Arithmetic Speed demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Patience: Resistance to anger",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Patience: Resistance to anger, or the opposite trait is expressed; 3=Moderate/average Patience: Resistance to anger; 5=Very high Patience: Resistance to anger clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Flawlessness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Flawlessness, or the opposite trait is expressed; 3=Moderate/average Flawlessness; 5=Very high Flawlessness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Self-Efficacy",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Self-Efficacy, or the opposite trait is expressed; 3=Moderate/average Self-Efficacy; 5=Very high Self-Efficacy clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Spelling Accuracy",
+    "category": "cognitive_ability",
+    "sensitivity": "low",
+    "scoring_anchors": "1=No evidence of Spelling Accuracy in the conversation; 3=Average/typical evidence of Spelling Accuracy; 5=Strong, clear evidence of high Spelling Accuracy demonstrated in the person's reasoning or language.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Peacefulness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Peacefulness, or the opposite trait is expressed; 3=Moderate/average Peacefulness; 5=Very high Peacefulness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Doggedness",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Doggedness, or the opposite trait is expressed; 3=Moderate/average Doggedness; 5=Very high Doggedness clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Decency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Decency, or the opposite trait is expressed; 3=Moderate/average Decency; 5=Very high Decency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  },
+  {
+    "facet_normalized": "Processed-food frequency",
+    "category": "personality_trait",
+    "sensitivity": "low",
+    "scoring_anchors": "1=Very low Processed-food frequency, or the opposite trait is expressed; 3=Moderate/average Processed-food frequency; 5=Very high Processed-food frequency clearly expressed in the conversation.",
+    "abstention_reason": ""
+  }
+]

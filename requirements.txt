@@ -1,0 +1,10 @@
+pandas
+numpy
+sentence-transformers
+faiss-cpu
+ollama
+pydantic
+rich
+tqdm
+scikit-learn
+jupyter
