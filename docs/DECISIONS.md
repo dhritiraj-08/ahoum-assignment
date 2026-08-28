@@ -186,3 +186,74 @@ instead of just seeing a low pass rate and not knowing why. The cost is
 that the grading logic itself (`_evaluate_case()`) is now something a
 reviewer has to trust I implemented fairly, since I wrote both the reference
 labels and the grading rule.
+
+---
+
+## 5. Hybrid LLM backend with automatic Ollama -> Groq fallback
+
+**The ambiguity/problem:** Ollama requires a local machine with a
+GPU-capable setup and enough VRAM to hold the model -- which means this
+project, as originally built, only runs on hardware exactly like mine. That's
+a real portability problem: a grader's laptop without a GPU, a CI runner, or
+anyone who just wants to try `app.py` without installing and pulling a
+multi-GB model can't run it at all. I needed a way to keep the "local model,
+private, no API key" design as the default while still letting the system
+run somewhere else when that default isn't available -- without turning it
+into "you must configure a cloud API to use this at all," which would
+undercut the whole point of choosing Ollama in the first place.
+
+**Options considered:**
+1. **Ollama only, document the limitation.** Simplest to build and reason
+   about, but the system is unusable on any machine without a GPU and a
+   pulled model -- including, plausibly, whoever grades this.
+2. **Manual backend selection** -- a `--backend ollama|groq` CLI flag or a
+   config setting the user sets explicitly every time. Predictable and
+   transparent, but adds a required decision/step for the common case
+   (Ollama running locally, which should just work with zero configuration)
+   and doesn't help someone who didn't know in advance that Ollama wasn't
+   going to be available on the machine they're using.
+3. **Automatic detection with silent fallback**: try Ollama first every
+   time (or rather, once per process, cached); if it's unreachable or
+   `llama3.1` isn't pulled, and `GROQ_API_KEY` is set, transparently use
+   Groq's `llama-3.1-8b-instant` instead; if neither is available, fail
+   immediately with a message telling the user exactly which of the two
+   things to fix.
+
+**Choice made:** Option 3, implemented as `detect_backend()` /
+`_call_llm()` in `src/scorer.py`. `score_facet_batch()` doesn't know or
+care which backend actually served a request -- it just calls `_call_llm(prompt)`
+and gets text back. Detection result is cached at the module level after
+the first check (so we're not hitting Ollama's `/api/tags` on every one of
+the ~4 batches in a single conversation) and only re-checked when something
+explicitly asks for `force_refresh=True` -- which is exactly what `app.py`
+does right after the user types a Groq key into the UI, so the status badge
+updates immediately instead of waiting for some other trigger.
+
+**Trade-off:**
+- **Silent fallback means a silent behavior change.** If Ollama crashes
+  mid-session (the exact `llama-server` crash from `DEBUGGING.md` #3 is a
+  real example of this happening on my own machine) and `GROQ_API_KEY`
+  happens to be set, later batches in the *same* conversation could get
+  scored by Groq's `llama-3.1-8b-instant` instead of local `llama3.1`,
+  without any explicit action or obvious signal beyond the backend badge
+  changing. Two facets from one conversation could technically be scored by
+  two different models. I accepted this because the alternative -- hard
+  failing until the user manually intervenes -- is worse for a demo/grading
+  context where "it just kept working" matters more than strict
+  single-model consistency within one run.
+- **The prompt and batch size (10) are shared unchanged across both
+  backends** for consistency, but I have not actually verified that
+  Groq's `llama-3.1-8b-instant` follows the "abstain rather than guess"
+  instruction as reliably as the locally-run `llama3.1` did across the
+  benchmark -- that's untested. Running the 10-conversation benchmark
+  specifically against the Groq backend (by stopping Ollama and setting
+  `GROQ_API_KEY`) is the obvious next step before trusting it in any
+  real grading demo, and I haven't done that yet.
+- **The cache doesn't self-heal.** If Ollama recovers after a fallback to
+  Groq, `app.py`'s badge only re-checks because it explicitly calls
+  `check_backend_status()` fresh on every Streamlit rerun (which happens on
+  basically every UI interaction) -- but a long-running CLI process
+  (`main.py --benchmark`, for instance) would keep using Groq for the rest
+  of that process's life once it has fallen back, even if Ollama comes back
+  up seconds later, since nothing in that code path calls
+  `detect_backend(force_refresh=True)`.

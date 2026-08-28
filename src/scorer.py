@@ -1,7 +1,8 @@
 """
 scorer.py
 ---------
-Uses a local Ollama model (llama3.1) to score a batch of retrieved facets
+Uses an LLM (local Ollama llama3.1 by default, Groq's llama-3.1-8b-instant
+as an automatic cloud fallback) to score a batch of retrieved facets
 against a conversation. Never scores more than BATCH_SIZE facets per LLM
 call, and never scores medical/biological facets under any circumstances
 (defense in depth -- even if one slips past retrieval, we force abstention
@@ -15,9 +16,20 @@ harder (one bad facet shouldn't sink 24 good ones). 10 is small enough for
 the model to stay focused and consistent, and large enough to keep the
 number of round trips (and prompt-preamble overhead) reasonable. See
 docs/DECISIONS.md for more detail.
+
+WHY A HYBRID OLLAMA/GROQ BACKEND: Ollama requires a local GPU-capable
+machine, which means the project only runs on hardware like the one it was
+built on. Groq's hosted API serves the same llama-3.1-8b family (as
+"llama-3.1-8b-instant") and needs nothing but an API key, so it's a natural
+fallback for running this on any machine, in CI, or when the local Ollama
+server/GPU isn't available. See docs/DECISIONS.md #5 for the full
+reasoning and trade-offs (in particular: the fallback is silent, so a
+mid-session Ollama crash can switch backends without an explicit user
+action).
 """
 
 import json
+import os
 import re
 from typing import Any
 
@@ -28,12 +40,118 @@ except ImportError as e:
 
 OLLAMA_HOST = "http://localhost:11434"
 MODEL_NAME = "llama3.1"
+GROQ_MODEL_NAME = "llama-3.1-8b-instant"
 BATCH_SIZE = 10
 
 VALID_STATUSES = {"scored", "insufficient_evidence", "not_observable"}
 VALID_CONFIDENCE = {"high", "medium", "low"}
 
 _client = ollama.Client(host=OLLAMA_HOST)
+
+# Cached result of detect_backend() -- "ollama" | "groq" -- so we don't
+# re-probe Ollama's /api/tags on every one of the ~4 batches per
+# conversation. None means "not checked yet". Reset with
+# detect_backend(force_refresh=True) (used by app.py after the user enters
+# a Groq key, and by tests).
+_active_backend: str | None = None
+_groq_client = None
+
+
+def _check_ollama_available() -> bool:
+    """
+    Checks that Ollama is reachable at OLLAMA_HOST (hits /api/tags, same
+    endpoint the ollama Python client's .list() call uses under the hood)
+    AND that llama3.1 specifically is pulled -- Ollama being *up* isn't
+    enough if the model itself isn't available yet.
+    """
+    try:
+        client = ollama.Client(host=OLLAMA_HOST)
+        models_response = client.list()
+        models = models_response.get("models", []) if isinstance(models_response, dict) else models_response.models
+        model_names = []
+        for m in models:
+            name = m.get("model") if isinstance(m, dict) else getattr(m, "model", None)
+            if name:
+                model_names.append(name)
+        return any("llama3.1" in name for name in model_names)
+    except Exception:
+        return False
+
+
+def detect_backend(force_refresh: bool = False) -> str:
+    """
+    Determine which LLM backend to use, preferring local Ollama:
+
+      1. Ollama reachable + llama3.1 pulled  -> "ollama"
+      2. Ollama unavailable, GROQ_API_KEY set -> "groq" (cloud fallback)
+      3. Neither                              -> raise RuntimeError with an
+                                                  actionable message
+
+    The result is cached at module level after the first successful check
+    so repeated calls within one conversation's batches don't re-probe
+    Ollama every time. Pass force_refresh=True to bypass the cache (e.g.
+    right after the user sets GROQ_API_KEY in app.py, or in tests).
+    """
+    global _active_backend
+    if _active_backend is not None and not force_refresh:
+        return _active_backend
+
+    if _check_ollama_available():
+        _active_backend = "ollama"
+        return _active_backend
+
+    if os.environ.get("GROQ_API_KEY"):
+        _active_backend = "groq"
+        return _active_backend
+
+    raise RuntimeError(
+        "No LLM backend available. Either start Ollama (and run "
+        "`ollama pull llama3.1`) so it's reachable at http://localhost:11434, "
+        "or set the GROQ_API_KEY environment variable to use the Groq cloud "
+        "fallback instead. See docs/README.md 'LLM Backend Options'."
+    )
+
+
+def _get_groq_client():
+    """Lazily construct and cache the Groq client so we don't require the
+    `groq` package or a valid key unless the Groq backend is actually used."""
+    global _groq_client
+    if _groq_client is None:
+        try:
+            from groq import Groq
+        except ImportError as e:
+            raise ImportError("groq package not installed. Run: pip install -r requirements.txt") from e
+        api_key = os.environ.get("GROQ_API_KEY")
+        if not api_key:
+            raise RuntimeError("GROQ_API_KEY is not set -- cannot use the Groq backend.")
+        _groq_client = Groq(api_key=api_key)
+    return _groq_client
+
+
+def _call_llm(prompt: str) -> str:
+    """
+    Send one chat-completion request to whichever backend detect_backend()
+    resolves to, and return the raw text content. This is the single point
+    where score_facet_batch() talks to "the LLM" -- it doesn't need to know
+    or care which backend actually served the request.
+    """
+    backend = detect_backend()
+    if backend == "ollama":
+        response = _client.chat(
+            model=MODEL_NAME,
+            messages=[{"role": "user", "content": prompt}],
+            options={"temperature": 0.1},  # low temperature: we want consistent, conservative scoring
+        )
+        return response["message"]["content"]
+
+    # backend == "groq"
+    client = _get_groq_client()
+    response = client.chat.completions.create(
+        model=GROQ_MODEL_NAME,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.1,
+    )
+    return response.choices[0].message.content
 
 
 def _build_prompt(facets_batch: list[dict], conversation: str) -> str:
@@ -191,15 +309,11 @@ def score_facet_batch(facets_batch: list[dict], conversation: str) -> list[dict]
         expected_names = {f["facet_normalized"] for f in safe_batch}
 
         try:
-            response = _client.chat(
-                model=MODEL_NAME,
-                messages=[{"role": "user", "content": prompt}],
-                options={"temperature": 0.1},  # low temperature: we want consistent, conservative scoring
-            )
-            raw_text = response["message"]["content"]
+            raw_text = _call_llm(prompt)
         except Exception as e:
-            # Ollama not running, model not pulled, connection refused, etc.
-            # Mark every facet in this sub-batch as a parse_error rather than crash.
+            # Neither backend available, Ollama connection refused, Groq API
+            # error, etc. -- see _call_llm()/detect_backend(). Mark every
+            # facet in this sub-batch as a parse_error rather than crash.
             for f in safe_batch:
                 results_by_name[f["facet_normalized"]] = {
                     "facet": f["facet_normalized"],

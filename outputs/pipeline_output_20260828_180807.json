@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "I quit my stable job last week to backpack solo through South America with no itinerary.",
+  "total_facets_retrieved": 40,
+  "scored": 7,
+  "abstained": 23,
+  "results": [
+    {
+      "facet": "Eco-tourism trips",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Travel-companions diversity",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Digital-nomad months",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Volunteer Work",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Sustainable-transport usage",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Casual lifestyle",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Organized lifestyle",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Participation in Community Activities",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Withdrawnness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Public-transport km/week",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of public transportation in the conversation."
+    },
+    {
+      "facet": "Creative resilience",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person quit their stable job to backpack solo through South America with no itinerary, showing a willingness to adapt to new and uncertain situations."
+    },
+    {
+      "facet": "Courageousness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person quit their stable job to backpack solo through South America, demonstrating a willingness to take risks and challenge themselves."
+    },
+    {
+      "facet": "Perseverance",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of perseverance or overcoming obstacles in the conversation."
+    },
+    {
+      "facet": "Practice frequency: Walking meditation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of walking meditation or any other mindfulness practice in the conversation."
+    },
+    {
+      "facet": "Adventure-Seeking Behavior",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person quit their stable job to backpack solo through South America, indicating a desire for adventure and exploration."
+    },
+    {
+      "facet": "Choir participation years",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of choir participation or any musical activities in the conversation."
+    },
+    {
+      "facet": "Museum visits/year",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of museum visits or any cultural activities in the conversation."
+    },
+    {
+      "facet": "Encouraging participation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of encouraging others to participate in activities or any leadership roles in the conversation."
+    },
+    {
+      "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of Buddhist practice or the Eightfold Path in the conversation."
+    },
+    {
+      "facet": "Risktaking",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person quit their stable job to backpack solo through South America with no itinerary."
+    },
+    {
+      "facet": "Patriotism",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of patriotism or national pride."
+    },
+    {
+      "facet": "Hardworking",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of work ethic or job performance."
+    },
+    {
+      "facet": "Rebelliousness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person quit their stable job without a clear plan, which suggests a desire to break free from conventional expectations."
+    },
+    {
+      "facet": "Collectedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of organization or planning."
+    },
+    {
+      "facet": "Desperation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no indication of feeling trapped or forced into this decision."
+    },
+    {
+      "facet": "Work Styles",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of work habits or productivity."
+    },
+    {
+      "facet": "Reliance on context",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no indication of relying on external factors to make decisions."
+    },
+    {
+      "facet": "Compulsive activities",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of compulsive behaviors or habits."
+    },
+    {
+      "facet": "Drug-use history",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of substance use or addiction."
+    },
+    {
+      "facet": "Music-lessons years",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of music lessons or years in the conversation."
+    },
+    {
+      "facet": "Peer-collaboration hours",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention peer collaboration or hours spent collaborating."
+    },
+    {
+      "facet": "Dance rehearsal hours/week",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of dance rehearsal or hours spent rehearsing in the conversation."
+    },
+    {
+      "facet": "Gamified-finance-app usage",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention gamified finance apps or their usage."
+    },
+    {
+      "facet": "Contribution to Group Goals",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention contributing to group goals or any group efforts."
+    },
+    {
+      "facet": "Psychological construct: Perfectionistic Strivings",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no indication of perfectionistic strivings or related thoughts in the conversation."
+    },
+    {
+      "facet": "Religious coping – Negative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention religious coping or any negative aspects of it."
+    },
+    {
+      "facet": "Storytelling proficiency",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person describes their decision to quit their job and backpack through South America, showing some ability to tell a story and share their thoughts and plans."
+    },
+    {
+      "facet": "Creative risk-taking tendency",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person quit their stable job to backpack through South America with no itinerary, indicating a strong tendency to take creative risks and challenge conventional norms."
+    },
+    {
+      "facet": "Training-cycle length",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention training cycles or their length."
+    }
+  ],
+  "parse_errors": 10
+}

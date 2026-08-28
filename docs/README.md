@@ -26,6 +26,45 @@ pull it for you if missing. On my machine (RTX 4050, 6GB VRAM) Ollama picks
 up the GPU automatically -- no extra config needed -- and a full 10-batch
 benchmark run finishes in a few minutes rather than being CPU-bound-slow.
 
+## LLM Backend Options
+
+`src/scorer.py` auto-detects which backend to use, in this order, every
+time a conversation is scored (cached per-process after the first check):
+
+- **Option A -- Local Ollama (default).** Private (nothing leaves your
+  machine), no API key, no cost, but requires a GPU-capable machine with
+  Ollama installed and `llama3.1` pulled. This is what every score/
+  benchmark result in this repo's docs was produced with.
+- **Option B -- Groq API (automatic cloud fallback).** Used automatically
+  whenever Ollama isn't reachable *and* `GROQ_API_KEY` is set in the
+  environment. Runs the same model family via Groq's hosted
+  `llama-3.1-8b-instant`, so it works on any machine -- a laptop with no
+  GPU, a CI runner, a grader's machine that doesn't have Ollama installed.
+
+**How to set the key:**
+
+```bash
+# Linux/Mac
+export GROQ_API_KEY=your_key_here
+```
+
+```powershell
+# Windows PowerShell
+$env:GROQ_API_KEY="your_key_here"
+```
+
+Get a free key at https://console.groq.com/keys. See `.env.example` for
+the expected format if you're using a `.env` file / process manager
+instead of exporting it directly. The Streamlit app (`app.py`) also lets
+you paste a key directly into a password-masked field in the UI, shown
+only when Ollama isn't detected -- see "Run the Streamlit UI" below.
+
+If neither Ollama nor `GROQ_API_KEY` is available, `--score`/`--benchmark`/
+`app.py` will fail fast with a clear message telling you which one to fix,
+rather than hanging or producing a confusing low-level connection error.
+See `DECISIONS.md` #5 for why this is automatic-and-silent rather than a
+manual `--backend` flag, and the trade-offs that come with that choice.
+
 ## Running the pipeline (in order)
 
 ```bash
@@ -48,9 +87,13 @@ A paste-a-conversation-and-see-results web UI over the same pipeline the
 CLI uses -- no code required. Requires `--audit` and `--embed` to have been
 run at least once already (the app shows a red status badge and tells you
 which command to run if the index is missing). Shows three status badges
-before you type anything (facet index, Ollama reachability, GPU VRAM
-headroom), a summary of retrieved/scored/abstained counts, the full facet
-scores table, and an outcome-distribution bar chart.
+before you type anything (facet index, **LLM Backend** -- which backend is
+actually active, Ollama or Groq, see "LLM Backend Options" above -- and GPU
+VRAM headroom), a summary of retrieved/scored/abstained counts, the full
+facet scores table, and an outcome-distribution bar chart. If Ollama isn't
+detected, a password-masked `GROQ_API_KEY` field appears so you can paste a
+key directly into the browser instead of setting an environment variable
+and restarting.
 
 ## Architecture
 

@@ -11,6 +11,7 @@ Run with:
     streamlit run app.py
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -128,6 +129,30 @@ def check_gpu_vram_status() -> tuple[str, str]:
         return "unknown", f"GPU status unknown ({e})."
 
 
+def check_backend_status(force_refresh: bool = False) -> tuple[str, str, str]:
+    """
+    Determines which LLM backend src/scorer.py will actually use: local
+    Ollama (preferred) or the Groq API fallback. Returns
+    (level, backend_label, message) where level is "green" | "red".
+
+    force_refresh=True bypasses scorer.py's cached detection result -- used
+    right after the user types a Groq key into the sidebar input, so the
+    badge updates immediately instead of showing stale "red" until the next
+    natural cache expiry (there isn't one; detect_backend() only re-checks
+    on an explicit force_refresh).
+    """
+    try:
+        from src.scorer import GROQ_MODEL_NAME, MODEL_NAME, detect_backend
+        backend = detect_backend(force_refresh=force_refresh)
+        if backend == "ollama":
+            return "green", "Ollama (local)", f"Using {MODEL_NAME} locally -- private, no API key needed."
+        return "green", "Groq (cloud fallback)", f"Ollama not detected -- using Groq's {GROQ_MODEL_NAME} instead."
+    except RuntimeError as e:
+        return "red", "None", str(e)
+    except Exception as e:
+        return "red", "None", f"Backend check failed: {e}"
+
+
 # ---------------------------------------------------------------------------
 # Header + status badges
 # ---------------------------------------------------------------------------
@@ -139,8 +164,22 @@ st.caption(
     "the conversation doesn't actually support a judgment."
 )
 
+def _apply_groq_key():
+    """on_change callback for the Groq API key input: sets it into this
+    process's environment (so scorer.py's os.environ.get("GROQ_API_KEY")
+    picks it up immediately) and forces an immediate backend re-check so
+    the badge above doesn't keep showing red until some later rerun."""
+    key = st.session_state.get("groq_api_key_input", "").strip()
+    if key:
+        os.environ["GROQ_API_KEY"] = key
+    else:
+        os.environ.pop("GROQ_API_KEY", None)
+    check_backend_status(force_refresh=True)
+
+
 index_ok, index_msg = check_index_status()
 ollama_ok, ollama_msg = check_ollama_status()
+backend_level, backend_label, backend_msg = check_backend_status()
 gpu_level, gpu_msg = check_gpu_vram_status()
 
 status_col1, status_col2, status_col3 = st.columns(3)
@@ -150,10 +189,10 @@ with status_col1:
     else:
         st.error(f"❌ Facet index: {index_msg}")
 with status_col2:
-    if ollama_ok:
-        st.success(f"✅ Ollama: {ollama_msg}")
+    if backend_level == "green":
+        st.success(f"✅ LLM Backend: {backend_label} -- {backend_msg}")
     else:
-        st.warning(f"⚠️ Ollama: {ollama_msg}")
+        st.error(f"❌ LLM Backend: {backend_msg}")
 with status_col3:
     if gpu_level == "green":
         st.success(f"✅ GPU VRAM: {gpu_msg}")
@@ -163,6 +202,22 @@ with status_col3:
         st.error(f"❌ GPU VRAM: {gpu_msg}")
     else:
         st.info(f"❔ GPU VRAM: {gpu_msg}")
+
+# Only show the Groq key input when Ollama isn't detected -- no point
+# asking for a cloud fallback key when the preferred local backend is
+# already working fine.
+if not ollama_ok:
+    st.text_input(
+        "GROQ_API_KEY (Ollama not detected -- paste a Groq API key to use the cloud fallback)",
+        type="password",
+        key="groq_api_key_input",
+        value=os.environ.get("GROQ_API_KEY", ""),
+        on_change=_apply_groq_key,
+        help=(
+            "Get a free key at https://console.groq.com/keys. Only kept in this "
+            "process's memory for this session -- never written to disk or logged."
+        ),
+    )
 
 with st.expander("How this works"):
     st.markdown(
@@ -200,10 +255,14 @@ conversation = st.text_area(
     ),
 )
 
-run_clicked = st.button("Run Pipeline", type="primary", disabled=not index_ok)
+run_clicked = st.button(
+    "Run Pipeline", type="primary", disabled=not index_ok or backend_level != "green"
+)
 
 if not index_ok:
     st.info("Build the facet index first (see the error above) before running the pipeline.")
+if index_ok and backend_level != "green":
+    st.info("No LLM backend available yet -- start Ollama, or paste a Groq API key above.")
 
 # ---------------------------------------------------------------------------
 # Run
@@ -212,7 +271,7 @@ if run_clicked:
     if not conversation or not conversation.strip():
         st.warning("Please paste a conversation first.")
     else:
-        with st.spinner("Retrieving relevant facets and scoring with llama3.1 (this can take a minute)..."):
+        with st.spinner(f"Retrieving relevant facets and scoring with {backend_label}..."):
             try:
                 from src.pipeline import run_pipeline
                 result = run_pipeline(conversation, save_output=True)
@@ -226,13 +285,14 @@ if run_clicked:
                 )
             except Exception as e:
                 st.session_state.pipeline_result = None
-                # Covers "Ollama isn't running" (connection refused), a model
-                # that isn't pulled, or any other unexpected failure -- we
+                # Covers Ollama connection refused, llama3.1 not pulled, a
+                # Groq API error, or any other unexpected failure -- we
                 # never want the app itself to crash on a bad LLM call.
                 st.error(
                     "Something went wrong while running the pipeline. This "
-                    "usually means Ollama isn't running or llama3.1 isn't "
-                    "pulled yet.\n\n"
+                    "usually means neither backend is currently reachable -- "
+                    "Ollama isn't running/llama3.1 isn't pulled, and no valid "
+                    "GROQ_API_KEY is set.\n\n"
                     f"Details: {e}"
                 )
 

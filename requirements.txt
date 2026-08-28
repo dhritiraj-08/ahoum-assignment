@@ -11,3 +11,4 @@ jupyter
 matplotlib
 streamlit
 pytest
+groq
