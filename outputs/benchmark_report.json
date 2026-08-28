@@ -1,4 +1,23 @@
 {
+  "metrics": {
+    "retrieval_recall": {
+      "value": 0.25925925925925924,
+      "naturally_retrieved": 7,
+      "total_retrievable_reference_facets": 27,
+      "note": "% of observable reference facets FAISS found on its own, WITHOUT force-include."
+    },
+    "scoring_accuracy": {
+      "value": 0.5925925925925926,
+      "correct": 16,
+      "total_scored_reference_facets": 27,
+      "note": "% correct GIVEN the right facet was in front of the LLM (force-included if FAISS missed it) -- isolates scorer quality from retriever quality."
+    },
+    "safety": {
+      "violations": 0,
+      "total_checks": 3,
+      "note": "Medical/spiritual/demographic/malformed reference facets that should NEVER be scored. Never force-included, by design."
+    }
+  },
   "cases": [
     {
       "id": 1,
@@ -7,30 +26,46 @@
       "evaluations": [
         {
           "facet": "Risktaking",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 5,
           "actual_status": "scored",
           "actual_score": 5,
-          "outcome": "exact_agreement"
+          "naturally_retrieved": true,
+          "force_added": false,
+          "retrieval_outcome": "retrieved_naturally",
+          "scoring_outcome": "exact_agreement"
         },
         {
           "facet": "Adventure-Seeking Behavior",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 5,
           "actual_status": "scored",
           "actual_score": 5,
-          "outcome": "exact_agreement"
+          "naturally_retrieved": true,
+          "force_added": false,
+          "retrieval_outcome": "retrieved_naturally",
+          "scoring_outcome": "exact_agreement"
         },
         {
           "facet": "Common-sense",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 2,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "retrieval_miss"
+          "actual_status": "scored",
+          "actual_score": 1,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "close_agreement"
         }
       ],
-      "total_retrieved": 40
+      "total_naturally_retrieved": 40,
+      "force_added_facets": [
+        "Common-sense"
+      ],
+      "unresolvable_reference_facets": []
     },
     {
       "id": 2,
@@ -39,30 +74,48 @@
       "evaluations": [
         {
           "facet": "Doggedness",
+          "metric": "retrieval+scoring",
           "expected_status": "insufficient_evidence",
           "expected_score": null,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "correct_abstention_not_retrieved"
+          "actual_status": "scored",
+          "actual_score": 2,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "incorrect_overconfident_score"
         },
         {
           "facet": "Self-Efficacy",
+          "metric": "retrieval+scoring",
           "expected_status": "insufficient_evidence",
           "expected_score": null,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "correct_abstention_not_retrieved"
+          "actual_status": "scored",
+          "actual_score": 3,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "incorrect_overconfident_score"
         },
         {
           "facet": "Common-sense",
+          "metric": "retrieval+scoring",
           "expected_status": "insufficient_evidence",
           "expected_score": null,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "correct_abstention_not_retrieved"
+          "actual_status": "scored",
+          "actual_score": 3,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "incorrect_overconfident_score"
         }
       ],
-      "total_retrieved": 40
+      "total_naturally_retrieved": 40,
+      "force_added_facets": [
+        "Common-sense",
+        "Doggedness",
+        "Self-Efficacy"
+      ],
+      "unresolvable_reference_facets": []
     },
     {
       "id": 3,
@@ -71,30 +124,47 @@
       "evaluations": [
         {
           "facet": "Patience: Resistance to anger",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 1,
           "actual_status": "scored",
           "actual_score": 1,
-          "outcome": "exact_agreement"
+          "naturally_retrieved": true,
+          "force_added": false,
+          "retrieval_outcome": "retrieved_naturally",
+          "scoring_outcome": "exact_agreement"
         },
         {
           "facet": "Emotionalism",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 4,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "retrieval_miss"
+          "actual_status": "scored",
+          "actual_score": 5,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "close_agreement"
         },
         {
           "facet": "Decency",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 2,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "retrieval_miss"
+          "actual_status": "scored",
+          "actual_score": 1,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "close_agreement"
         }
       ],
-      "total_retrieved": 40
+      "total_naturally_retrieved": 40,
+      "force_added_facets": [
+        "Decency",
+        "Emotionalism"
+      ],
+      "unresolvable_reference_facets": []
     },
     {
       "id": 4,
@@ -103,30 +173,48 @@
       "evaluations": [
         {
           "facet": "Doggedness",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 2,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "retrieval_miss"
+          "actual_status": "scored",
+          "actual_score": 1,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "close_agreement"
         },
         {
           "facet": "Self-improvement",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 2,
-          "actual_status": "not_retrieved",
+          "actual_status": "insufficient_evidence",
           "actual_score": null,
-          "outcome": "retrieval_miss"
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "incorrect_abstention"
         },
         {
           "facet": "Discontentment",
+          "metric": "retrieval+scoring",
           "expected_status": "insufficient_evidence",
           "expected_score": null,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "correct_abstention_not_retrieved"
+          "actual_status": "scored",
+          "actual_score": 5,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "incorrect_overconfident_score"
         }
       ],
-      "total_retrieved": 40
+      "total_naturally_retrieved": 40,
+      "force_added_facets": [
+        "Discontentment",
+        "Doggedness",
+        "Self-improvement"
+      ],
+      "unresolvable_reference_facets": []
     },
     {
       "id": 5,
@@ -135,30 +223,48 @@
       "evaluations": [
         {
           "facet": "Compassion",
+          "metric": "retrieval+scoring",
           "expected_status": "insufficient_evidence",
           "expected_score": null,
-          "actual_status": "not_retrieved",
+          "actual_status": "insufficient_evidence",
           "actual_score": null,
-          "outcome": "correct_abstention_not_retrieved"
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "correct_abstention"
         },
         {
           "facet": "Risktaking",
+          "metric": "retrieval+scoring",
           "expected_status": "insufficient_evidence",
           "expected_score": null,
-          "actual_status": "not_retrieved",
+          "actual_status": "insufficient_evidence",
           "actual_score": null,
-          "outcome": "correct_abstention_not_retrieved"
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "correct_abstention"
         },
         {
           "facet": "Emotionalism",
+          "metric": "retrieval+scoring",
           "expected_status": "insufficient_evidence",
           "expected_score": null,
-          "actual_status": "not_retrieved",
+          "actual_status": "insufficient_evidence",
           "actual_score": null,
-          "outcome": "correct_abstention_not_retrieved"
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "correct_abstention"
         }
       ],
-      "total_retrieved": 40
+      "total_naturally_retrieved": 40,
+      "force_added_facets": [
+        "Compassion",
+        "Emotionalism",
+        "Risktaking"
+      ],
+      "unresolvable_reference_facets": []
     },
     {
       "id": 6,
@@ -167,30 +273,46 @@
       "evaluations": [
         {
           "facet": "Compassion",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 4,
           "actual_status": "scored",
           "actual_score": 5,
-          "outcome": "close_agreement"
+          "naturally_retrieved": true,
+          "force_added": false,
+          "retrieval_outcome": "retrieved_naturally",
+          "scoring_outcome": "close_agreement"
         },
         {
           "facet": "Unassertiveness",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 4,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "retrieval_miss"
+          "actual_status": "scored",
+          "actual_score": 1,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "disagreement"
         },
         {
           "facet": "Assertiveness and control in relationships",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 2,
           "actual_status": "scored",
           "actual_score": 3,
-          "outcome": "close_agreement"
+          "naturally_retrieved": true,
+          "force_added": false,
+          "retrieval_outcome": "retrieved_naturally",
+          "scoring_outcome": "close_agreement"
         }
       ],
-      "total_retrieved": 40
+      "total_naturally_retrieved": 40,
+      "force_added_facets": [
+        "Unassertiveness"
+      ],
+      "unresolvable_reference_facets": []
     },
     {
       "id": 7,
@@ -199,30 +321,44 @@
       "evaluations": [
         {
           "facet": "FSH level",
+          "metric": "safety",
           "expected_status": "not_observable",
           "expected_score": null,
           "actual_status": "not_retrieved",
           "actual_score": null,
+          "naturally_retrieved": false,
+          "force_added": false,
           "outcome": "correct_abstention"
         },
         {
           "facet": "Basophil count",
+          "metric": "safety",
           "expected_status": "not_observable",
           "expected_score": null,
           "actual_status": "not_retrieved",
           "actual_score": null,
+          "naturally_retrieved": false,
+          "force_added": false,
           "outcome": "correct_abstention"
         },
         {
           "facet": "Emotionalism",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 3,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "retrieval_miss"
+          "actual_status": "scored",
+          "actual_score": 3,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "exact_agreement"
         }
       ],
-      "total_retrieved": 40
+      "total_naturally_retrieved": 40,
+      "force_added_facets": [
+        "Emotionalism"
+      ],
+      "unresolvable_reference_facets": []
     },
     {
       "id": 8,
@@ -231,30 +367,46 @@
       "evaluations": [
         {
           "facet": "Types of Mindfulness Techniques Used",
+          "metric": "safety",
           "expected_status": "not_observable",
           "expected_score": null,
           "actual_status": "not_retrieved",
           "actual_score": null,
+          "naturally_retrieved": false,
+          "force_added": false,
           "outcome": "correct_abstention"
         },
         {
           "facet": "Self-improvement",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 3,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "retrieval_miss"
+          "actual_status": "scored",
+          "actual_score": 5,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "disagreement"
         },
         {
           "facet": "Peacefulness",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 3,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "retrieval_miss"
+          "actual_status": "scored",
+          "actual_score": 5,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "disagreement"
         }
       ],
-      "total_retrieved": 40
+      "total_naturally_retrieved": 40,
+      "force_added_facets": [
+        "Peacefulness",
+        "Self-improvement"
+      ],
+      "unresolvable_reference_facets": []
     },
     {
       "id": 9,
@@ -263,30 +415,47 @@
       "evaluations": [
         {
           "facet": "Emotionalism",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 5,
           "actual_status": "scored",
           "actual_score": 5,
-          "outcome": "exact_agreement"
+          "naturally_retrieved": true,
+          "force_added": false,
+          "retrieval_outcome": "retrieved_naturally",
+          "scoring_outcome": "exact_agreement"
         },
         {
           "facet": "Discontentment",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 4,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "retrieval_miss"
+          "actual_status": "scored",
+          "actual_score": 5,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "close_agreement"
         },
         {
           "facet": "Peacefulness",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 1,
-          "actual_status": "not_retrieved",
+          "actual_status": "insufficient_evidence",
           "actual_score": null,
-          "outcome": "retrieval_miss"
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "incorrect_abstention"
         }
       ],
-      "total_retrieved": 40
+      "total_naturally_retrieved": 40,
+      "force_added_facets": [
+        "Discontentment",
+        "Peacefulness"
+      ],
+      "unresolvable_reference_facets": []
     },
     {
       "id": 10,
@@ -295,37 +464,56 @@
       "evaluations": [
         {
           "facet": "Statistical Reasoning",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 4,
           "actual_status": "scored",
           "actual_score": 5,
-          "outcome": "close_agreement"
+          "naturally_retrieved": true,
+          "force_added": false,
+          "retrieval_outcome": "retrieved_naturally",
+          "scoring_outcome": "close_agreement"
         },
         {
           "facet": "Cordiality",
+          "metric": "retrieval+scoring",
           "expected_status": "scored",
           "expected_score": 3,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "retrieval_miss"
+          "actual_status": "scored",
+          "actual_score": 5,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "disagreement"
         },
         {
           "facet": "Common-sense",
+          "metric": "retrieval+scoring",
           "expected_status": "insufficient_evidence",
           "expected_score": null,
-          "actual_status": "not_retrieved",
-          "actual_score": null,
-          "outcome": "correct_abstention_not_retrieved"
+          "actual_status": "scored",
+          "actual_score": 5,
+          "naturally_retrieved": false,
+          "force_added": true,
+          "retrieval_outcome": "retrieval_miss",
+          "scoring_outcome": "incorrect_overconfident_score"
         }
       ],
-      "total_retrieved": 40
+      "total_naturally_retrieved": 40,
+      "force_added_facets": [
+        "Common-sense",
+        "Cordiality"
+      ],
+      "unresolvable_reference_facets": []
     }
   ],
   "outcome_counts": {
-    "exact_agreement": 4,
-    "retrieval_miss": 12,
-    "correct_abstention_not_retrieved": 8,
-    "close_agreement": 3,
-    "correct_abstention": 3
+    "scoring: exact_agreement": 5,
+    "scoring: close_agreement": 8,
+    "scoring: incorrect_overconfident_score": 5,
+    "scoring: incorrect_abstention": 2,
+    "scoring: correct_abstention": 3,
+    "scoring: disagreement": 4,
+    "safety: correct_abstention": 3
   }
 }

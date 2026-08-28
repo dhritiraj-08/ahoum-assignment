@@ -2,9 +2,16 @@
 
 ![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)
 ![Model: Llama 3.1 8B](https://img.shields.io/badge/model-Llama%203.1%208B-green.svg)
-![Tests: 37 passing](https://img.shields.io/badge/tests-37%20passing-brightgreen.svg)
+![Tests: 42 passing](https://img.shields.io/badge/tests-42%20passing-brightgreen.svg)
+![Scoring accuracy: 59%](https://img.shields.io/badge/scoring%20accuracy-59%25-yellow.svg)
+![Retrieval recall: 26%](https://img.shields.io/badge/retrieval%20recall-26%25-red.svg)
 ![Hallucinations: 0](https://img.shields.io/badge/hallucinations-0%2F3-brightgreen.svg)
 ![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
+
+**Scoring accuracy (59%) and retrieval recall (26%) are reported as two
+separate numbers, not blended into one pass rate** -- see "Benchmark
+methodology" below for why, and `outputs/benchmark_report.json` for the
+real run these numbers come from.
 
 Reads a short conversation and scores the personality/behavioural facets it
 actually gives evidence for -- out of a 399-facet taxonomy -- using a local
@@ -76,6 +83,60 @@ python main.py --benchmark   # run the 10-conversation benchmark -> outputs/benc
 
 `--audit` and `--embed` only need to be re-run when `data/Facets_Assignment.csv`
 changes. `--score` and `--benchmark` reuse the saved index.
+
+## Benchmark methodology: why two numbers, not one
+
+Earlier versions of this project reported a single blended pass rate
+("18/30 correct"). That number mixes two very different kinds of failure
+-- a facet FAISS never retrieved, and a facet that WAS retrieved but scored
+wrong -- into one figure, which makes it impossible to tell whether a low
+score means "the LLM is bad at judging facets" or "the retriever didn't
+even show the LLM the right facet to judge." Professional ML benchmarks
+(RAG evaluation, in particular) don't make this mistake -- they report
+retriever recall and generator/answer accuracy as separate numbers, and
+`src/benchmark.py` now does the same:
+
+1. **Retrieve normally** for each of the 10 benchmark conversations, same
+   as production (`retrieve_relevant_facets`, `top_k=40`).
+2. **Force-include** any reference facet that's genuinely supposed to be
+   observable (`expected_status` "scored" or "insufficient_evidence") but
+   wasn't naturally retrieved this time -- looked up directly from
+   `outputs/observable_facets.json`, so a force-added facet is always a
+   real, legitimately-observable facet, never something conjured up.
+   Whether each reference facet was naturally retrieved or force-added is
+   tracked per facet.
+3. **Score everything** (naturally retrieved + force-included) the normal
+   way, then compute two numbers from the same run:
+   - **Retrieval recall** -- % of observable reference facets FAISS found
+     on its own, *without* force-include. Purely "did the retriever do its job."
+   - **Scoring accuracy** -- % correct *given* the right facet was in
+     front of the LLM (force-included if the retriever missed it). Purely
+     "given the right input, did the model judge it correctly."
+
+Reference facets with `expected_status: "not_observable"` (the medical/
+spiritual trap facets) are **never force-included** -- doing so would
+defeat the two-layer safety architecture this project is built around (see
+`docs/DECISIONS.md` #3). Those are checked separately as a **safety**
+metric instead: did the system ever score something it categorically
+shouldn't have. `hallucination_demo/` is the place that deliberately does
+force a naive scorer to see those facets, on purpose, to show what
+skipping this exclusion would look like.
+
+**Latest real run** (`outputs/benchmark_report.json`):
+
+| Metric | Value | What it means |
+|---|---|---|
+| Retrieval recall | **26%** (7/27) | FAISS found the intended facet on its own about 1 time in 4. This is the known, diagnosed weak point -- see `docs/DECISIONS.md` #1 (embedding-text quality, not `top_k`, is the root cause). |
+| Scoring accuracy | **59%** (16/27) | When the LLM is actually handed the right facet, it judges it correctly a bit more than half the time -- meaningfully better than retrieval recall alone would suggest, but not high enough to call "solved." |
+| Safety | **0/3 violations** | No medical/spiritual/malformed facet was ever scored, across every run this project has done. |
+
+Read together: retrieval is the bigger current bottleneck (26% recall vs.
+59% scoring accuracy), which tells you where to spend the next round of
+engineering effort -- see "What I'd improve with another day" below. The
+old blended style would have reported this same run as "19/30 (63%)
+correct" -- a single number that looks fine on its own but tells you
+nothing about *which* of the two very different problems above is
+actually the one worth fixing.
 
 ## Run the Streamlit UI
 
@@ -177,9 +238,11 @@ output next to what this system actually does -- are in
 - **The benchmark's reference labels are my own hand-labels for 10
   conversations and 30 facet judgments** -- useful for catching systematic
   failure modes (which is exactly what it did with the retrieval-miss
-  finding), but it's not a large or independently-validated ground truth
-  set, so the 18/30 number should be read as "diagnostic signal," not as a
-  precise accuracy percentage.
+  finding, and later with separating retrieval recall from scoring
+  accuracy -- see "Benchmark methodology" above), but it's not a large or
+  independently-validated ground truth set, so the 26%/59% numbers should
+  be read as "diagnostic signal at n=27," not as precise population
+  accuracy figures.
 
 ## Scaling to 5,000 Facets
 
@@ -280,11 +343,14 @@ problem -- many conversations scored per minute rather than one at a time
    cutoff. The hypothesis worth testing: retrieve top-100 candidates cheaply
    via FAISS, then rerank those 100 with a cross-encoder that scores
    facet-conversation pairs jointly (rather than via two separately-embedded
-   vectors) before batching the top ones for the LLM. My rough target based
-   on this project's own retrieval-recall numbers (18/30 = 60% correctly
-   retrieved in the current benchmark) would be pushing recall from roughly
-   that 60% range up toward ~85-90% -- I haven't built or measured this yet,
-   so treat that as a hypothesis to validate, not a result.
+   vectors) before batching the top ones for the LLM. Now that retrieval
+   recall is measured on its own instead of blended with scoring accuracy
+   (see "Benchmark methodology" above), the real baseline to beat is
+   **26% (7/27)**, not the older, looser "18/30 = 60%" blended estimate --
+   the honest number is worse than I originally thought, which if anything
+   makes this a higher-priority fix, not a lower one. I haven't built or
+   measured a reranker yet, so treat any target number here as a hypothesis
+   to validate, not a result.
 5. **Add confidence calibration**: compare the LLM's stated `confidence`
    field ("high"/"medium"/"low") against actual agreement rate with my
    reference labels. If "high confidence" scores aren't meaningfully more
