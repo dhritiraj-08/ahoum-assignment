@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "i am feeling low",
+  "total_facets_retrieved": 40,
+  "scored": 7,
+  "abstained": 33,
+  "results": [
+    {
+      "facet": "Depression: Feelings of sadness and hopelessness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The statement 'i am feeling low' directly expresses feelings of sadness."
+    },
+    {
+      "facet": "Discontentment",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear expression of discontentment in the conversation."
+    },
+    {
+      "facet": "Enthusiasm",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear expression of enthusiasm in the conversation."
+    },
+    {
+      "facet": "Depression Symptoms",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The statement 'i am feeling low' suggests the presence of depression symptoms."
+    },
+    {
+      "facet": "Desperation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear expression of desperation in the conversation."
+    },
+    {
+      "facet": "Depression (DEP)",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The statement 'i am feeling low' directly expresses feelings of sadness, which is a symptom of depression."
+    },
+    {
+      "facet": "Desire for excellence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear expression of a desire for excellence in the conversation."
+    },
+    {
+      "facet": "Dauntlessness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear expression of dauntlessness in the conversation."
+    },
+    {
+      "facet": "Inversion comfort level",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear expression related to inversion comfort level in the conversation."
+    },
+    {
+      "facet": "Esteem Needs",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear expression of esteem needs in the conversation."
+    },
+    {
+      "facet": "Seeking approval",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any clear desire for approval or attention."
+    },
+    {
+      "facet": "Sensationalism",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not contain any sensational or attention-grabbing language."
+    },
+    {
+      "facet": "Happiness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any clear emotions or feelings related to happiness."
+    },
+    {
+      "facet": "Volunteer Work",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any volunteer work or related activities."
+    },
+    {
+      "facet": "Blissfulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any clear emotions or feelings related to blissfulness."
+    },
+    {
+      "facet": "Drug-use history",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any drug use or related topics."
+    },
+    {
+      "facet": "Warmheartedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any clear emotions or feelings related to warmheartedness."
+    },
+    {
+      "facet": "Self-effacement",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any clear self-effacing or modest language."
+    },
+    {
+      "facet": "Aesthetic Appreciation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any aesthetic or artistic topics."
+    },
+    {
+      "facet": "Effeteness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any clear language related to effeteness or affectation."
+    },
+    {
+      "facet": "Clumsiness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any physical actions or accidents."
+    },
+    {
+      "facet": "Contentment Levels",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker states they are 'feeling low', indicating low contentment levels."
+    },
+    {
+      "facet": "Perceiving",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any sensory experiences or observations."
+    },
+    {
+      "facet": "Chronic pain presence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any chronic pain or ongoing health issues."
+    },
+    {
+      "facet": "Encouraging participation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not contain any invitations or prompts for further discussion."
+    },
+    {
+      "facet": "Affection",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any emotional expressions of affection."
+    },
+    {
+      "facet": "Intrinsic Motivation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any internal drives or interests."
+    },
+    {
+      "facet": "Neuroticism",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker states they are 'feeling low', which could indicate some level of neuroticism, but it's not a clear expression of the trait."
+    },
+    {
+      "facet": "Withdrawnness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker's statement could be seen as a withdrawal from social interaction or emotional expression, but it's not a clear expression of the trait."
+    },
+    {
+      "facet": "Abasement",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker states they are 'feeling low', which is a clear expression of self-deprecation and abasement."
+    },
+    {
+      "facet": "Fearfulness: Fear of physical dangers",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any physical dangers or threats."
+    },
+    {
+      "facet": "Self-improvement",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any goals, plans, or efforts to improve."
+    },
+    {
+      "facet": "Significance: Desire to make an impact",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any desire to make an impact or change."
+    },
+    {
+      "facet": "Anticipativeness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any future plans, expectations, or concerns."
+    },
+    {
+      "facet": "Religious coping – Negative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any negative religious coping mechanisms."
+    },
+    {
+      "facet": "Well-being component: Engagement",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any engagement in activities or interests."
+    },
+    {
+      "facet": "Understanding Mathematical Concepts",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any mathematical concepts or problems."
+    },
+    {
+      "facet": "Participation in Community Activities",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any community activities or involvement."
+    },
+    {
+      "facet": "Compassion Fatigue",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any emotional exhaustion or burnout."
+    },
+    {
+      "facet": "Merriness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention any positive emotions or happiness."
+    }
+  ],
+  "parse_errors": 0
+}

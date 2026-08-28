@@ -67,6 +67,67 @@ def check_index_status() -> tuple[bool, str]:
     )
 
 
+def check_gpu_vram_status() -> tuple[str, str]:
+    """
+    Checks free GPU VRAM via torch. This exists because of a real crash
+    found during testing (docs/DEBUGGING.md #3): Ollama's llama-server
+    inference worker crashed mid-batch when the Jupyter kernel, browser,
+    and Streamlit were all competing for the RTX 4050's 6GB of VRAM at
+    once. Surfacing this *before* a run starts is a lot more useful than a
+    wall of parse_error rows after the fact.
+
+    Returns (level, message) where level is one of
+    "green" / "yellow" / "red" / "unknown".
+
+    Note: this uses torch.cuda.mem_get_info(), not
+    torch.cuda.get_device_properties(0).total_memory. total_memory is the
+    card's fixed capacity (always ~6GB on this laptop, for example) and
+    doesn't change no matter what else is using the GPU -- it would never
+    actually detect the contention this badge is meant to warn about.
+    mem_get_info() returns the CURRENTLY FREE bytes on the device, which is
+    what the green/yellow/red thresholds below are actually about.
+    """
+    try:
+        import torch
+    except ImportError:
+        return "unknown", "GPU status unknown -- torch isn't installed."
+
+    try:
+        # A CPU-only torch build (pip installs this by default on Windows
+        # unless you point at the CUDA wheel index) always reports
+        # is_available()=False -- even when a real NVIDIA GPU is present
+        # and Ollama itself is actively using it via its own CUDA runtime.
+        # Reporting "red / no GPU" in that case would be a false alarm, so
+        # this is treated as "can't check" rather than "no GPU" -- run
+        # `nvidia-smi` yourself to check VRAM directly if you see this.
+        if getattr(torch.version, "cuda", None) is None:
+            return "unknown", (
+                "GPU status unknown -- this torch install has no CUDA support "
+                "(pip installed the CPU-only build), so it can't see the GPU "
+                "even if one is present and in use by Ollama. Run `nvidia-smi` "
+                "to check VRAM directly."
+            )
+        if not torch.cuda.is_available():
+            return "red", "No CUDA GPU detected."
+        free_bytes, total_bytes = torch.cuda.mem_get_info(0)
+        free_gb = free_bytes / (1024 ** 3)
+        total_gb = total_bytes / (1024 ** 3)
+        if free_gb > 3:
+            return "green", f"{free_gb:.1f} GB free / {total_gb:.1f} GB total."
+        if free_gb >= 1:
+            return "yellow", (
+                f"Only {free_gb:.1f} GB free / {total_gb:.1f} GB total -- close other "
+                "GPU workloads (Jupyter kernels, extra browser tabs) for the most "
+                "reliable results."
+            )
+        return "red", (
+            f"Only {free_gb:.1f} GB free / {total_gb:.1f} GB total -- Ollama may crash "
+            "mid-batch under this little headroom (see docs/DEBUGGING.md #3)."
+        )
+    except Exception as e:
+        return "unknown", f"GPU status unknown ({e})."
+
+
 # ---------------------------------------------------------------------------
 # Header + status badges
 # ---------------------------------------------------------------------------
@@ -80,8 +141,9 @@ st.caption(
 
 index_ok, index_msg = check_index_status()
 ollama_ok, ollama_msg = check_ollama_status()
+gpu_level, gpu_msg = check_gpu_vram_status()
 
-status_col1, status_col2 = st.columns(2)
+status_col1, status_col2, status_col3 = st.columns(3)
 with status_col1:
     if index_ok:
         st.success(f"✅ Facet index: {index_msg}")
@@ -92,6 +154,15 @@ with status_col2:
         st.success(f"✅ Ollama: {ollama_msg}")
     else:
         st.warning(f"⚠️ Ollama: {ollama_msg}")
+with status_col3:
+    if gpu_level == "green":
+        st.success(f"✅ GPU VRAM: {gpu_msg}")
+    elif gpu_level == "yellow":
+        st.warning(f"⚠️ GPU VRAM: {gpu_msg}")
+    elif gpu_level == "red":
+        st.error(f"❌ GPU VRAM: {gpu_msg}")
+    else:
+        st.info(f"❔ GPU VRAM: {gpu_msg}")
 
 st.divider()
 
