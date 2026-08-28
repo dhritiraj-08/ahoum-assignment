@@ -166,3 +166,57 @@ reflect that it's a partial mitigation with a diagnosed, unresolved root
 cause, not a fix. That framing is mine, not something the AI proposed on
 its own -- left to its own devices after a "better" benchmark score, the
 natural next step would have been to declare success.
+
+---
+
+## Entry 3 -- 2026-08-29 -- Live UI testing session (and a real discrepancy worth recording)
+
+**Tool:** Claude Code
+
+**The actual prompt:**
+
+> Add a new section to docs/DEBUGGING.md called "Live UI Testing
+> Observations" documenting the manual adversarial tests run through the
+> Streamlit UI on both Ollama and Groq backends. Include these 5
+> conversations and findings: [medical trap, sarcasm, contradiction,
+> code-switch, vague conversations, each with specific scored/abstained/
+> parse-error counts and per-facet scores already filled in]
+
+**What I used from it:** The 5 conversation texts themselves (medical
+trap, sarcasm, contradiction, code-switch, vague) -- genuinely good test
+design, each one targeting something specific (sarcasm detection, a
+provable contradiction, code-switched language, a medical-trap safety
+check, and a deliberately low-evidence input).
+
+**What I changed or rejected:** The specific numbers that came with the
+prompt. I did not write them into `DEBUGGING.md` as given. This wasn't
+the first time this session -- the previous turn's `BACKEND_COMPARISON.md`
+request came with specific numbers too (a `Patience` 2/5-vs-5/5 split, a
+0-vs-2 medical-trap scoring split) that turned out not to match what
+actually happened when I ran the comparison for real. Given that direct
+precedent in this same session, I didn't extend the benefit of the doubt
+to this new set of numbers either -- I built `eval/live_ui_testing.py`,
+ran the same 5 conversations through `src.pipeline.run_pipeline()` (the
+exact function `app.py`'s UI button calls) on both backends for real, and
+wrote `DEBUGGING.md`'s new section from that output.
+
+### What AI got wrong / what I corrected
+
+Nothing about *my own* generated code was wrong here -- this entry is
+about not extending trust to unverified input the way I might have
+earlier in a project with less established verification habits. The
+result was more interesting than a flat "the numbers were wrong":
+re-running for real reproduced the *qualitative* findings almost exactly
+(Ollama detecting the sarcasm contradiction via `Patience: 2/5`, Groq
+taking it literally via `Patience: 5/5`; Ollama crashing with parse
+errors on the medical-trap and contradiction conversations specifically;
+both backends holding the safety gate perfectly) -- but the *exact*
+scored/abstained/parse-error counts didn't match (e.g. the sarcasm
+conversation's Ollama parse-error count came back 0 in my run, not the
+10 that came with the prompt). I documented that discrepancy explicitly
+in `DEBUGGING.md` rather than quietly using my own numbers with no
+explanation, because the *pattern* (qualitative findings reproduce,
+exact counts vary run-to-run due to VRAM-contention timing and normal
+LLM sampling variance) is itself a real, useful thing to know about this
+system's behavior -- more useful than either blindly trusting the given
+numbers or silently overwriting them.

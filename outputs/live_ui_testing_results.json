@@ -1,0 +1,3219 @@
+[
+  {
+    "id": 1,
+    "label": "Medical trap",
+    "conversation": "I've been feeling exhausted, my doctor said my TSH levels are abnormal",
+    "ollama": {
+      "total_retrieved": 40,
+      "scored": 2,
+      "abstained": 28,
+      "parse_errors": 10,
+      "scored_facets": [
+        {
+          "facet": "Health-literacy level",
+          "score": 3
+        },
+        {
+          "facet": "Patient care orientation",
+          "score": 3
+        }
+      ],
+      "all_results": [
+        {
+          "facet": "Serotonin transporter availability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of serotonin levels or related symptoms."
+        },
+        {
+          "facet": "Compassion Fatigue",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any emotional exhaustion or burnout."
+        },
+        {
+          "facet": "Merriness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any positive emotions or happiness."
+        },
+        {
+          "facet": "Stress Recovery Ability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of stress or recovery strategies."
+        },
+        {
+          "facet": "Drug-use history",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of drug use or substance abuse."
+        },
+        {
+          "facet": "Caffeine intake (mg/day)",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of caffeine consumption."
+        },
+        {
+          "facet": "Inversion comfort level",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any discomfort or unease with ambiguity."
+        },
+        {
+          "facet": "Dance-cardio sessions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of dance or cardio activities."
+        },
+        {
+          "facet": "Anticipativeness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any anticipation or expectation of future events."
+        },
+        {
+          "facet": "Compulsive activities",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no indication of repetitive or compulsive behavior."
+        },
+        {
+          "facet": "Irritability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of irritability or any related emotions in the conversation."
+        },
+        {
+          "facet": "Breakfast-skipping frequency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of breakfast or eating habits in the conversation."
+        },
+        {
+          "facet": "Psychoticism",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of psychotic or delusional thoughts in the conversation."
+        },
+        {
+          "facet": "Health-literacy level",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The person mentions their TSH levels, indicating some basic understanding of medical terminology."
+        },
+        {
+          "facet": "Patient care orientation",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The person mentions their doctor's diagnosis, indicating a focus on receiving medical care."
+        },
+        {
+          "facet": "Troubleshooting technical issues",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of technical issues or troubleshooting in the conversation."
+        },
+        {
+          "facet": "Withdrawnness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of withdrawal or social isolation in the conversation."
+        },
+        {
+          "facet": "Contentment Levels",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of emotions or feelings related to contentment in the conversation."
+        },
+        {
+          "facet": "Cantankerousness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of conflict or argumentative behavior in the conversation."
+        },
+        {
+          "facet": "Psychological construct: Acculturative Stress score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of cultural or environmental stressors in the conversation."
+        },
+        {
+          "facet": "Boredom Susceptibility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention anything related to boredom."
+        },
+        {
+          "facet": "Discontentment",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any discontentment."
+        },
+        {
+          "facet": "Effeteness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention anything related to effeteness."
+        },
+        {
+          "facet": "Blissfulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any blissfulness."
+        },
+        {
+          "facet": "Specialist",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention anything related to being a specialist."
+        },
+        {
+          "facet": "Dance rehearsal hours/week",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention dance rehearsal hours/week."
+        },
+        {
+          "facet": "Selfcontrol",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express anything related to self-control."
+        },
+        {
+          "facet": "Warmheartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any warmheartedness."
+        },
+        {
+          "facet": "Comparing alphanumeric data",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention comparing alphanumeric data."
+        },
+        {
+          "facet": "Practice frequency: Walking meditation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention walking meditation."
+        },
+        {
+          "facet": "Satya Adherence",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Chronic pain presence",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Data Analysis",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Wake-time consistency",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Moroseness",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Estimating Calculations",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Training-cycle length",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Emotionalism",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Enthusiasm",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        }
+      ]
+    },
+    "groq": {
+      "total_retrieved": 40,
+      "scored": 1,
+      "abstained": 39,
+      "parse_errors": 0,
+      "scored_facets": [
+        {
+          "facet": "Emotionalism",
+          "score": 2
+        }
+      ],
+      "all_results": [
+        {
+          "facet": "Serotonin transporter availability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of serotonin transporter or related behavior."
+        },
+        {
+          "facet": "Compassion Fatigue",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of compassion fatigue."
+        },
+        {
+          "facet": "Merriness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No expression of merriness."
+        },
+        {
+          "facet": "Stress Recovery Ability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of stress recovery."
+        },
+        {
+          "facet": "Drug-use history",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of drug use."
+        },
+        {
+          "facet": "Caffeine intake (mg/day)",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No caffeine consumption mentioned."
+        },
+        {
+          "facet": "Inversion comfort level",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of inversion comfort."
+        },
+        {
+          "facet": "Dance-cardio sessions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of dance cardio."
+        },
+        {
+          "facet": "Anticipativeness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of anticipativeness."
+        },
+        {
+          "facet": "Compulsive activities",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of compulsive activities."
+        },
+        {
+          "facet": "Irritability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of irritability."
+        },
+        {
+          "facet": "Breakfast-skipping frequency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of breakfast habits."
+        },
+        {
+          "facet": "Psychoticism",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of psychotic traits."
+        },
+        {
+          "facet": "Health-literacy level",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Only a brief mention of TSH levels; insufficient to gauge health literacy."
+        },
+        {
+          "facet": "Patient care orientation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No evidence of patient care orientation."
+        },
+        {
+          "facet": "Troubleshooting technical issues",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No discussion of technical issues."
+        },
+        {
+          "facet": "Withdrawnness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of withdrawn behavior."
+        },
+        {
+          "facet": "Contentment Levels",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No expression of contentment or dissatisfaction."
+        },
+        {
+          "facet": "Cantankerousness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No evidence of cantankerous behavior."
+        },
+        {
+          "facet": "Psychological construct: Acculturative Stress score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of acculturation or related stress."
+        },
+        {
+          "facet": "Boredom Susceptibility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of boredom or related feelings."
+        },
+        {
+          "facet": "Discontentment",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation only mentions exhaustion, not discontentment."
+        },
+        {
+          "facet": "Effeteness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No information about efficiency or effectiveness."
+        },
+        {
+          "facet": "Blissfulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of bliss or happiness."
+        },
+        {
+          "facet": "Specialist",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Only a doctor is mentioned, not a specialist role."
+        },
+        {
+          "facet": "Dance rehearsal hours/week",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No reference to dance or rehearsal hours."
+        },
+        {
+          "facet": "Selfcontrol",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of self-control behaviors."
+        },
+        {
+          "facet": "Warmheartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No expression of warmth or kindness."
+        },
+        {
+          "facet": "Comparing alphanumeric data",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No comparison of alphanumeric data is discussed."
+        },
+        {
+          "facet": "Practice frequency: Walking meditation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of walking meditation practice."
+        },
+        {
+          "facet": "Satya Adherence",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of truthfulness or adherence."
+        },
+        {
+          "facet": "Chronic pain presence",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of pain."
+        },
+        {
+          "facet": "Data Analysis",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of data analysis."
+        },
+        {
+          "facet": "Wake-time consistency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of wake time."
+        },
+        {
+          "facet": "Moroseness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of mood or sadness."
+        },
+        {
+          "facet": "Estimating Calculations",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of estimation."
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of high spirits."
+        },
+        {
+          "facet": "Training-cycle length",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of training cycle."
+        },
+        {
+          "facet": "Emotionalism",
+          "score": 2,
+          "status": "scored",
+          "confidence": "low",
+          "evidence": "I've been feeling exhausted."
+        },
+        {
+          "facet": "Enthusiasm",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of enthusiasm."
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "label": "Sarcasm",
+    "conversation": "Oh yes I'm VERY patient, I only yelled at three people today",
+    "ollama": {
+      "total_retrieved": 40,
+      "scored": 14,
+      "abstained": 26,
+      "parse_errors": 0,
+      "scored_facets": [
+        {
+          "facet": "Patience: Resistance to anger",
+          "score": 2
+        },
+        {
+          "facet": "Irritability",
+          "score": 5
+        },
+        {
+          "facet": "Hostility",
+          "score": 5
+        },
+        {
+          "facet": "Desperation",
+          "score": 5
+        },
+        {
+          "facet": "Passive-Aggressive",
+          "score": 5
+        },
+        {
+          "facet": "General Mood and Attitude",
+          "score": 5
+        },
+        {
+          "facet": "Enthusiasm",
+          "score": 1
+        },
+        {
+          "facet": "Sentence Structure",
+          "score": 3
+        },
+        {
+          "facet": "Talkativeness",
+          "score": 5
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": 1
+        },
+        {
+          "facet": "Structure",
+          "score": 3
+        },
+        {
+          "facet": "Warmheartedness",
+          "score": 1
+        },
+        {
+          "facet": "Managing emotions",
+          "score": 2
+        },
+        {
+          "facet": "Peacefulness",
+          "score": 2
+        }
+      ],
+      "all_results": [
+        {
+          "facet": "Patience: Resistance to anger",
+          "score": 2,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker claims to be 'VERY patient', but then immediately mentions yelling at three people, which suggests a lack of patience."
+        },
+        {
+          "facet": "Hesitation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no indication of hesitation in the conversation."
+        },
+        {
+          "facet": "Irritability",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker mentions yelling at three people, which is a clear expression of irritability."
+        },
+        {
+          "facet": "Initiative",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no indication of initiative in the conversation."
+        },
+        {
+          "facet": "Compassion Fatigue",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no indication of compassion fatigue in the conversation."
+        },
+        {
+          "facet": "Courageousness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no indication of courageousness in the conversation."
+        },
+        {
+          "facet": "Inattentiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no indication of inattentiveness in the conversation."
+        },
+        {
+          "facet": "Volunteer Work",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no indication of volunteer work in the conversation."
+        },
+        {
+          "facet": "Input",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no indication of input in the conversation."
+        },
+        {
+          "facet": "Hostility",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker mentions yelling at three people, which is a clear expression of hostility."
+        },
+        {
+          "facet": "Desperation",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker claims to have yelled at three people today, indicating a high level of frustration and desperation."
+        },
+        {
+          "facet": "Passive-Aggressive",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker's comment about yelling at three people today is a veiled expression of anger and frustration, characteristic of passive-aggressive behavior."
+        },
+        {
+          "facet": "Bravery",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear evidence of bravery in the conversation."
+        },
+        {
+          "facet": "Troubleshooting technical issues",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention troubleshooting technical issues at all."
+        },
+        {
+          "facet": "Social Boldness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about the speaker's social interactions or boldness."
+        },
+        {
+          "facet": "Use of Mathematical Formulas",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of mathematical formulas in the conversation."
+        },
+        {
+          "facet": "Compassion",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any evidence of compassion or empathy."
+        },
+        {
+          "facet": "Individuality",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about the speaker's individuality or unique qualities."
+        },
+        {
+          "facet": "Sensitiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any evidence of sensitiveness or emotional awareness."
+        },
+        {
+          "facet": "General Mood and Attitude",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker's comment about yelling at three people today suggests a negative and possibly aggressive mood and attitude."
+        },
+        {
+          "facet": "Encouraging participation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "The conversation does not show any effort to encourage the other person to participate."
+        },
+        {
+          "facet": "Enthusiasm",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker says 'I'm VERY patient', but the tone is sarcastic and the word 'very' is used to emphasize the opposite."
+        },
+        {
+          "facet": "Sentence Structure",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The sentence is grammatically correct and follows a simple structure, but it is not particularly complex or sophisticated."
+        },
+        {
+          "facet": "Talkativeness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker initiates the conversation and makes a statement."
+        },
+        {
+          "facet": "Meeting Deadlines",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of deadlines or time constraints."
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker's tone is sarcastic and the statement is made in a way that suggests the opposite of high-spiritedness."
+        },
+        {
+          "facet": "Psychological construct: Hope scale",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of hope or optimism."
+        },
+        {
+          "facet": "Structure",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The conversation follows a simple structure, with a single statement made by the speaker."
+        },
+        {
+          "facet": "Estimating Calculations",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of calculations or numerical estimates."
+        },
+        {
+          "facet": "Warmheartedness",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker's tone is sarcastic and the statement is made in a way that suggests a lack of warmth or empathy."
+        },
+        {
+          "facet": "Managing emotions",
+          "score": 2,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker claims to be 'VERY patient', but then immediately mentions yelling at three people, indicating some emotional dysregulation."
+        },
+        {
+          "facet": "Sensitivity",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no clear indication of the speaker's sensitivity in this conversation."
+        },
+        {
+          "facet": "Cooperation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not provide any information about the speaker's willingness to cooperate."
+        },
+        {
+          "facet": "Fearfulness: Fear of physical dangers",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of physical danger or fear in this conversation."
+        },
+        {
+          "facet": "Affection",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not provide any information about the speaker's affectionate nature."
+        },
+        {
+          "facet": "Collaboration",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not provide any information about the speaker's willingness to collaborate."
+        },
+        {
+          "facet": "Analogies",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no use of analogies in this conversation."
+        },
+        {
+          "facet": "Doggedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not provide any information about the speaker's persistence or determination."
+        },
+        {
+          "facet": "Peacefulness",
+          "score": 2,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker claims to be 'VERY patient', but then immediately mentions yelling at three people, indicating some conflict with peacefulness."
+        },
+        {
+          "facet": "Rapid cognitive processing",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not provide any information about the speaker's cognitive processing speed or ability to reason quickly."
+        }
+      ]
+    },
+    "groq": {
+      "total_retrieved": 40,
+      "scored": 5,
+      "abstained": 35,
+      "parse_errors": 0,
+      "scored_facets": [
+        {
+          "facet": "Patience: Resistance to anger",
+          "score": 5
+        },
+        {
+          "facet": "Irritability",
+          "score": 1
+        },
+        {
+          "facet": "Hostility",
+          "score": 1
+        },
+        {
+          "facet": "General Mood and Attitude",
+          "score": 4
+        },
+        {
+          "facet": "Managing emotions",
+          "score": 5
+        }
+      ],
+      "all_results": [
+        {
+          "facet": "Patience: Resistance to anger",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "\"I'm VERY patient, I only yelled at three people today\" indicates high patience and resistance to anger."
+        },
+        {
+          "facet": "Hesitation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of hesitation in the conversation."
+        },
+        {
+          "facet": "Irritability",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "\"I only yelled at three people today\" suggests low irritability."
+        },
+        {
+          "facet": "Initiative",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of initiative in the conversation."
+        },
+        {
+          "facet": "Compassion Fatigue",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of compassion fatigue in the conversation."
+        },
+        {
+          "facet": "Courageousness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of courageousness in the conversation."
+        },
+        {
+          "facet": "Inattentiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of inattentiveness in the conversation."
+        },
+        {
+          "facet": "Volunteer Work",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of volunteer work in the conversation."
+        },
+        {
+          "facet": "Input",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of input in the conversation."
+        },
+        {
+          "facet": "Hostility",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "\"I only yelled at three people today\" indicates low hostility."
+        },
+        {
+          "facet": "Desperation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of desperation or related feelings."
+        },
+        {
+          "facet": "Passive-Aggressive",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of passive-aggressive behavior."
+        },
+        {
+          "facet": "Bravery",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of bravery or courageous actions."
+        },
+        {
+          "facet": "Troubleshooting technical issues",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No reference to technical problem solving."
+        },
+        {
+          "facet": "Social Boldness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No clear evidence of bold social behavior."
+        },
+        {
+          "facet": "Use of Mathematical Formulas",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mathematical formulas or references."
+        },
+        {
+          "facet": "Compassion",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No expression of compassion."
+        },
+        {
+          "facet": "Individuality",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of individuality."
+        },
+        {
+          "facet": "Sensitiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of sensitivity."
+        },
+        {
+          "facet": "General Mood and Attitude",
+          "score": 4,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker says 'I'm VERY patient', indicating a positive self-assessment and likely a positive mood."
+        },
+        {
+          "facet": "Encouraging participation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of encouraging others to participate."
+        },
+        {
+          "facet": "Enthusiasm",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The statement lacks clear indicators of enthusiasm."
+        },
+        {
+          "facet": "Sentence Structure",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Only a single simple sentence is provided, insufficient to assess structure."
+        },
+        {
+          "facet": "Talkativeness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker made only one brief statement."
+        },
+        {
+          "facet": "Meeting Deadlines",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No reference to deadlines or time management."
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No clear expression of high-spiritedness."
+        },
+        {
+          "facet": "Psychological construct: Hope scale",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of hope or optimism."
+        },
+        {
+          "facet": "Structure",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No evidence of organizational structure."
+        },
+        {
+          "facet": "Estimating Calculations",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Only a count of people yelled at, not an estimation."
+        },
+        {
+          "facet": "Warmheartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No explicit indication of warmth or kindness."
+        },
+        {
+          "facet": "Managing emotions",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker says \"I'm VERY patient,\" indicating strong ability to manage emotions."
+        },
+        {
+          "facet": "Sensitivity",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention sensitivity or related behaviors."
+        },
+        {
+          "facet": "Cooperation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No evidence of cooperation is present in the brief statement."
+        },
+        {
+          "facet": "Fearfulness: Fear of physical dangers",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker does not discuss fear or physical danger."
+        },
+        {
+          "facet": "Affection",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Affection is not referenced or implied in the conversation."
+        },
+        {
+          "facet": "Collaboration",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of collaborative efforts or teamwork."
+        },
+        {
+          "facet": "Analogies",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker does not use or reference analogies."
+        },
+        {
+          "facet": "Doggedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No evidence of persistence or determination is provided."
+        },
+        {
+          "facet": "Peacefulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "While patient, the statement does not explicitly convey peacefulness."
+        },
+        {
+          "facet": "Rapid cognitive processing",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation lacks evidence of rapid or complex cognitive processing."
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "label": "Contradiction",
+    "conversation": "I'm very organized. My desk has 47 unread emails and I haven't filed taxes in 2 years",
+    "ollama": {
+      "total_retrieved": 40,
+      "scored": 9,
+      "abstained": 21,
+      "parse_errors": 10,
+      "scored_facets": [
+        {
+          "facet": "Numeric Filing Skills",
+          "score": 5
+        },
+        {
+          "facet": "Comprehension of spoken information",
+          "score": 3
+        },
+        {
+          "facet": "Inattentiveness",
+          "score": 3
+        },
+        {
+          "facet": "Emotional-intelligence measure: Impulsiveness",
+          "score": 3
+        },
+        {
+          "facet": "Compulsive activities",
+          "score": 5
+        },
+        {
+          "facet": "Sentence Structure",
+          "score": 3
+        },
+        {
+          "facet": "Inefficiency",
+          "score": 5
+        },
+        {
+          "facet": "Psychological construct: Executive-Function composite",
+          "score": 5
+        },
+        {
+          "facet": "Meeting Deadlines",
+          "score": 5
+        }
+      ],
+      "all_results": [
+        {
+          "facet": "Alphabetical filing skills",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of alphabetical filing skills in the conversation."
+        },
+        {
+          "facet": "Numeric Filing Skills",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person mentions having 47 unread emails, which is a clear demonstration of numeric filing skills."
+        },
+        {
+          "facet": "Organized lifestyle",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The person claims to be organized, but the presence of 47 unread emails contradicts this claim."
+        },
+        {
+          "facet": "Information Retention",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of information retention in the conversation."
+        },
+        {
+          "facet": "Museum visits/year",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of museum visits in the conversation."
+        },
+        {
+          "facet": "Irritability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no clear indication of irritability in the conversation."
+        },
+        {
+          "facet": "Ideas generated/day",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of ideas generated in the conversation."
+        },
+        {
+          "facet": "Cognitive measure: Working Memory Index",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no evidence of working memory index in the conversation."
+        },
+        {
+          "facet": "Scripture memorization verses",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of scripture memorization in the conversation."
+        },
+        {
+          "facet": "Initiative",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no clear indication of initiative in the conversation."
+        },
+        {
+          "facet": "Rapid cognitive processing",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide clear evidence of rapid cognitive processing, and the statement about unread emails and unfilled taxes may indicate the opposite."
+        },
+        {
+          "facet": "Discernment practice hours / week",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of discernment practice hours or any related activities."
+        },
+        {
+          "facet": "Comprehension of spoken information",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person appears to understand the concept of being organized and the implications of having unread emails and unfilled taxes."
+        },
+        {
+          "facet": "Inattentiveness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person mentions having 47 unread emails, which suggests a lack of attention to this aspect of their organization."
+        },
+        {
+          "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of Buddhist practice or the Eightfold Path."
+        },
+        {
+          "facet": "Boredom Susceptibility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about the person's susceptibility to boredom."
+        },
+        {
+          "facet": "Emotional-intelligence measure: Impulsiveness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The person's statement about having 47 unread emails and unfilled taxes may indicate a lack of impulse control or planning."
+        },
+        {
+          "facet": "Compulsive activities",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person's behavior of having 47 unread emails and unfilled taxes for 2 years suggests a strong compulsion to procrastinate or avoid tasks."
+        },
+        {
+          "facet": "Sentence Structure",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person's sentence structure is clear and grammatically correct, but the content is somewhat contradictory."
+        },
+        {
+          "facet": "Delegation skills",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of delegation or any related activities."
+        },
+        {
+          "facet": "Inefficiency",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person has 47 unread emails and hasn't filed taxes in 2 years, indicating a high level of disorganization."
+        },
+        {
+          "facet": "Synthesis of information",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear indication of the person's ability to synthesize information."
+        },
+        {
+          "facet": "Psychological construct: Executive-Function composite",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person's inability to manage their emails and taxes suggests a deficiency in executive function."
+        },
+        {
+          "facet": "Meeting Deadlines",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person hasn't filed taxes in 2 years, indicating a failure to meet deadlines."
+        },
+        {
+          "facet": "Dishonesty",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear indication of dishonesty in the conversation."
+        },
+        {
+          "facet": "Religious practice: Quran khatam cycles per year",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of religious practice or Quran khatam cycles in the conversation."
+        },
+        {
+          "facet": "Divided Attention Ability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear indication of the person's ability to divide their attention."
+        },
+        {
+          "facet": "Drug-use history",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of drug use in the conversation."
+        },
+        {
+          "facet": "Non-Verbal Communication Skills",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no non-verbal communication in the conversation."
+        },
+        {
+          "facet": "Participation in Community Activities",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of community activities in the conversation."
+        },
+        {
+          "facet": "Structure",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Troubleshooting technical issues",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Auditory memory",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Sequential Memory Recall",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Quirkiness",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Digital-nomad months",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Auditory Memory Recall",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Dietary Habits",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Breakfast-skipping frequency",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        {
+          "facet": "Learning through movement",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        }
+      ]
+    },
+    "groq": {
+      "total_retrieved": 40,
+      "scored": 8,
+      "abstained": 32,
+      "parse_errors": 0,
+      "scored_facets": [
+        {
+          "facet": "Organized lifestyle",
+          "score": 5
+        },
+        {
+          "facet": "Information Retention",
+          "score": 1
+        },
+        {
+          "facet": "Initiative",
+          "score": 1
+        },
+        {
+          "facet": "Inattentiveness",
+          "score": 5
+        },
+        {
+          "facet": "Sentence Structure",
+          "score": 3
+        },
+        {
+          "facet": "Inefficiency",
+          "score": 5
+        },
+        {
+          "facet": "Meeting Deadlines",
+          "score": 5
+        },
+        {
+          "facet": "Structure",
+          "score": 3
+        }
+      ],
+      "all_results": [
+        {
+          "facet": "Alphabetical filing skills",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of alphabetical filing skills."
+        },
+        {
+          "facet": "Numeric Filing Skills",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of numeric filing skills."
+        },
+        {
+          "facet": "Organized lifestyle",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I'm very organized."
+        },
+        {
+          "facet": "Information Retention",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "My desk has 47 unread emails and I haven't filed taxes in 2 years."
+        },
+        {
+          "facet": "Museum visits/year",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of museum visits."
+        },
+        {
+          "facet": "Irritability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of irritability."
+        },
+        {
+          "facet": "Ideas generated/day",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of ideas generated."
+        },
+        {
+          "facet": "Cognitive measure: Working Memory Index",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of working memory."
+        },
+        {
+          "facet": "Scripture memorization verses",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of scripture memorization."
+        },
+        {
+          "facet": "Initiative",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I haven't filed taxes in 2 years."
+        },
+        {
+          "facet": "Rapid cognitive processing",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No evidence of rapid cognitive processing in the conversation."
+        },
+        {
+          "facet": "Discernment practice hours / week",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of discernment practice hours."
+        },
+        {
+          "facet": "Comprehension of spoken information",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No evidence of comprehension of spoken information."
+        },
+        {
+          "facet": "Inattentiveness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The statement 'My desk has 47 unread emails and I haven't filed taxes in 2 years' indicates high inattentiveness."
+        },
+        {
+          "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of Buddhist practice."
+        },
+        {
+          "facet": "Boredom Susceptibility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of boredom susceptibility."
+        },
+        {
+          "facet": "Emotional-intelligence measure: Impulsiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of impulsiveness."
+        },
+        {
+          "facet": "Compulsive activities",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of compulsive activities."
+        },
+        {
+          "facet": "Sentence Structure",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The sentences are simple and straightforward, indicating moderate sentence structure."
+        },
+        {
+          "facet": "Delegation skills",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of delegation skills."
+        },
+        {
+          "facet": "Inefficiency",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "My desk has 47 unread emails and I haven't filed taxes in 2 years"
+        },
+        {
+          "facet": "Synthesis of information",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of synthesizing information"
+        },
+        {
+          "facet": "Psychological construct: Executive-Function composite",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No clear evidence of executive function beyond claim of being organized"
+        },
+        {
+          "facet": "Meeting Deadlines",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I haven't filed taxes in 2 years"
+        },
+        {
+          "facet": "Dishonesty",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of dishonest behavior"
+        },
+        {
+          "facet": "Religious practice: Quran khatam cycles per year",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of religious practice"
+        },
+        {
+          "facet": "Divided Attention Ability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of divided attention"
+        },
+        {
+          "facet": "Drug-use history",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of drug use"
+        },
+        {
+          "facet": "Non-Verbal Communication Skills",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of non-verbal communication"
+        },
+        {
+          "facet": "Participation in Community Activities",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of community activities"
+        },
+        {
+          "facet": "Structure",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker claims to be very organized, yet also notes a messy desk with 47 unread emails and overdue taxes, indicating a mixed but moderate level of structure."
+        },
+        {
+          "facet": "Troubleshooting technical issues",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention any technical problems or troubleshooting."
+        },
+        {
+          "facet": "Auditory memory",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no reference to hearing or recalling auditory information."
+        },
+        {
+          "facet": "Sequential Memory Recall",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker does not describe recalling a sequence of events or items."
+        },
+        {
+          "facet": "Quirkiness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No explicit or strongly suggestive quirky behavior is described."
+        },
+        {
+          "facet": "Digital-nomad months",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains no mention of traveling or working remotely."
+        },
+        {
+          "facet": "Auditory Memory Recall",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of recalling auditory information."
+        },
+        {
+          "facet": "Dietary Habits",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker does not discuss food or eating patterns."
+        },
+        {
+          "facet": "Breakfast-skipping frequency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of breakfast or meal timing."
+        },
+        {
+          "facet": "Learning through movement",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not reference learning by moving or physical activity."
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "label": "Code-switch",
+    "conversation": "I work hard yaar, but kabhi kabhi I just want to chill",
+    "ollama": {
+      "total_retrieved": 40,
+      "scored": 16,
+      "abstained": 24,
+      "parse_errors": 0,
+      "scored_facets": [
+        {
+          "facet": "Warmheartedness",
+          "score": 3
+        },
+        {
+          "facet": "Hardworking",
+          "score": 3
+        },
+        {
+          "facet": "General Mood and Attitude",
+          "score": 3
+        },
+        {
+          "facet": "Discontentment",
+          "score": 3
+        },
+        {
+          "facet": "Boredom Susceptibility",
+          "score": 3
+        },
+        {
+          "facet": "Work Styles",
+          "score": 3
+        },
+        {
+          "facet": "Genuine",
+          "score": 3
+        },
+        {
+          "facet": "Satya Adherence",
+          "score": 5
+        },
+        {
+          "facet": "Happiness",
+          "score": 3
+        },
+        {
+          "facet": "Comfort with Vulnerability",
+          "score": 3
+        },
+        {
+          "facet": "Peacefulness",
+          "score": 3
+        },
+        {
+          "facet": "Casual lifestyle",
+          "score": 5
+        },
+        {
+          "facet": "Joyfulness",
+          "score": 3
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": 3
+        },
+        {
+          "facet": "Blissfulness",
+          "score": 3
+        },
+        {
+          "facet": "Well-being component: Engagement",
+          "score": 3
+        }
+      ],
+      "all_results": [
+        {
+          "facet": "Patience: Resistance to anger",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention anger or frustration."
+        },
+        {
+          "facet": "Warmheartedness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker uses a friendly term 'yaar'."
+        },
+        {
+          "facet": "Hardworking",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker mentions working hard."
+        },
+        {
+          "facet": "Religious practice: Quran khatam cycles per year",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention religious practice."
+        },
+        {
+          "facet": "General Mood and Attitude",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker seems to be expressing a casual, relaxed attitude."
+        },
+        {
+          "facet": "Discontentment",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker mentions wanting to 'chill', implying some level of discontent with their current situation."
+        },
+        {
+          "facet": "Boredom Susceptibility",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker mentions wanting to 'chill', which could imply a susceptibility to boredom."
+        },
+        {
+          "facet": "Work Styles",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker mentions working hard, but also wanting to 'chill', which suggests a balance between work and leisure."
+        },
+        {
+          "facet": "Genuine",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker's tone seems natural and sincere."
+        },
+        {
+          "facet": "Desperation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not convey a sense of desperation."
+        },
+        {
+          "facet": "Satya Adherence",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker admits to wanting to chill, indicating a willingness to be honest about their feelings."
+        },
+        {
+          "facet": "Happiness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker mentions wanting to chill, which could imply a desire to relax and be happy, but the tone is not extremely positive."
+        },
+        {
+          "facet": "Enthusiasm",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear expression of enthusiasm in the conversation."
+        },
+        {
+          "facet": "Attitude toward learning",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention learning or any related topics."
+        },
+        {
+          "facet": "Comfort with Vulnerability",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker shares their desire to chill, which could be seen as a vulnerable expression of their feelings."
+        },
+        {
+          "facet": "Peacefulness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker mentions wanting to chill, which implies a desire for relaxation and calmness."
+        },
+        {
+          "facet": "Mindfulness facet: Observing",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear expression of observing or mindfulness in the conversation."
+        },
+        {
+          "facet": "Pure Challenge",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention challenges or any related topics."
+        },
+        {
+          "facet": "Cooking and Culinary Arts",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention cooking or culinary arts."
+        },
+        {
+          "facet": "Hostility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any hostility or negative emotions."
+        },
+        {
+          "facet": "Managing emotions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide enough information to assess the person's emotional management."
+        },
+        {
+          "facet": "Dignity",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide enough information to assess the person's dignity."
+        },
+        {
+          "facet": "Casual lifestyle",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person mentions wanting to 'chill', indicating a preference for a casual lifestyle."
+        },
+        {
+          "facet": "Joyfulness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The person's tone is casual and relaxed, suggesting a moderate level of joyfulness."
+        },
+        {
+          "facet": "Soft-skill training hours",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide enough information to assess the person's soft-skill training hours."
+        },
+        {
+          "facet": "Desire for excellence",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide enough information to assess the person's desire for excellence."
+        },
+        {
+          "facet": "Sleep-environment temperature",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide enough information to assess the person's sleep-environment temperature preferences."
+        },
+        {
+          "facet": "Irritability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide enough information to assess the person's irritability."
+        },
+        {
+          "facet": "Religious coping – Negative",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide enough information to assess the person's religious coping mechanisms."
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The person's casual tone and desire to 'chill' suggest a moderate level of high-spiritedness."
+        },
+        {
+          "facet": "Creativity in solutions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about creative solutions."
+        },
+        {
+          "facet": "Blissfulness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker says 'I just want to chill', which suggests a desire for relaxation and happiness."
+        },
+        {
+          "facet": "Big-heartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about the speaker's willingness to help others."
+        },
+        {
+          "facet": "Psychological construct: Perfectionistic Strivings",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about the speaker's striving for perfection."
+        },
+        {
+          "facet": "Decision-Making Confidence",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about the speaker's confidence in making decisions."
+        },
+        {
+          "facet": "Sensitiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about the speaker's sensitivity to others."
+        },
+        {
+          "facet": "Big Five facet Openness – Artistic Interests",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about the speaker's artistic interests."
+        },
+        {
+          "facet": "Withdrawnness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about the speaker's tendency to withdraw from social interactions."
+        },
+        {
+          "facet": "Well-being component: Engagement",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker says 'I just want to chill', which suggests a desire to engage in relaxing activities."
+        },
+        {
+          "facet": "Negative Affect Frequency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide any information about the speaker's frequency of negative emotions."
+        }
+      ]
+    },
+    "groq": {
+      "total_retrieved": 40,
+      "scored": 5,
+      "abstained": 35,
+      "parse_errors": 0,
+      "scored_facets": [
+        {
+          "facet": "Hardworking",
+          "score": 5
+        },
+        {
+          "facet": "Work Styles",
+          "score": 5
+        },
+        {
+          "facet": "Genuine",
+          "score": 5
+        },
+        {
+          "facet": "Casual lifestyle",
+          "score": 3
+        },
+        {
+          "facet": "Desire for excellence",
+          "score": 4
+        }
+      ],
+      "all_results": [
+        {
+          "facet": "Patience: Resistance to anger",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention anger or patience."
+        },
+        {
+          "facet": "Warmheartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No reference to warmth or kindness is present."
+        },
+        {
+          "facet": "Hardworking",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker explicitly states \"I work hard\"."
+        },
+        {
+          "facet": "Religious practice: Quran khatam cycles per year",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of religious practice."
+        },
+        {
+          "facet": "General Mood and Attitude",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The statement hints at a relaxed desire but does not clearly convey overall mood."
+        },
+        {
+          "facet": "Discontentment",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker only says they want to chill, not that they are discontented."
+        },
+        {
+          "facet": "Boredom Susceptibility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No explicit mention of boredom is made."
+        },
+        {
+          "facet": "Work Styles",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker says \"I work hard,\" indicating a strong work-oriented style."
+        },
+        {
+          "facet": "Genuine",
+          "score": 5,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker openly shares both effort and a desire to relax, suggesting authenticity."
+        },
+        {
+          "facet": "Desperation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no indication of desperation in the conversation."
+        },
+        {
+          "facet": "Satya Adherence",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No statement indicating truthfulness or deception."
+        },
+        {
+          "facet": "Happiness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not explicitly convey happiness."
+        },
+        {
+          "facet": "Enthusiasm",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No clear expression of enthusiasm is present."
+        },
+        {
+          "facet": "Attitude toward learning",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Learning is not mentioned in the conversation."
+        },
+        {
+          "facet": "Comfort with Vulnerability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker shares a casual thought but not enough to assess vulnerability."
+        },
+        {
+          "facet": "Peacefulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not explicitly indicate a peaceful state."
+        },
+        {
+          "facet": "Mindfulness facet: Observing",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No observation or mindfulness content is present."
+        },
+        {
+          "facet": "Pure Challenge",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No challenge is discussed in the conversation."
+        },
+        {
+          "facet": "Cooking and Culinary Arts",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Cooking or culinary topics are absent."
+        },
+        {
+          "facet": "Hostility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No hostile language or attitude is evident."
+        },
+        {
+          "facet": "Managing emotions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No direct mention of managing emotions in the conversation."
+        },
+        {
+          "facet": "Dignity",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No direct mention of dignity in the conversation."
+        },
+        {
+          "facet": "Casual lifestyle",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker says 'just want to chill', indicating a casual approach to life."
+        },
+        {
+          "facet": "Joyfulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No direct mention of joyfulness in the conversation."
+        },
+        {
+          "facet": "Soft-skill training hours",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No direct mention of soft-skill training hours in the conversation."
+        },
+        {
+          "facet": "Desire for excellence",
+          "score": 4,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker says 'I work hard', showing a desire for excellence."
+        },
+        {
+          "facet": "Sleep-environment temperature",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No direct mention of sleep-environment temperature in the conversation."
+        },
+        {
+          "facet": "Irritability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No direct mention of irritability in the conversation."
+        },
+        {
+          "facet": "Religious coping – Negative",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No direct mention of religious coping – Negative in the conversation."
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No direct mention of high-spiritedness in the conversation."
+        },
+        {
+          "facet": "Creativity in solutions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention any creative solutions or problem-solving."
+        },
+        {
+          "facet": "Blissfulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide evidence of blissful or highly positive affect."
+        },
+        {
+          "facet": "Big-heartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of generosity, empathy, or concern for others."
+        },
+        {
+          "facet": "Psychological construct: Perfectionistic Strivings",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The statement about working hard does not indicate perfectionistic standards or fear of failure."
+        },
+        {
+          "facet": "Decision-Making Confidence",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No decision-making process or confidence is described."
+        },
+        {
+          "facet": "Sensitiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not reflect sensitivity to emotions or others."
+        },
+        {
+          "facet": "Big Five facet Openness – Artistic Interests",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No reference to artistic interests or creative pursuits."
+        },
+        {
+          "facet": "Withdrawnness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker does not express withdrawal or isolation."
+        },
+        {
+          "facet": "Well-being component: Engagement",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The statement about working hard is too brief to assess engagement."
+        },
+        {
+          "facet": "Negative Affect Frequency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not provide clear evidence of negative affect."
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "label": "Vague",
+    "conversation": "Things are okay I guess",
+    "ollama": {
+      "total_retrieved": 40,
+      "scored": 11,
+      "abstained": 28,
+      "parse_errors": 1,
+      "scored_facets": [
+        {
+          "facet": "Happiness",
+          "score": 3
+        },
+        {
+          "facet": "General Mood and Attitude",
+          "score": 3
+        },
+        {
+          "facet": "Contentment Levels",
+          "score": 3
+        },
+        {
+          "facet": "Sentence Structure",
+          "score": 5
+        },
+        {
+          "facet": "Classiness",
+          "score": 3
+        },
+        {
+          "facet": "Well-being component: Engagement",
+          "score": 3
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": 1
+        },
+        {
+          "facet": "Brevity",
+          "score": 5
+        },
+        {
+          "facet": "Talkativeness",
+          "score": 1
+        },
+        {
+          "facet": "Civility",
+          "score": 5
+        },
+        {
+          "facet": "Peacefulness",
+          "score": 3
+        }
+      ],
+      "all_results": [
+        {
+          "facet": "Happiness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The phrase 'Things are okay I guess' suggests a neutral, average level of happiness."
+        },
+        {
+          "facet": "Troubleshooting technical issues",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of technical issues or problem-solving in the conversation."
+        },
+        {
+          "facet": "General Mood and Attitude",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The phrase 'Things are okay I guess' suggests a neutral, average general mood and attitude."
+        },
+        {
+          "facet": "Harmfulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no indication of harm or negativity in the conversation."
+        },
+        {
+          "facet": "Orderliness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention order or organization."
+        },
+        {
+          "facet": "Safety compliance",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of safety protocols or compliance in the conversation."
+        },
+        {
+          "facet": "Control over situations",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not suggest any attempt to control or influence situations."
+        },
+        {
+          "facet": "Discreteness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention discretion or secrecy."
+        },
+        {
+          "facet": "Contentment Levels",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The phrase 'Things are okay I guess' suggests a moderate level of contentment."
+        },
+        {
+          "facet": "Sentence Structure",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The conversation consists of a single, grammatically correct sentence with a clear subject-verb-object structure."
+        },
+        {
+          "facet": "Classiness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The response is neutral and lacks strong emotional tone, indicating moderate classiness."
+        },
+        {
+          "facet": "Well-being component: Engagement",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The response is brief and lacks enthusiasm, indicating moderate engagement."
+        },
+        {
+          "facet": "Doggedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear indication of persistence or determination in the response."
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The response lacks enthusiasm and has a neutral tone, indicating low high-spiritedness."
+        },
+        {
+          "facet": "Clumsiness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear indication of carelessness or lack of coordination in the response."
+        },
+        {
+          "facet": "Brevity",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The response is extremely concise, indicating very high brevity."
+        },
+        {
+          "facet": "Big-heartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear indication of kindness or generosity in the response."
+        },
+        {
+          "facet": "Talkativeness",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The response is extremely brief, indicating very low talkativeness."
+        },
+        {
+          "facet": "Openness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear indication of willingness to share thoughts or feelings in the response."
+        },
+        {
+          "facet": "Esteem Needs",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no clear indication of need for respect or admiration in the response."
+        },
+        {
+          "facet": "Big Five facet Openness – Artistic Interests",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Model did not return a result for this facet."
+        },
+        {
+          "facet": "Irritability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any irritation or frustration."
+        },
+        {
+          "facet": "Sportsmanship rating",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention any competitive or sporting context."
+        },
+        {
+          "facet": "Moroseness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any sadness, gloominess, or despair."
+        },
+        {
+          "facet": "Disagreeableness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any disagreement, hostility, or contentiousness."
+        },
+        {
+          "facet": "Civility",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The conversation uses a polite and neutral tone, saying 'I guess'."
+        },
+        {
+          "facet": "Evaluating Solutions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention any problem-solving or solution-evaluating context."
+        },
+        {
+          "facet": "Emotional Boundaries",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any emotional vulnerability or boundary-pushing."
+        },
+        {
+          "facet": "Affection",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any affection, warmth, or emotional closeness."
+        },
+        {
+          "facet": "Fearfulness: Fear of physical dangers",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention any physical danger or fear of harm."
+        },
+        {
+          "facet": "Comfort with Vulnerability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any vulnerability or openness."
+        },
+        {
+          "facet": "Warmheartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any warmth or affection."
+        },
+        {
+          "facet": "Joyfulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any joy or enthusiasm."
+        },
+        {
+          "facet": "Depth of Emotional Connections",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any emotional connection or intimacy."
+        },
+        {
+          "facet": "Managing emotions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any emotional regulation or management."
+        },
+        {
+          "facet": "Religious coping – Negative",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention religion or any negative coping mechanisms."
+        },
+        {
+          "facet": "Individuality",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any unique personality traits or individuality."
+        },
+        {
+          "facet": "Exemplariness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any admirable or exemplary behavior."
+        },
+        {
+          "facet": "Hostility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not express any anger or aggression."
+        },
+        {
+          "facet": "Peacefulness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The conversation expresses a neutral and calm tone, with the phrase 'Things are okay I guess' implying a sense of stability and serenity."
+        }
+      ]
+    },
+    "groq": {
+      "total_retrieved": 40,
+      "scored": 2,
+      "abstained": 38,
+      "parse_errors": 0,
+      "scored_facets": [
+        {
+          "facet": "Sentence Structure",
+          "score": 3
+        },
+        {
+          "facet": "Brevity",
+          "score": 5
+        }
+      ],
+      "all_results": [
+        {
+          "facet": "Happiness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation is too short and ambiguous to determine happiness level."
+        },
+        {
+          "facet": "Troubleshooting technical issues",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of technical issues or troubleshooting."
+        },
+        {
+          "facet": "General Mood and Attitude",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The statement is vague and does not clearly indicate mood or attitude."
+        },
+        {
+          "facet": "Harmfulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No harmful content is present."
+        },
+        {
+          "facet": "Orderliness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of orderliness is provided."
+        },
+        {
+          "facet": "Safety compliance",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No safety compliance information is mentioned."
+        },
+        {
+          "facet": "Control over situations",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The phrase 'I guess' suggests uncertainty, but not enough to assess control."
+        },
+        {
+          "facet": "Discreteness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No information about discretion is given."
+        },
+        {
+          "facet": "Contentment Levels",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The statement is ambiguous regarding contentment."
+        },
+        {
+          "facet": "Sentence Structure",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The single sentence is a simple declarative sentence with no complex clauses, indicating moderate sentence structure."
+        },
+        {
+          "facet": "Classiness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of classiness in the conversation."
+        },
+        {
+          "facet": "Well-being component: Engagement",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of engagement level in the conversation."
+        },
+        {
+          "facet": "Doggedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No evidence of perseverance or determination in the conversation."
+        },
+        {
+          "facet": "High-spiritedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No expression of high energy or enthusiasm in the conversation."
+        },
+        {
+          "facet": "Clumsiness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of clumsiness or awkwardness in the conversation."
+        },
+        {
+          "facet": "Brevity",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The utterance 'Things are okay I guess' is very brief, indicating high brevity."
+        },
+        {
+          "facet": "Big-heartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of generosity or compassion in the conversation."
+        },
+        {
+          "facet": "Talkativeness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation is minimal, providing no evidence of talkativeness."
+        },
+        {
+          "facet": "Openness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No expression of openness or willingness to share in the conversation."
+        },
+        {
+          "facet": "Esteem Needs",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of desire for esteem or recognition in the conversation."
+        },
+        {
+          "facet": "Big Five facet Openness – Artistic Interests",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Conversation is too short and does not mention any artistic interests."
+        },
+        {
+          "facet": "Irritability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Conversation does not contain any expression of irritability."
+        },
+        {
+          "facet": "Sportsmanship rating",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of sports or related behavior."
+        },
+        {
+          "facet": "Moroseness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The statement is neutral; no clear moroseness is expressed."
+        },
+        {
+          "facet": "Disagreeableness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No disagreement or negative stance is present."
+        },
+        {
+          "facet": "Civility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No conflict or impolite language is observed."
+        },
+        {
+          "facet": "Evaluating Solutions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No problem or solution discussion is evident."
+        },
+        {
+          "facet": "Emotional Boundaries",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No boundaries or emotional context is provided."
+        },
+        {
+          "facet": "Affection",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No affectionate language or sentiment is present."
+        },
+        {
+          "facet": "Fearfulness: Fear of physical dangers",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of fear or danger is made."
+        },
+        {
+          "facet": "Comfort with Vulnerability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains only the sentence 'Things are okay I guess', which does not provide clear evidence for comfort with vulnerability."
+        },
+        {
+          "facet": "Warmheartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains only the sentence 'Things are okay I guess', which does not provide clear evidence for warmheartedness."
+        },
+        {
+          "facet": "Joyfulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains only the sentence 'Things are okay I guess', which does not provide clear evidence for joyfulness."
+        },
+        {
+          "facet": "Depth of Emotional Connections",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains only the sentence 'Things are okay I guess', which does not provide clear evidence for depth of emotional connections."
+        },
+        {
+          "facet": "Managing emotions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains only the sentence 'Things are okay I guess', which does not provide clear evidence for managing emotions."
+        },
+        {
+          "facet": "Religious coping – Negative",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains only the sentence 'Things are okay I guess', which does not provide clear evidence for religious coping – negative."
+        },
+        {
+          "facet": "Individuality",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains only the sentence 'Things are okay I guess', which does not provide clear evidence for individuality."
+        },
+        {
+          "facet": "Exemplariness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains only the sentence 'Things are okay I guess', which does not provide clear evidence for exemplariness."
+        },
+        {
+          "facet": "Hostility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains only the sentence 'Things are okay I guess', which does not provide clear evidence for hostility."
+        },
+        {
+          "facet": "Peacefulness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains only the sentence 'Things are okay I guess', which does not provide clear evidence for peacefulness."
+        }
+      ]
+    }
+  }
+]
