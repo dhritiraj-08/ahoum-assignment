@@ -1,5 +1,11 @@
 # Conversation -> Personality Facet Scorer
 
+![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)
+![Model: Llama 3.1 8B](https://img.shields.io/badge/model-Llama%203.1%208B-green.svg)
+![Tests: 37 passing](https://img.shields.io/badge/tests-37%20passing-brightgreen.svg)
+![Hallucinations: 0](https://img.shields.io/badge/hallucinations-0%2F3-brightgreen.svg)
+![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
+
 Reads a short conversation and scores the personality/behavioural facets it
 actually gives evidence for -- out of a 399-facet taxonomy -- using a local
 LLM (Ollama + llama3.1), retrieval-first so the model never sees all 399
@@ -31,6 +37,20 @@ python main.py --benchmark   # run the 10-conversation benchmark -> outputs/benc
 
 `--audit` and `--embed` only need to be re-run when `data/Facets_Assignment.csv`
 changes. `--score` and `--benchmark` reuse the saved index.
+
+## Run the Streamlit UI
+
+```bash
+streamlit run app.py
+```
+
+A paste-a-conversation-and-see-results web UI over the same pipeline the
+CLI uses -- no code required. Requires `--audit` and `--embed` to have been
+run at least once already (the app shows a red status badge and tells you
+which command to run if the index is missing). Shows three status badges
+before you type anything (facet index, Ollama reachability, GPU VRAM
+headroom), a summary of retrieved/scored/abstained counts, the full facet
+scores table, and an outcome-distribution bar chart.
 
 ## Architecture
 
@@ -209,17 +229,50 @@ problem -- many conversations scored per minute rather than one at a time
    I only found the colon-heuristic issue because I happened to query
    specific facet names; there could be other systematic errors I haven't
    looked for yet.
-4. **Add a small cross-encoder reranker** on top of the FAISS top-`k`
-   candidates to re-score them more precisely against the actual
-   conversation before batching for the LLM -- this targets precision
-   rather than the recall problem `top_k` was aimed at, and might help with
-   cases where a *wrong* facet gets retrieved ahead of the right one.
-5. **Grow the benchmark past 10 conversations / 30 reference facets.** The
+4. **Add a cross-encoder reranker over the top-100 FAISS candidates**
+   (retrieve wider, then rerank down to the batch size) instead of relying
+   on raw embedding similarity alone -- widening `top_k` from 25 to 40 only
+   recovered 1 of 13 retrieval misses (see `DECISIONS.md` #1), which tells
+   me the embedding-similarity ranking itself is the weak link, not the
+   cutoff. The hypothesis worth testing: retrieve top-100 candidates cheaply
+   via FAISS, then rerank those 100 with a cross-encoder that scores
+   facet-conversation pairs jointly (rather than via two separately-embedded
+   vectors) before batching the top ones for the LLM. My rough target based
+   on this project's own retrieval-recall numbers (18/30 = 60% correctly
+   retrieved in the current benchmark) would be pushing recall from roughly
+   that 60% range up toward ~85-90% -- I haven't built or measured this yet,
+   so treat that as a hypothesis to validate, not a result.
+5. **Add confidence calibration**: compare the LLM's stated `confidence`
+   field ("high"/"medium"/"low") against actual agreement rate with my
+   reference labels. If "high confidence" scores aren't meaningfully more
+   accurate than "medium confidence" ones, the confidence field is
+   decorative rather than informative, and that's worth knowing before
+   anyone downstream treats it as a real signal.
+6. **Replace the CPU-only torch build with a CUDA build.** I found during
+   Streamlit testing that this project's installed `torch` is `2.6.0+cpu`
+   (`torch.version.cuda is None`), so `torch.cuda.is_available()` always
+   returns `False` -- even though `nvidia-smi` confirms a real RTX 4050
+   with free VRAM that Ollama is actively using. `app.py`'s GPU VRAM status
+   badge currently has to fall back to "unknown" instead of showing real
+   free-VRAM numbers because of this. Installing the CUDA build (`pip
+   install torch --index-url https://download.pytorch.org/whl/cu121` or
+   similar for this driver) would let that badge report actual green/
+   yellow/red VRAM status instead of an honest shrug.
+7. **Add inter-annotator agreement** by having a second reviewer
+   independently label a sample of the benchmark's reference facets before
+   seeing my labels or the system's output. Right now the "reference"
+   scores in `src/benchmark.py` are entirely my own single judgment call --
+   I don't actually know how much two reasonable humans would agree with
+   each other on, say, whether a given conversation supports `Emotionalism:
+   4` vs `5`. Without that baseline, it's hard to say how much of the
+   system's disagreement with my labels reflects a real system error versus
+   normal human-to-human disagreement on an inherently subjective 1-5 scale.
+8. **Grow the benchmark past 10 conversations / 30 reference facets.** The
    current set was enough to surface the retrieval-miss pattern, but a
    larger, more systematically varied reference set would tell me whether
    that failure mode generalizes the way I think it does or whether it's
    specific to how I phrased these particular 10 conversations.
-6. **Test batch sizes other than 10** (the brief specifies "max 10," but I
+9. **Test batch sizes other than 10** (the brief specifies "max 10," but I
    never actually swept 5/8/10/12 against parse-error rate to confirm 10
    is the right point on the reliability/throughput curve for llama3.1 on
    this specific hardware -- I just never saw a failure at 10, which isn't
