@@ -330,11 +330,19 @@ problem -- many conversations scored per minute rather than one at a time
    colon-based rule. This would recover facets like `Achievement
    Motivation` and `Leadership Potential` for scoring without
    reintroducing the risk of scoring an actual section header.
-3. **Spot-check the ~293 facets that defaulted to `personality_trait`** for
-   misclassifications the keyword lists in `audit.py` might have missed --
-   I only found the colon-heuristic issue because I happened to query
-   specific facet names; there could be other systematic errors I haven't
-   looked for yet.
+3. **Hand-audit the remaining ~287 facets (roughly 72% of all 399) that
+   fall through to the default `personality_trait` bucket** in
+   `audit.py`, instead of trusting the keyword classifier and moving on.
+   This isn't hypothetical caution -- it's exactly how the 6-facet clinical
+   misclassification in `DEBUGGING.md` #4 was found: not by reviewing
+   `MEDICAL_KEYWORDS` and noticing it was incomplete (a code review of that
+   list looked reasonably thorough), but by live-testing an adversarial
+   conversation ("i am feeling low") and watching `Depression Symptoms`
+   come back scored 5/5. The colon-heuristic issue was found the same
+   way -- by querying specific facet names, not by systematically
+   reviewing the rule. Two real misclassification clusters found by
+   spot-checking, zero found by reading the code, strongly suggests more
+   remain in a bucket this large that I simply haven't stumbled onto yet.
 4. **Add a cross-encoder reranker over the top-100 FAISS candidates**
    (retrieve wider, then rerank down to the batch size) instead of relying
    on raw embedding similarity alone -- widening `top_k` from 25 to 40 only
@@ -386,3 +394,15 @@ problem -- many conversations scored per minute rather than one at a time
    is the right point on the reliability/throughput curve for llama3.1 on
    this specific hardware -- I just never saw a failure at 10, which isn't
    the same as knowing where the failures start.)
+10. **Run the full benchmark against the Groq backend specifically**
+    (stop Ollama, set `GROQ_API_KEY`, re-run `python main.py --benchmark`)
+    to check whether `llama-3.1-8b-instant` abstains as conservatively as
+    the locally-run `llama3.1` did. This is flagged honestly as untested in
+    `DECISIONS.md` #5 -- the hybrid backend was built and verified to
+    *route* correctly (5 passing tests confirm the dispatch logic), but
+    nothing has verified the *scoring behavior* is equivalent between the
+    two models. Given the retrieval-recall/scoring-accuracy split this
+    project now reports (see "Benchmark methodology" above), it would be
+    easy to end up comparing Groq's scoring accuracy against Ollama's on
+    the exact same 27 force-included reference facets -- a clean,
+    already-built apples-to-apples comparison that just hasn't been run yet.

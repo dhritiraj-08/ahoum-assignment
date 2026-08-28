@@ -182,11 +182,80 @@ cleanly on the very next call.
 **Lesson:** Close competing GPU workloads (Jupyter kernels, extra browser
 tabs, anything else that touches the GPU) before running `app.py` for the
 most reliable results on a 6GB card -- 6GB is enough for llama3.1 alone
-but not much else at the same time. I haven't added this yet, but the
-concrete next step is a VRAM/process-contention warning in `app.py`'s
-status badges (alongside the existing Ollama-reachability and facet-index
-checks), so this shows up as a visible warning before scoring starts
-instead of as a wall of `parse_error` rows after the fact.
+but not much else at the same time. I've since added a GPU VRAM
+status badge to `app.py` (green/yellow/red free-VRAM thresholds, alongside
+the facet-index and LLM-backend badges) so this shows up as a visible
+warning before scoring starts instead of as a wall of `parse_error` rows
+after the fact -- worth noting the badge itself hit a real gotcha too
+(this machine's `torch` build has no CUDA support, so it has to report
+"unknown" rather than a false "no GPU" reading; see the badge's own code
+comments in `app.py`).
+
+---
+
+## 4. Six clinical/psychiatric facets were classified as scorable personality traits
+
+**Symptom:** During live Streamlit testing with the conversation "i am
+feeling low", the system scored `Depression Symptoms` **5/5** and
+`Depression: Feelings of sadness and hopelessness` **5/5** -- a confident,
+specific clinical score produced from four words of vague, low-evidence
+text. This is exactly the category of hallucination the whole two-layer
+safety architecture is supposed to make structurally impossible, and here
+it wasn't.
+
+**Diagnosis:** Checked `outputs/enriched_facets.csv` directly rather than
+guessing at the scope of the problem, and found **6** clinical/psychiatric
+facets wrongly classified `category = personality_trait`,
+`conversation_observable = True`: `Depression Symptoms`, `Depression:
+Feelings of sadness and hopelessness`, `Depression (DEP)`, `Burnout
+Symptoms`, `Hypomania (Ma)`, `Hysteria (Hy)`. Two of these --
+`Depression (DEP)` and `Hysteria (Hy)` -- are literally MMPI clinical
+scale names, not generic trait phrases.
+
+**Root cause:** `MEDICAL_KEYWORDS` in `src/audit.py` already contained
+`"diagnosis"`, `"disorder"`, `"syndrome"`, `"clinical"` -- but none of
+these six facet names contain any of those words. `"Depression Symptoms"`
+has the word "Symptoms," not "diagnosis." `"Hysteria (Hy)"` and
+`"Hypomania (Ma)"` are bare clinical-scale/condition names with no generic
+medical vocabulary at all. The keyword list was built around lab-test and
+diagnosis-record language and simply had no coverage for named
+psychiatric conditions or symptom-cluster phrasing, so these six slipped
+through every existing rule.
+
+**Fix:** Added a dedicated clinical/psychiatric keyword block to
+`MEDICAL_KEYWORDS` in `audit.py`: `symptom`, `depression`, `hypomania`,
+`mania`, `bipolar`, `hysteria`, `psychopathic`, `paranoia`,
+`psychasthenia`, `schizophrenia`, `psychosis`, `burnout`, `ptsd`, `ocd`,
+`panic disorder`, `panic attack`, `phobia`, `eating disorder`,
+`personality disorder`, `psychiatric`, `anxiety disorder`. Before applying
+it, grepped the full raw CSV for every one of these terms to check for
+false-positive risk against legitimate, unrelated facets -- found zero;
+every match was one of the same 6 known-bad rows. Ran `python main.py
+--audit` then `python main.py --embed`: `medical_biological` count went
+from 8 to 14 (+6, exactly matching), `personality_trait` went from 293 to
+287 (-6).
+
+**Verification:** Re-ran `retrieve_relevant_facets("i am feeling low",
+top_k=40)` directly -- all 6 formerly-misclassified facets now come back
+`conversation_observable = False` under `category = medical_biological`,
+and none of the 6 appear anywhere in the 40 retrieved candidates (they're
+structurally absent from the FAISS index now, not just filtered
+post-hoc). Full 42-test suite still passes. Also re-ran a live Streamlit
+test on a different real conversation (the medical-trap one about
+tiredness and hormone levels) and confirmed zero clinical/medical facets
+appeared among the scored results.
+
+**Why this matters:** This bug was caught by actually using the system on
+an adversarial input, not by reading `audit.py`'s code. A code review of
+the keyword lists would very plausibly have signed off on them -- they
+looked reasonably thorough, covered the obvious lab-test vocabulary, and
+nothing about `MEDICAL_KEYWORDS` looked incomplete until a real
+"what happens if someone says they feel depressed?" conversation exposed
+the gap between "words a reviewer expects a medical facet to contain" and
+"words the actual facet names in this specific CSV contain." That's the
+core argument for `hallucination_demo/`'s whole approach: structural,
+adversarial testing against the real facet list catches exactly the class
+of gap that reading the classification logic in isolation does not.
 
 ---
 
@@ -194,9 +263,12 @@ instead of as a wall of `parse_error` rows after the fact.
 
 - Skim `outputs/enriched_facets.csv` for more misclassified facets beyond
   the trailing-colon cases already found (`Achievement Motivation:`,
-  `Leadership Potential:`, `HonestyHumility:`) -- the classifier in
-  `src/audit.py` is keyword-based and will get some wrong on 399 diverse
-  rows; log any real ones you find here.
+  `Leadership Potential:`, `HonestyHumility:`) and the 6 clinical facets
+  found in #4 above -- both were found by spot-checking or live testing,
+  not by systematically reviewing the classifier, which strongly suggests
+  more gaps remain in the ~287 facets that default to `personality_trait`.
+  See `README.md` "What I'd improve with another day" -- this is now an
+  explicit, prioritized item, not just a stress-test suggestion.
 - Deliberately kill Ollama (`taskkill` it or close the app) mid-`--score`
   call and confirm `scorer.py` reports a clean failure per batch instead of
   an unhandled exception -- I exercised the JSON-parsing failure path
