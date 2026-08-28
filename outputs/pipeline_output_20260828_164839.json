@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "I broke down crying in the middle of the grocery store today. Everything just hit me at once. I couldn't stop shaking and had to call my best friend just to breathe through it.",
+  "total_facets_retrieved": 40,
+  "scored": 16,
+  "abstained": 14,
+  "results": [
+    {
+      "facet": "Emotional Boundaries",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Depression: Feelings of sadness and hopelessness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Compassion Fatigue",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Irritability",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Desperation",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Depression (DEP)",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Depression Symptoms",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Managing emotions",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Psychological construct: Self-Compassion total",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Psychological construct: Hope scale",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Patience: Resistance to anger",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person broke down crying in the middle of the grocery store, indicating a lack of patience and resistance to anger."
+    },
+    {
+      "facet": "Big-heartedness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person called their best friend to 'breathe through it', showing a willingness to reach out for support and care for their emotional well-being."
+    },
+    {
+      "facet": "Psychological construct: Excuse-Making tendency",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no indication of excuse-making in the conversation, but the conversation is also quite brief and focused on the person's emotional state."
+    },
+    {
+      "facet": "Significance: Desire to make an impact",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person's emotional breakdown in the grocery store does not suggest a desire to make an impact or a sense of significance."
+    },
+    {
+      "facet": "Religious coping – Negative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of religion or any negative religious coping mechanisms in the conversation."
+    },
+    {
+      "facet": "Physical-violence exposure",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of physical violence or exposure to it in the conversation."
+    },
+    {
+      "facet": "Compassion",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person's willingness to call their best friend for support shows a compassionate and caring attitude."
+    },
+    {
+      "facet": "Depth of Emotional Connections",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person's emotional breakdown and need to call their best friend for support suggests a deep emotional connection with that person."
+    },
+    {
+      "facet": "Stress Recovery Ability",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The person was able to call their best friend for support, which suggests some ability to recover from stress, but the conversation does not provide more detailed information on this."
+    },
+    {
+      "facet": "Psychological construct: Eye-Contact avoidance score",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of eye contact or any avoidance of it in the conversation."
+    },
+    {
+      "facet": "Happiness",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person broke down crying and had to call their best friend to breathe through it, indicating a low level of happiness."
+    },
+    {
+      "facet": "Mindfulness facet: Observing",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of observing or mindfulness in the conversation."
+    },
+    {
+      "facet": "Psychological construct: Resilience-Trait score",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person broke down crying and had to call their best friend to breathe through it, indicating a low level of resilience."
+    },
+    {
+      "facet": "Emotionalism",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person broke down crying and had to call their best friend to breathe through it, indicating a high level of emotional expression."
+    },
+    {
+      "facet": "Courageousness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of courageous behavior in the conversation."
+    },
+    {
+      "facet": "Comfort with Vulnerability",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person broke down crying and called their best friend to breathe through it, indicating a high level of comfort with vulnerability."
+    },
+    {
+      "facet": "Hysteria (Hy)",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person broke down crying and had to call their best friend to breathe through it, indicating a high level of emotional reactivity."
+    },
+    {
+      "facet": "Snacking Behavior",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of snacking behavior in the conversation."
+    },
+    {
+      "facet": "Warmheartedness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The person called their best friend to breathe through their emotions, indicating a moderate level of warmheartedness."
+    },
+    {
+      "facet": "Emotional-intelligence measure: Impulsiveness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of impulsiveness in the conversation."
+    },
+    {
+      "facet": "Control over situations",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker broke down crying in the middle of the grocery store, indicating a lack of control over their emotional response to the situation."
+    },
+    {
+      "facet": "Creative resilience",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of creative problem-solving or resilience in the face of adversity."
+    },
+    {
+      "facet": "Negative Affect Frequency",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker reports breaking down crying and having to call their best friend to breathe through their emotions, indicating a high frequency of negative affect."
+    },
+    {
+      "facet": "Joyfulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of joy or happiness in the conversation."
+    },
+    {
+      "facet": "Ego Dissolution Frequency",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker reports feeling overwhelmed and unable to stop shaking, indicating a high frequency of ego dissolution."
+    },
+    {
+      "facet": "Self-righteousness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of self-righteousness or moral superiority in the conversation."
+    },
+    {
+      "facet": "Hatefulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of hatred or anger in the conversation."
+    },
+    {
+      "facet": "Sensitiveness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker reports feeling overwhelmed and needing to call their best friend to breathe through their emotions, indicating a high level of sensitiveness."
+    },
+    {
+      "facet": "Chronic pain presence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of chronic pain or ongoing physical discomfort in the conversation."
+    },
+    {
+      "facet": "Harmfulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of harm or intent to cause harm in the conversation."
+    }
+  ],
+  "parse_errors": 10
+}

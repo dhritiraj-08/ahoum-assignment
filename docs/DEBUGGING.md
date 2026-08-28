@@ -122,6 +122,74 @@ different conversations or a different Ollama/model version.
 
 ---
 
+## 3. Ollama's `llama-server` crashed mid-batch during live Streamlit testing
+
+**Symptom:** While manually testing `app.py` end-to-end in the browser (a
+crying-in-a-grocery-store conversation, `top_k=40`), the summary metrics
+came back showing 10 out of 40 retrieved facets as `parse_error` -- way
+higher than the 0 out of 70 I'd seen across both full CLI benchmark runs at
+batch size 10. That jump was the first sign something different was going
+on here, not just normal local-model flakiness.
+
+**Diagnosis:** Instead of guessing, I pulled the actual saved output file
+(`outputs/pipeline_output_{timestamp}.json`, written automatically by
+`run_pipeline()`) and printed the `evidence` field for every facet with
+`status == "parse_error"`. If this were the same malformed-JSON issue as
+Bug #2, I'd expect to see something like "No JSON array found in model
+output" or a `JSONDecodeError` message. Instead, every one of the 10
+showed the same thing: `"LLM call failed: llama-server process no longer
+running: exit status 0xc0000409: ..."` -- that's not a JSON parsing
+failure at all, it's `scorer.py`'s `except Exception as e` branch around
+the `ollama.chat()` call itself catching a failed request, not a bad
+response.
+
+**Root cause:** Ollama's `llama-server` inference worker (the actual
+process that loads llama3.1 and runs inference, separate from the
+`ollama.exe` service that stays up) crashed mid-batch with Windows exit
+code `0xc0000409` -- a native stack-buffer-overrun. The likely cause is
+GPU memory contention: at the time of this test I had a Jupyter kernel
+(from building `notebooks/benchmark_report.ipynb` earlier in the same
+session), a browser tab, and the new Streamlit process all running
+simultaneously, all competing for the RTX 4050's 6GB of VRAM while Ollama
+was trying to keep an 8B-parameter model loaded. This is a different, more
+severe failure mode than Bug #2 -- that one was the model producing bad
+output; this one is the underlying inference process dying entirely
+partway through a batch.
+
+**Fix:** No code change was needed here -- the existing defensive design in
+`scorer.py` already covers this case, because the `try/except` around the
+`ollama.chat()` call catches *any* exception from that call, not just JSON
+problems. The crash was caught per-batch, every facet in that specific
+batch was marked `"status": "parse_error"` with the real crash reason
+preserved in `"evidence"` (so it's debuggable after the fact instead of
+silently swallowed), and the Streamlit app itself never went down. The 16
+out of 40 facets that had already completed in earlier batches before the
+crash scored normally and correctly -- including `Emotionalism: 5` for a
+conversation about crying in a grocery store, which is exactly the kind of
+result you'd want. Ollama auto-respawned `llama-server` on its own after
+the crash, without me restarting anything.
+
+**Verification:** After the crash, I ran a direct Ollama health check --
+`curl http://localhost:11434/api/chat` with a trivial "reply with just the
+word OK" prompt -- and got a normal response back (`"content": "OK"`),
+confirming `llama-server` had recovered by itself. This is real evidence,
+not just a hope, that the per-batch error isolation in `scorer.py` is the
+right design: a single batch's inference process dying doesn't take down
+the whole pipeline, the whole conversation's results, or the Streamlit UI
+-- it costs exactly the facets in that one batch, and the system recovers
+cleanly on the very next call.
+
+**Lesson:** Close competing GPU workloads (Jupyter kernels, extra browser
+tabs, anything else that touches the GPU) before running `app.py` for the
+most reliable results on a 6GB card -- 6GB is enough for llama3.1 alone
+but not much else at the same time. I haven't added this yet, but the
+concrete next step is a VRAM/process-contention warning in `app.py`'s
+status badges (alongside the existing Ollama-reachability and facet-index
+checks), so this shows up as a visible warning before scoring starts
+instead of as a wall of `parse_error` rows after the fact.
+
+---
+
 ### Things still worth stress-testing
 
 - Skim `outputs/enriched_facets.csv` for more misclassified facets beyond
