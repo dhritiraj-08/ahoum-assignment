@@ -44,9 +44,15 @@ time a conversation is scored (cached per-process after the first check):
   benchmark result in this repo's docs was produced with.
 - **Option B -- Groq API (automatic cloud fallback).** Used automatically
   whenever Ollama isn't reachable *and* `GROQ_API_KEY` is set in the
-  environment. Runs the same model family via Groq's hosted
-  `llama-3.1-8b-instant`, so it works on any machine -- a laptop with no
-  GPU, a CI runner, a grader's machine that doesn't have Ollama installed.
+  environment. Runs Groq's hosted `openai/gpt-oss-20b` by default (set via
+  `GROQ_MODEL_NAME`, overridable without a code change -- see
+  `.env.example`), so it works on any machine -- a laptop with no GPU, a
+  CI runner, a grader's machine that doesn't have Ollama installed. This
+  default has already changed once: the original default,
+  `llama-3.1-8b-instant`, became enterprise-only and started 404ing on
+  developer-tier Groq accounts, which is exactly the failure mode
+  `python main.py --test-groq` (see "Running the pipeline" below) exists
+  to catch.
 
 **How to set the key:**
 
@@ -79,6 +85,7 @@ python main.py --audit       # clean/classify the 399 raw facets -> outputs/enri
 python main.py --embed       # build the FAISS retrieval index -> outputs/faiss_index.bin
 python main.py --score "I quit my job to backpack across South America with no plan."
 python main.py --benchmark   # run the 10-conversation benchmark -> outputs/benchmark_report.json
+python main.py --test-groq   # verify GROQ_API_KEY + GROQ_MODEL_NAME work, bypassing Ollama entirely
 ```
 
 `--audit` and `--embed` only need to be re-run when `data/Facets_Assignment.csv`
@@ -396,8 +403,8 @@ problem -- many conversations scored per minute rather than one at a time
    the same as knowing where the failures start.)
 10. **Run the full benchmark against the Groq backend specifically**
     (stop Ollama, set `GROQ_API_KEY`, re-run `python main.py --benchmark`)
-    to check whether `llama-3.1-8b-instant` abstains as conservatively as
-    the locally-run `llama3.1` did. This is flagged honestly as untested in
+    to check whether Groq's `openai/gpt-oss-20b` abstains as conservatively
+    as the locally-run `llama3.1` did. This is flagged honestly as untested in
     `DECISIONS.md` #5 -- the hybrid backend was built and verified to
     *route* correctly (5 passing tests confirm the dispatch logic), but
     nothing has verified the *scoring behavior* is equivalent between the

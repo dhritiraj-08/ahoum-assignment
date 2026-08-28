@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "I quit my job on a whim to travel with no plan.",
+  "total_facets_retrieved": 40,
+  "scored": 7,
+  "abstained": 13,
+  "results": [
+    {
+      "facet": "Eco-tourism trips",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+    },
+    {
+      "facet": "Travel-companions diversity",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+    },
+    {
+      "facet": "Adventure-Seeking Behavior",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+    },
+    {
+      "facet": "Withdrawnness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+    },
+    {
+      "facet": "Creative risk-taking tendency",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+    },
+    {
+      "facet": "Sustainable-transport usage",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+    },
+    {
+      "facet": "Risktaking",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+    },
+    {
+      "facet": "Courageousness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+    },
+    {
+      "facet": "Desperation",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+    },
+    {
+      "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+    },
+    {
+      "facet": "Psychological construct: Perfectionistic Strivings",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of striving for perfection or high standards in the conversation."
+    },
+    {
+      "facet": "Public-transport km/week",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of public transportation or travel plans in the conversation."
+    },
+    {
+      "facet": "Desire for excellence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of striving for excellence or high achievement in the conversation."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of feeling bored or lacking stimulation in the conversation."
+    },
+    {
+      "facet": "Digital-nomad months",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of working remotely or traveling for an extended period in the conversation."
+    },
+    {
+      "facet": "Discontentment",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker quit their job 'on a whim' suggesting a high level of discontentment with their current situation."
+    },
+    {
+      "facet": "Religious coping – Negative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of religious beliefs or coping mechanisms in the conversation."
+    },
+    {
+      "facet": "Impracticalness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker quit their job without a plan, suggesting a high level of impracticalness."
+    },
+    {
+      "facet": "Joyfulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of feeling joyful or enthusiastic in the conversation."
+    },
+    {
+      "facet": "Dauntlessness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker quit their job 'on a whim' suggesting a high level of dauntlessness and willingness to take risks."
+    },
+    {
+      "facet": "Decision-Making Confidence",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker quit their job on a whim, indicating impulsive decision-making."
+    },
+    {
+      "facet": "Creative resilience",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker's decision to travel with no plan suggests some ability to adapt to uncertainty."
+    },
+    {
+      "facet": "Rebelliousness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker quit their job on a whim, indicating a willingness to challenge conventional norms."
+    },
+    {
+      "facet": "Museum visits/year",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of museum visits."
+    },
+    {
+      "facet": "Volunteer Work",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of volunteer work."
+    },
+    {
+      "facet": "Participation in Community Activities",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of community activities."
+    },
+    {
+      "facet": "Organized lifestyle",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker quit their job on a whim, indicating a lack of planning or organization."
+    },
+    {
+      "facet": "Perseverance",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of perseverance."
+    },
+    {
+      "facet": "Self-effacement",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of self-effacement."
+    },
+    {
+      "facet": "Desire to influence others",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of influencing others."
+    },
+    {
+      "facet": "Self Perspective",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Patriotism",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Patience: Resistance to anger",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Drug-use history",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Practice frequency: Walking meditation",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Casual lifestyle",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Goal-Directed Behavior",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Significance: Desire to make an impact",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Inefficiency",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Decision-making decisiveness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    }
+  ],
+  "parse_errors": 20
+}

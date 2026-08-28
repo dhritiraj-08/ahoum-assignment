@@ -215,9 +215,9 @@ undercut the whole point of choosing Ollama in the first place.
 3. **Automatic detection with silent fallback**: try Ollama first every
    time (or rather, once per process, cached); if it's unreachable or
    `llama3.1` isn't pulled, and `GROQ_API_KEY` is set, transparently use
-   Groq's `llama-3.1-8b-instant` instead; if neither is available, fail
-   immediately with a message telling the user exactly which of the two
-   things to fix.
+   Groq's hosted model instead (`GROQ_MODEL_NAME`, currently
+   `openai/gpt-oss-20b`); if neither is available, fail immediately with a
+   message telling the user exactly which of the two things to fix.
 
 **Choice made:** Option 3, implemented as `detect_backend()` /
 `_call_llm()` in `src/scorer.py`. `score_facet_batch()` doesn't know or
@@ -234,21 +234,31 @@ updates immediately instead of waiting for some other trigger.
   mid-session (the exact `llama-server` crash from `DEBUGGING.md` #3 is a
   real example of this happening on my own machine) and `GROQ_API_KEY`
   happens to be set, later batches in the *same* conversation could get
-  scored by Groq's `llama-3.1-8b-instant` instead of local `llama3.1`,
-  without any explicit action or obvious signal beyond the backend badge
-  changing. Two facets from one conversation could technically be scored by
-  two different models. I accepted this because the alternative -- hard
+  scored by Groq's hosted model instead of local `llama3.1`, without any
+  explicit action or obvious signal beyond the backend badge changing. Two
+  facets from one conversation could technically be scored by two
+  different models. I accepted this because the alternative -- hard
   failing until the user manually intervenes -- is worse for a demo/grading
   context where "it just kept working" matters more than strict
   single-model consistency within one run.
 - **The prompt and batch size (10) are shared unchanged across both
   backends** for consistency, but I have not actually verified that
-  Groq's `llama-3.1-8b-instant` follows the "abstain rather than guess"
-  instruction as reliably as the locally-run `llama3.1` did across the
-  benchmark -- that's untested. Running the 10-conversation benchmark
-  specifically against the Groq backend (by stopping Ollama and setting
-  `GROQ_API_KEY`) is the obvious next step before trusting it in any
-  real grading demo, and I haven't done that yet.
+  Groq's model follows the "abstain rather than guess" instruction as
+  reliably as the locally-run `llama3.1` did across the benchmark --
+  that's untested. Running the 10-conversation benchmark specifically
+  against the Groq backend (by stopping Ollama and setting `GROQ_API_KEY`)
+  is the obvious next step before trusting it in any real grading demo,
+  and I haven't done that yet.
+- **Hardcoding a specific Groq model name is itself a trade-off, and it
+  already bit me once.** `GROQ_MODEL_NAME` originally defaulted to
+  `llama-3.1-8b-instant`; it later became enterprise-only and started
+  404ing on developer-tier accounts, so the default was changed to
+  `openai/gpt-oss-20b`. This is exactly why `GROQ_MODEL_NAME` is read from
+  an environment variable rather than only a hardcoded constant, and why
+  `python main.py --test-groq` exists -- Groq's model catalog and access
+  tiers change on a timeline this project doesn't control, and the fix
+  needs to be "set an env var and re-run `--test-groq`," not "wait for a
+  code change."
 - **The cache doesn't self-heal.** If Ollama recovers after a fallback to
   Groq, `app.py`'s badge only re-checks because it explicitly calls
   `check_backend_status()` fresh on every Streamlit rerun (which happens on

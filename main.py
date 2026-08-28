@@ -9,10 +9,12 @@ Usage:
     python main.py --score "some conversation text"
     python main.py --benchmark
     python main.py --setup
+    python main.py --test-groq
 """
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 
@@ -121,6 +123,85 @@ def cmd_benchmark():
     run_benchmark()
 
 
+def cmd_test_groq():
+    """
+    Forces the Groq backend for one real single-facet scoring call --
+    bypassing Ollama detection entirely, even if Ollama is running and
+    working fine -- so you can verify GROQ_API_KEY + GROQ_MODEL_NAME
+    actually work end-to-end without stopping Ollama or running the full
+    pipeline.
+
+    This exists specifically because Groq's model catalog changes over
+    time: a model ID that's correct today can 404 months later if Groq
+    deprecates/decommissions it (a real example: "llama3-8b-8192" was shut
+    down 2025-08-30). Rather than guess at the right model name, this
+    makes exactly one real API call and reports the actual result.
+    """
+    console.print("[bold cyan]Testing Groq backend (Ollama detection bypassed for this check)...[/bold cyan]\n")
+
+    if not os.environ.get("GROQ_API_KEY"):
+        console.print("[bold red]FAILED:[/bold red] GROQ_API_KEY is not set in this environment.")
+        console.print("  Set it first:")
+        console.print("    export GROQ_API_KEY=your_key_here        (Linux/Mac)")
+        console.print('    $env:GROQ_API_KEY="your_key_here"        (Windows PowerShell)')
+        console.print("  Get a free key at https://console.groq.com/keys")
+        sys.exit(1)
+
+    from src import scorer
+
+    # Force Groq: skip Ollama detection entirely for this one check,
+    # regardless of whether it's actually running. Restored afterward so a
+    # normal run right after --test-groq still prefers Ollama as usual.
+    original_check_ollama = scorer._check_ollama_available
+    original_backend = scorer._active_backend
+    scorer._check_ollama_available = lambda: False
+    scorer._active_backend = None
+
+    try:
+        try:
+            backend = scorer.detect_backend(force_refresh=True)
+        except RuntimeError as e:
+            console.print(f"[bold red]FAILED:[/bold red] {e}")
+            sys.exit(1)
+
+        if backend != "groq":
+            console.print(f"[bold red]FAILED:[/bold red] Expected backend 'groq' but got '{backend}'.")
+            sys.exit(1)
+
+        console.print(f"Backend resolved to: [green]groq[/green] (model: [bold]{scorer.GROQ_MODEL_NAME}[/bold])")
+        console.print("Running one real single-facet scoring call against Groq...\n")
+
+        test_facet = {
+            "facet_normalized": "Risktaking",
+            "category": "personality_trait",
+            "scoring_anchors": (
+                "1=Very low Risktaking, or the opposite trait is expressed; "
+                "3=Moderate/average Risktaking; 5=Very high Risktaking clearly expressed in the conversation."
+            ),
+        }
+        test_conversation = (
+            "I quit my job on a whim to go travel with no real plan and barely any savings left."
+        )
+
+        results = scorer.score_facet_batch([test_facet], test_conversation)
+        result = results[0]
+
+        if result["status"] == "parse_error":
+            console.print("[bold red]FAILED:[/bold red] The Groq call did not succeed.")
+            console.print(f"  {result['evidence']}")
+            sys.exit(1)
+
+        console.print("[bold green]SUCCESS:[/bold green] Groq backend is working end-to-end.")
+        console.print(
+            f"  facet={result['facet']}  status={result['status']}  "
+            f"score={result['score']}  confidence={result['confidence']}"
+        )
+        console.print(f"  evidence: {result['evidence']}")
+    finally:
+        scorer._check_ollama_available = original_check_ollama
+        scorer._active_backend = original_backend
+
+
 def main():
     parser = argparse.ArgumentParser(description="Conversation -> personality facet scoring pipeline")
     parser.add_argument("--audit", action="store_true", help="Run the facet CSV audit/cleaning step")
@@ -128,10 +209,14 @@ def main():
     parser.add_argument("--score", type=str, metavar="TEXT", help="Score a conversation string")
     parser.add_argument("--benchmark", action="store_true", help="Run the 10-conversation benchmark")
     parser.add_argument("--setup", action="store_true", help="Check Ollama is running and llama3.1 is available")
+    parser.add_argument(
+        "--test-groq", action="store_true",
+        help="Force the Groq backend (bypassing Ollama) and run one real scoring call to verify GROQ_API_KEY/GROQ_MODEL_NAME work",
+    )
 
     args = parser.parse_args()
 
-    if not any([args.audit, args.embed, args.score, args.benchmark, args.setup]):
+    if not any([args.audit, args.embed, args.score, args.benchmark, args.setup, args.test_groq]):
         parser.print_help()
         sys.exit(0)
 
@@ -146,6 +231,8 @@ def main():
             cmd_score(args.score)
         if args.benchmark:
             cmd_benchmark()
+        if args.test_groq:
+            cmd_test_groq()
     except Exception as e:
         console.print(f"[bold red]Fatal error:[/bold red] {e}")
         sys.exit(1)

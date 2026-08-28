@@ -229,3 +229,44 @@ def test_call_llm_routes_to_groq_when_backend_is_groq(monkeypatch):
     fake_ollama_client.chat.assert_not_called()
     call_kwargs = fake_groq_client.chat.completions.create.call_args.kwargs
     assert call_kwargs["model"] == scorer.GROQ_MODEL_NAME
+
+
+def test_groq_404_model_not_found_gets_actionable_hint(monkeypatch):
+    """
+    A deprecated/decommissioned Groq model ID surfaces as a 404 from the
+    SDK -- real example: "llama3-8b-8192" was shut down by Groq on
+    2025-08-30. score_facet_batch must still not crash, and the evidence
+    message should point at the actual fix (check console.groq.com/docs/models,
+    override GROQ_MODEL_NAME) rather than just the raw SDK exception.
+    """
+    monkeypatch.setattr(scorer, "_active_backend", "groq")
+
+    fake_groq_client = MagicMock()
+    fake_groq_client.chat.completions.create.side_effect = Exception(
+        "Error code: 404 - {'error': {'message': \"The model `llama3-8b-8192` does not exist\"}}"
+    )
+    monkeypatch.setattr(scorer, "_get_groq_client", lambda: fake_groq_client)
+
+    results = scorer.score_facet_batch([_fake_facet("Risktaking")], "some conversation text")
+
+    assert results[0]["status"] == "parse_error"
+    assert "console.groq.com/docs/models" in results[0]["evidence"]
+    assert "GROQ_MODEL_NAME" in results[0]["evidence"]
+    assert "--test-groq" in results[0]["evidence"]
+
+
+def test_groq_model_name_env_var_override(monkeypatch):
+    """GROQ_MODEL_NAME should be overridable without editing code -- this
+    is what lets you recover from a Groq model deprecation by setting an
+    env var instead of a code change. Verified by reloading the module
+    with the env var set, since GROQ_MODEL_NAME is read once at import time."""
+    import importlib
+
+    monkeypatch.setenv("GROQ_MODEL_NAME", "some-other-model-id")
+    try:
+        importlib.reload(scorer)
+        assert scorer.GROQ_MODEL_NAME == "some-other-model-id"
+    finally:
+        monkeypatch.delenv("GROQ_MODEL_NAME", raising=False)
+        importlib.reload(scorer)  # restore the default for any tests that run after this one
+        assert scorer.GROQ_MODEL_NAME == "openai/gpt-oss-20b"

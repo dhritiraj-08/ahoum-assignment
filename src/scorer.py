@@ -1,7 +1,7 @@
 """
 scorer.py
 ---------
-Uses an LLM (local Ollama llama3.1 by default, Groq's llama-3.1-8b-instant
+Uses an LLM (local Ollama llama3.1 by default, Groq's openai/gpt-oss-20b
 as an automatic cloud fallback) to score a batch of retrieved facets
 against a conversation. Never scores more than BATCH_SIZE facets per LLM
 call, and never scores medical/biological facets under any circumstances
@@ -19,13 +19,16 @@ docs/DECISIONS.md for more detail.
 
 WHY A HYBRID OLLAMA/GROQ BACKEND: Ollama requires a local GPU-capable
 machine, which means the project only runs on hardware like the one it was
-built on. Groq's hosted API serves the same llama-3.1-8b family (as
-"llama-3.1-8b-instant") and needs nothing but an API key, so it's a natural
-fallback for running this on any machine, in CI, or when the local Ollama
-server/GPU isn't available. See docs/DECISIONS.md #5 for the full
-reasoning and trade-offs (in particular: the fallback is silent, so a
-mid-session Ollama crash can switch backends without an explicit user
-action).
+built on. Groq's hosted API needs nothing but an API key, so it's a
+natural fallback for running this on any machine, in CI, or when the
+local Ollama server/GPU isn't available. The specific Groq model
+(GROQ_MODEL_NAME, default "openai/gpt-oss-20b") has already changed once --
+"llama-3.1-8b-instant" was the original default until it became
+enterprise-only and started 404ing on developer accounts, which is
+exactly why GROQ_MODEL_NAME is an overridable env var rather than only a
+hardcoded constant. See docs/DECISIONS.md #5 for the full reasoning and
+trade-offs (in particular: the fallback is silent, so a mid-session
+Ollama crash can switch backends without an explicit user action).
 """
 
 import json
@@ -40,7 +43,15 @@ except ImportError as e:
 
 OLLAMA_HOST = "http://localhost:11434"
 MODEL_NAME = "llama3.1"
-GROQ_MODEL_NAME = "llama-3.1-8b-instant"
+# Overridable via env var on purpose: Groq deprecates/decommissions model
+# IDs over time (e.g. "llama3-8b-8192" was shut down 2025-08-30), and access
+# tiers change too -- "llama-3.1-8b-instant" was the default here until it
+# became enterprise-only and started 404ing on developer accounts. When
+# this happens again, set GROQ_MODEL_NAME to whatever's current/accessible
+# at https://console.groq.com/docs/models instead of editing this file --
+# `python main.py --test-groq` will tell you clearly whether the active
+# model name actually works.
+GROQ_MODEL_NAME = os.environ.get("GROQ_MODEL_NAME", "openai/gpt-oss-20b")
 BATCH_SIZE = 10
 
 VALID_STATUSES = {"scored", "insufficient_evidence", "not_observable"}
@@ -146,11 +157,28 @@ def _call_llm(prompt: str) -> str:
 
     # backend == "groq"
     client = _get_groq_client()
-    response = client.chat.completions.create(
-        model=GROQ_MODEL_NAME,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.1,
-    )
+    try:
+        response = client.chat.completions.create(
+            model=GROQ_MODEL_NAME,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.1,
+        )
+    except Exception as e:
+        # A 404 / "model not found" here almost always means GROQ_MODEL_NAME
+        # has been deprecated/decommissioned on Groq's side since this was
+        # last verified -- not a typo in our code. Re-raise with an
+        # actionable hint rather than a bare SDK error; score_facet_batch's
+        # caller still catches this the same way either way.
+        message = str(e)
+        if "404" in message or "does not exist" in message.lower() or "not_found" in message.lower():
+            raise RuntimeError(
+                f"Groq model '{GROQ_MODEL_NAME}' was not found (likely deprecated/decommissioned "
+                "by Groq -- their model catalog changes over time). Check the current list at "
+                "https://console.groq.com/docs/models, then set the GROQ_MODEL_NAME environment "
+                f"variable to override it without editing code. Run `python main.py --test-groq` "
+                f"to verify. Original error: {message}"
+            ) from e
+        raise
     return response.choices[0].message.content
 
 
