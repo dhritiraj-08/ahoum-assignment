@@ -8,3 +8,4 @@ rich
 tqdm
 scikit-learn
 jupyter
+matplotlib

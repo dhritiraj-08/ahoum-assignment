@@ -137,7 +137,10 @@ verify empirically: across both full benchmark runs (`top_k=25` and
 `top_k=40`, 30 reference facets each, including the medical-trap and
 spiritual-trap conversations that specifically try to bait the system into
 scoring `FSH level`, `Basophil count`, and esoteric facets), the
-`SAFETY_VIOLATION_scored_non_observable_facet` count was 0 both times. I'd
+`SAFETY_VIOLATION_scored_non_observable_facet` count was 0 both times. See
+`docs/HALLUCINATION_EXAMPLES.md` for three worked examples of exactly what
+this prevents -- real facet names from the CSV, what a naive single-layer
+system would have scored, and why it's wrong. I'd
 rather have redundant, verifiable safety than a single check I'm just
 hoping the model respects.
 

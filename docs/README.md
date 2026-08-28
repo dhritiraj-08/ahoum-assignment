@@ -79,7 +79,9 @@ business judging from a short chat:
 Verified empirically, not just by design: across two full 10-conversation
 benchmark runs (including a "medical trap" and "spiritual trap" conversation
 specifically written to bait the system), the safety-violation count was 0
-both times.
+both times. Three worked examples of this in action -- a naive scored
+output next to what this system actually does -- are in
+`docs/HALLUCINATION_EXAMPLES.md`.
 
 ## Known limitations
 
@@ -115,6 +117,76 @@ both times.
   finding), but it's not a large or independently-validated ground truth
   set, so the 18/30 number should be read as "diagnostic signal," not as a
   precise accuracy percentage.
+
+## Scaling to 5,000 Facets
+
+The current system runs against 399 raw facets (322 conversation-observable
+after filtering). Here's what actually changes, piece by piece, if that
+grows to 5,000 -- and what doesn't.
+
+**Indexing (`src/embeddings.py`):** No code changes needed. FAISS's flat
+`IndexFlatIP` index is exact brute-force cosine similarity, and at 5,000
+384-dimensional vectors that's still a trivially small index by FAISS
+standards (people routinely run flat indexes at millions of vectors). Build
+time scales roughly linearly with facet count for the embedding step
+(`SentenceTransformer.encode()` is the actual bottleneck, not FAISS
+`index.add()`): 399 facets embed in about 1-2 seconds on CPU in this
+project, so 5,000 facets (~12.5x more) would land around 10-15 seconds --
+still a one-time cost you only pay when `data/Facets_Assignment.csv`
+changes, not per conversation.
+
+**Retrieval (`retrieve_relevant_facets()`):** `top_k` stays fixed at 40
+regardless of how many total facets are in the index -- that's the whole
+point of retrieval-based filtering instead of scaling the LLM's input with
+the corpus size. A flat FAISS search over 5,000 vectors is still a
+single-digit-millisecond operation (roughly proportional to `N * dim`
+multiply-adds, so ~12.5x the raw compute of 399 facets, but that's the
+difference between ~0.2ms and ~2ms in practice, not something you'd notice
+per conversation). The number of facets sent to the LLM per conversation
+does not change.
+
+**Batching (`src/scorer.py`):** Still 10 facets per Ollama call. With
+`top_k=40` retrieved, that's still exactly 4 batches per conversation --
+identical to today, because batching depends on `top_k`, not on total
+corpus size. This is the key scaling property of the whole architecture:
+**growing the facet library doesn't grow the number of LLM calls per
+conversation** as long as `top_k` stays fixed. It only grows the pool that
+retrieval selects from.
+
+**Latency estimate:** Today, scoring one conversation is 4 batches x ~11s
+per Ollama call on this hardware (RTX 4050) = roughly 45 seconds
+end-to-end. At 5,000 facets, retrieval still returns 40 candidates, still
+splits into 4 batches, so per-conversation scoring latency stays at roughly
+the same ~45 seconds -- the LLM has no idea the underlying facet library
+grew. The only latency that increases is the one-time index build:
+`python main.py --embed` goes from ~2s to an estimated ~10-15s, which you
+only pay once (or whenever the CSV changes), not per conversation scored.
+
+**Where the real bottleneck moves:** At 5,000 facets with `top_k` still 40,
+the system as designed actually scales fine -- the bottleneck stays exactly
+where it is today: Ollama's single-threaded local inference throughput
+during the 4 sequential batch calls per conversation. That bottleneck would
+only get *worse* if `top_k` were naively scaled up alongside the facet
+count (e.g. someone deciding "5,000 facets means we should retrieve 500,
+not 40") -- that's the scenario to actively avoid, since it would turn 4
+batches into 50 and make each conversation take 10x longer. Keeping
+`top_k` fixed regardless of corpus size is what keeps this cheap.
+
+If conversation *volume* (not facet count) became the actual scaling
+problem -- many conversations scored per minute rather than one at a time
+-- the fixes would be:
+- **Async/concurrent batching:** fire multiple batch requests to Ollama
+  concurrently instead of the current sequential loop in
+  `score_facets()`, or move to a serving layer built for concurrent
+  local inference (e.g. vLLM, or Ollama's own request queuing) instead of
+  one conversation at a time.
+- **Caching:** add a simple cache keyed on `(facet_normalized,
+  hash(conversation_text))` -- a dict for a single-process demo, Redis for
+  anything multi-process/persistent -- so re-scoring the exact same
+  conversation (e.g. a user re-submitting, or a retry after a parse error)
+  doesn't re-spend an LLM call on facets already scored for that exact
+  text. This wouldn't help with novel conversations, but it's a real,
+  cheap win for repeated/retried requests.
 
 ## What I'd improve with another day
 
