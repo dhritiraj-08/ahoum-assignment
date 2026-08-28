@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "I love taking risks and jumping into new challenges",
+  "total_facets_retrieved": 40,
+  "scored": 0,
+  "abstained": 0,
+  "results": [
+    {
+      "facet": "Risktaking",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Creative risk-taking tendency",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Pure Challenge",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Fearfulness: Fear of physical dangers",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Control over situations",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Adventure-Seeking Behavior",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Creativity in solutions",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Competition",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Creative resilience",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Significance: Desire to make an impact",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Psychological construct: Psychological Safety climate",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Safety compliance",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Overprotectiveness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Learning through movement",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Use of Nature as a Stress Reliever",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Perseverance",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Gamified-finance-app usage",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Comfort with Vulnerability",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Bravery",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Judging Consequences",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Decision-Making Confidence",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Desperation",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Numeric Filing Skills",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Attitude toward learning",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Harmfulness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Psychological construct: Perfectionistic Strivings",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Physical-violence exposure",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Courageousness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Impudence",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Use of Mathematical Formulas",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Self-Efficacy",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Desire to influence others",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Hesitation",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Initiative",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Decision-making speed",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Understanding mechanical concepts",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Understanding Mathematical Concepts",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    },
+    {
+      "facet": "Hardworking",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}"
+    }
+  ],
+  "parse_errors": 40
+}
