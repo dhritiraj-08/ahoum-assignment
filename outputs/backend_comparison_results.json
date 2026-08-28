@@ -1,0 +1,1882 @@
+[
+  {
+    "id": 1,
+    "type": "clear_direct",
+    "conversation": "I quit my stable corporate job last week to backpack solo through South America with no itinerary and barely any savings left. I've always been the one jumping off cliffs, literally and figuratively, before checking the depth of the water.",
+    "reference_facets": [
+      "Risktaking",
+      "Adventure-Seeking Behavior",
+      "Common-sense"
+    ],
+    "ollama": {
+      "total_retrieved": 25,
+      "scored": 5,
+      "abstained": 10,
+      "parse_errors": 10,
+      "results_by_facet": {
+        "Eco-tourism trips": {
+          "facet": "Eco-tourism trips",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+        },
+        "Volunteer Work": {
+          "facet": "Volunteer Work",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+        },
+        "Risktaking": {
+          "facet": "Risktaking",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+        },
+        "Perseverance": {
+          "facet": "Perseverance",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+        },
+        "Digital-nomad months": {
+          "facet": "Digital-nomad months",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+        },
+        "Casual lifestyle": {
+          "facet": "Casual lifestyle",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+        },
+        "Creative resilience": {
+          "facet": "Creative resilience",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+        },
+        "Buddhist practice: Eightfold Path – Right Intention level": {
+          "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+        },
+        "Withdrawnness": {
+          "facet": "Withdrawnness",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+        },
+        "Travel-companions diversity": {
+          "facet": "Travel-companions diversity",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed (status code: 500)"
+        },
+        "Creative risk-taking tendency": {
+          "facet": "Creative risk-taking tendency",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person mentions jumping off cliffs 'literally and figuratively' before checking the depth of the water, indicating a willingness to take creative risks."
+        },
+        "Adventure-Seeking Behavior": {
+          "facet": "Adventure-Seeking Behavior",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person has quit their job to backpack solo through South America with no itinerary, indicating a strong desire for adventure."
+        },
+        "Desperation": {
+          "facet": "Desperation",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person mentions having 'barely any savings left', indicating a sense of desperation or financial urgency."
+        },
+        "Courageousness": {
+          "facet": "Courageousness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person is taking a significant risk by quitting their job and traveling alone, indicating a high level of courageousness."
+        },
+        "Boredom Susceptibility": {
+          "facet": "Boredom Susceptibility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of boredom or any related emotions in the conversation."
+        },
+        "Sustainable-transport usage": {
+          "facet": "Sustainable-transport usage",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of transportation methods or their sustainability in the conversation."
+        },
+        "Organized lifestyle": {
+          "facet": "Organized lifestyle",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The person mentions having 'no itinerary', which suggests a lack of planning or organization."
+        },
+        "Participation in Community Activities": {
+          "facet": "Participation in Community Activities",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of community activities or participation in the conversation."
+        },
+        "Hardworking": {
+          "facet": "Hardworking",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The person mentions quitting their job, which could imply a lack of hard work or dedication to their previous employment."
+        },
+        "Collectedness": {
+          "facet": "Collectedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of the person's emotional state or level of collectedness in the conversation."
+        },
+        "Rebelliousness": {
+          "facet": "Rebelliousness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker describes themselves as 'the one jumping off cliffs, literally and figuratively, before checking the depth of the water'."
+        },
+        "Gamified-finance-app usage": {
+          "facet": "Gamified-finance-app usage",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of gamified finance apps in the conversation."
+        },
+        "Practice frequency: Walking meditation": {
+          "facet": "Practice frequency: Walking meditation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of walking meditation in the conversation."
+        },
+        "Self-effacement": {
+          "facet": "Self-effacement",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The speaker does not express self-effacement or humility; instead, they describe their impulsive behavior."
+        },
+        "Encouraging participation": {
+          "facet": "Encouraging participation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The speaker does not attempt to encourage or invite the listener to participate in any way."
+        }
+      }
+    },
+    "groq": {
+      "total_retrieved": 25,
+      "scored": 8,
+      "abstained": 17,
+      "parse_errors": 0,
+      "results_by_facet": {
+        "Eco-tourism trips": {
+          "facet": "Eco-tourism trips",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of eco-tourism."
+        },
+        "Volunteer Work": {
+          "facet": "Volunteer Work",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of volunteer work."
+        },
+        "Risktaking": {
+          "facet": "Risktaking",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I've always been the one jumping off cliffs, literally and figuratively, before checking the depth of the water."
+        },
+        "Perseverance": {
+          "facet": "Perseverance",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No explicit mention of perseverance over time."
+        },
+        "Digital-nomad months": {
+          "facet": "Digital-nomad months",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of digital nomad."
+        },
+        "Casual lifestyle": {
+          "facet": "Casual lifestyle",
+          "score": 4,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "Backpack solo through South America with no itinerary and barely any savings left."
+        },
+        "Creative resilience": {
+          "facet": "Creative resilience",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of creative resilience."
+        },
+        "Buddhist practice: Eightfold Path – Right Intention level": {
+          "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of Buddhist practice."
+        },
+        "Withdrawnness": {
+          "facet": "Withdrawnness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of withdrawnness."
+        },
+        "Travel-companions diversity": {
+          "facet": "Travel-companions diversity",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I am backpack solo."
+        },
+        "Creative risk-taking tendency": {
+          "facet": "Creative risk-taking tendency",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "I quit my stable corporate job last week to backpack solo through South America with no itinerary and barely any savings left."
+        },
+        "Adventure-Seeking Behavior": {
+          "facet": "Adventure-Seeking Behavior",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "backpack solo through South America with no itinerary."
+        },
+        "Desperation": {
+          "facet": "Desperation",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "barely any savings left."
+        },
+        "Courageousness": {
+          "facet": "Courageousness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I've always been the one jumping off cliffs, literally and figuratively, before checking the depth of the water."
+        },
+        "Boredom Susceptibility": {
+          "facet": "Boredom Susceptibility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of boredom or related behavior."
+        },
+        "Sustainable-transport usage": {
+          "facet": "Sustainable-transport usage",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of transport type or sustainability."
+        },
+        "Organized lifestyle": {
+          "facet": "Organized lifestyle",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of organization or planning."
+        },
+        "Participation in Community Activities": {
+          "facet": "Participation in Community Activities",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of community activities."
+        },
+        "Hardworking": {
+          "facet": "Hardworking",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of work ethic or effort."
+        },
+        "Collectedness": {
+          "facet": "Collectedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of calmness or composure."
+        },
+        "Rebelliousness": {
+          "facet": "Rebelliousness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I quit my stable corporate job last week to backpack solo through South America with no itinerary and barely any savings left."
+        },
+        "Gamified-finance-app usage": {
+          "facet": "Gamified-finance-app usage",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of gamified finance app usage."
+        },
+        "Practice frequency: Walking meditation": {
+          "facet": "Practice frequency: Walking meditation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of walking meditation."
+        },
+        "Self-effacement": {
+          "facet": "Self-effacement",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of self-effacement."
+        },
+        "Encouraging participation": {
+          "facet": "Encouraging participation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of encouraging participation."
+        }
+      }
+    }
+  },
+  {
+    "id": 3,
+    "type": "contradictory",
+    "conversation": "I tell everyone I'm a very patient person who never loses his temper. But this morning I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later.",
+    "reference_facets": [
+      "Patience: Resistance to anger",
+      "Emotionalism",
+      "Decency"
+    ],
+    "ollama": {
+      "total_retrieved": 25,
+      "scored": 16,
+      "abstained": 9,
+      "parse_errors": 0,
+      "results_by_facet": {
+        "Patience: Resistance to anger": {
+          "facet": "Patience: Resistance to anger",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person admits to screaming at the barista and storming out, indicating a lack of patience."
+        },
+        "Irritability": {
+          "facet": "Irritability",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person's behavior of screaming at the barista and storming out clearly shows high irritability."
+        },
+        "Hostility": {
+          "facet": "Hostility",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person's behavior of screaming at the barista and storming out is a clear expression of hostility."
+        },
+        "Use of Mathematical Formulas": {
+          "facet": "Use of Mathematical Formulas",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "There is no mention of mathematical formulas in the conversation."
+        },
+        "Tendency Toward Compromise or Confrontation": {
+          "facet": "Tendency Toward Compromise or Confrontation",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person's behavior of screaming at the barista and storming out indicates a tendency toward confrontation."
+        },
+        "Psychological construct: Psychological Safety climate": {
+          "facet": "Psychological construct: Psychological Safety climate",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention anything related to a psychological safety climate."
+        },
+        "Control over situations": {
+          "facet": "Control over situations",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person's behavior of screaming at the barista and storming out indicates a lack of control over the situation."
+        },
+        "Managing emotions": {
+          "facet": "Managing emotions",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person's behavior of screaming at the barista and storming out indicates poor management of emotions."
+        },
+        "Warmheartedness": {
+          "facet": "Warmheartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "high",
+          "evidence": "The conversation does not mention anything related to warmheartedness."
+        },
+        "General Mood and Attitude": {
+          "facet": "General Mood and Attitude",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person's behavior of screaming at the barista and storming out indicates a negative general mood and attitude."
+        },
+        "Assertiveness and control in relationships": {
+          "facet": "Assertiveness and control in relationships",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person screams at the barista, throws the cup in the trash, and storms out, indicating a high level of assertiveness and control in relationships."
+        },
+        "Psychological construct: Excuse-Making tendency": {
+          "facet": "Psychological construct: Excuse-Making tendency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no indication of excuse-making in the conversation, but it is also not explicitly denied."
+        },
+        "Discontentment": {
+          "facet": "Discontentment",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person screams at the barista and storms out, indicating high discontentment."
+        },
+        "Psychological construct: Perfectionistic Strivings": {
+          "facet": "Psychological construct: Perfectionistic Strivings",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no indication of perfectionistic strivings in the conversation."
+        },
+        "Negative Affect Frequency": {
+          "facet": "Negative Affect Frequency",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person screams at the barista and storms out, indicating a high frequency of negative affect."
+        },
+        "Controlling Reactions": {
+          "facet": "Controlling Reactions",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person screams at the barista, throws the cup in the trash, and storms out, indicating a high level of controlling reactions."
+        },
+        "Immaturity": {
+          "facet": "Immaturity",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person screams at the barista, throws the cup in the trash, and storms out, indicating immature behavior."
+        },
+        "Desperation": {
+          "facet": "Desperation",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person screams at the barista and storms out, indicating desperation."
+        },
+        "Sensitiveness": {
+          "facet": "Sensitiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no indication of sensitiveness in the conversation."
+        },
+        "Comfort with Vulnerability": {
+          "facet": "Comfort with Vulnerability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "The conversation does not touch on the topic of vulnerability."
+        },
+        "Social Desirability Bias": {
+          "facet": "Social Desirability Bias",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker explicitly states they are a very patient person who never loses their temper, but then describes losing their temper and screaming at the barista."
+        },
+        "Judging Consequences": {
+          "facet": "Judging Consequences",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker describes the consequences of their actions, including throwing the cup in the trash and storming out, indicating they are judging the consequences of their behavior."
+        },
+        "Psychological construct: Acculturative Stress score": {
+          "facet": "Psychological construct: Acculturative Stress score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of acculturative stress or any related themes in the conversation."
+        },
+        "Ego Dissolution Frequency": {
+          "facet": "Ego Dissolution Frequency",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker's behavior, including screaming and storming out, suggests a loss of ego control and a high frequency of ego dissolution."
+        },
+        "High-spiritedness": {
+          "facet": "High-spiritedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of high-spiritedness or any related themes in the conversation."
+        }
+      }
+    },
+    "groq": {
+      "total_retrieved": 25,
+      "scored": 20,
+      "abstained": 5,
+      "parse_errors": 0,
+      "results_by_facet": {
+        "Patience: Resistance to anger": {
+          "facet": "Patience: Resistance to anger",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later."
+        },
+        "Irritability": {
+          "facet": "Irritability",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later."
+        },
+        "Hostility": {
+          "facet": "Hostility",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later."
+        },
+        "Use of Mathematical Formulas": {
+          "facet": "Use of Mathematical Formulas",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of mathematical formulas in the conversation."
+        },
+        "Tendency Toward Compromise or Confrontation": {
+          "facet": "Tendency Toward Compromise or Confrontation",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later."
+        },
+        "Psychological construct: Psychological Safety climate": {
+          "facet": "Psychological construct: Psychological Safety climate",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later."
+        },
+        "Control over situations": {
+          "facet": "Control over situations",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later."
+        },
+        "Managing emotions": {
+          "facet": "Managing emotions",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later."
+        },
+        "Warmheartedness": {
+          "facet": "Warmheartedness",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later."
+        },
+        "General Mood and Attitude": {
+          "facet": "General Mood and Attitude",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later."
+        },
+        "Assertiveness and control in relationships": {
+          "facet": "Assertiveness and control in relationships",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker screamed at the barista, threw the cup, and stormed out, showing a lack of control."
+        },
+        "Psychological construct: Excuse-Making tendency": {
+          "facet": "Psychological construct: Excuse-Making tendency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of excuses or justification for the behavior."
+        },
+        "Discontentment": {
+          "facet": "Discontentment",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker was fuming for twenty minutes after the incident, indicating high discontentment."
+        },
+        "Psychological construct: Perfectionistic Strivings": {
+          "facet": "Psychological construct: Perfectionistic Strivings",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No reference to perfectionistic goals or standards."
+        },
+        "Negative Affect Frequency": {
+          "facet": "Negative Affect Frequency",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker exhibited negative affect by screaming, throwing the cup, and storming out, but only in a single incident."
+        },
+        "Controlling Reactions": {
+          "facet": "Controlling Reactions",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker attempted to control the situation by screaming and throwing the cup."
+        },
+        "Immaturity": {
+          "facet": "Immaturity",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "Throwing the cup and storming out are behaviors often associated with immaturity."
+        },
+        "Desperation": {
+          "facet": "Desperation",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "There is no indication of desperation; the behavior appears to be anger rather than desperation."
+        },
+        "Sensitiveness": {
+          "facet": "Sensitiveness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker reacted strongly to a small mistake, showing sensitivity."
+        },
+        "Comfort with Vulnerability": {
+          "facet": "Comfort with Vulnerability",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker claims to be patient but does not display vulnerability; the behavior is defensive rather than vulnerable."
+        },
+        "Social Desirability Bias": {
+          "facet": "Social Desirability Bias",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I tell everyone I'm a very patient person who never loses his temper, yet I screamed at the barista and stormed out."
+        },
+        "Judging Consequences": {
+          "facet": "Judging Consequences",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later, showing no consideration of consequences."
+        },
+        "Psychological construct: Acculturative Stress score": {
+          "facet": "Psychological construct: Acculturative Stress score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains no mention of acculturation or related stress."
+        },
+        "Ego Dissolution Frequency": {
+          "facet": "Ego Dissolution Frequency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no indication of ego dissolution in the conversation."
+        },
+        "High-spiritedness": {
+          "facet": "High-spiritedness",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The behavior described—screaming, throwing the cup, and storming out—indicates low high-spiritedness."
+        }
+      }
+    }
+  },
+  {
+    "id": 4,
+    "type": "sarcastic",
+    "conversation": "Oh sure, I LOVE waking up at 5am to go for a run in the freezing cold, it's basically my favorite thing in the world. Said no one ever. I hit snooze four times and rolled back to sleep, as usual.",
+    "reference_facets": [
+      "Doggedness",
+      "Self-improvement",
+      "Discontentment"
+    ],
+    "ollama": {
+      "total_retrieved": 25,
+      "scored": 11,
+      "abstained": 13,
+      "parse_errors": 1,
+      "results_by_facet": {
+        "Sleep-environment temperature": {
+          "facet": "Sleep-environment temperature",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person says they hit snooze four times and rolled back to sleep, indicating they prefer a warm environment."
+        },
+        "Wake-time consistency": {
+          "facet": "Wake-time consistency",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person says they hit snooze four times, indicating inconsistent wake-up times."
+        },
+        "Breakfast-skipping frequency": {
+          "facet": "Breakfast-skipping frequency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no mention of breakfast or skipping it."
+        },
+        "Time outdoors/day (h)": {
+          "facet": "Time outdoors/day (h)",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no mention of time spent outdoors."
+        },
+        "Warmheartedness": {
+          "facet": "Warmheartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no indication of the person's emotional warmth or empathy."
+        },
+        "Boredom Susceptibility": {
+          "facet": "Boredom Susceptibility",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person says 'Said no one ever', indicating they are aware of the unusual nature of their behavior and may be prone to boredom."
+        },
+        "Comfort with Vulnerability": {
+          "facet": "Comfort with Vulnerability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no indication of the person's comfort with vulnerability or openness."
+        },
+        "Childhood Experiences": {
+          "facet": "Childhood Experiences",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no mention of the person's childhood experiences."
+        },
+        "Desperation": {
+          "facet": "Desperation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no indication of desperation or a sense of urgency."
+        },
+        "Adventure-Seeking Behavior": {
+          "facet": "Adventure-Seeking Behavior",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no indication of the person's willingness to take risks or engage in adventurous activities."
+        },
+        "Caffeine intake (mg/day)": {
+          "facet": "Caffeine intake (mg/day)",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of caffeine intake is made in the conversation."
+        },
+        "Happiness": {
+          "facet": "Happiness",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker says 'Said no one ever', implying they do not enjoy waking up at 5am."
+        },
+        "Caffeine sensitivity gene": {
+          "facet": "Caffeine sensitivity gene",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No information about the speaker's caffeine sensitivity gene is provided."
+        },
+        "Inversion comfort level": {
+          "facet": "Inversion comfort level",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker expresses discomfort with waking up at 5am, indicating a low inversion comfort level."
+        },
+        "Casual lifestyle": {
+          "facet": "Casual lifestyle",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker hits snooze four times and rolls back to sleep, indicating a preference for a more relaxed, casual lifestyle."
+        },
+        "Vivacity": {
+          "facet": "Vivacity",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker's tone is sarcastic and unenthusiastic, indicating a low level of vivacity."
+        },
+        "Psychological construct: Psychological Safety climate": {
+          "facet": "Psychological construct: Psychological Safety climate",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No information about the speaker's psychological safety climate is provided."
+        },
+        "Digital-nomad months": {
+          "facet": "Digital-nomad months",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of digital nomadism is made in the conversation."
+        },
+        "Blissfulness": {
+          "facet": "Blissfulness",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker's sarcastic tone and lack of enthusiasm indicate a low level of blissfulness."
+        },
+        "Big Five facet Openness – Artistic Interests": {
+          "facet": "Big Five facet Openness – Artistic Interests",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No information about the speaker's artistic interests is provided."
+        },
+        "Joyfulness": {
+          "facet": "Joyfulness",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker expresses disdain for waking up early and implies it's a chore."
+        },
+        "Self-righteousness": {
+          "facet": "Self-righteousness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker uses a sarcastic tone to express their disapproval of others who might enjoy waking up early."
+        },
+        "Psychological construct: Operant-Learning rate": {
+          "facet": "Psychological construct: Operant-Learning rate",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Model did not return a result for this facet."
+        },
+        "Organized lifestyle": {
+          "facet": "Organized lifestyle",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker admits to hitting snooze four times and rolling back to sleep, indicating a lack of organization or discipline in their morning routine."
+        },
+        "Openness": {
+          "facet": "Openness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no clear indication of the speaker's openness to new experiences or ideas."
+        }
+      }
+    },
+    "groq": {
+      "total_retrieved": 25,
+      "scored": 7,
+      "abstained": 18,
+      "parse_errors": 0,
+      "results_by_facet": {
+        "Sleep-environment temperature": {
+          "facet": "Sleep-environment temperature",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of bedroom temperature."
+        },
+        "Wake-time consistency": {
+          "facet": "Wake-time consistency",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "They wake at 5am but hit snooze four times and rolled back to sleep, indicating low consistency."
+        },
+        "Breakfast-skipping frequency": {
+          "facet": "Breakfast-skipping frequency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of breakfast."
+        },
+        "Time outdoors/day (h)": {
+          "facet": "Time outdoors/day (h)",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No duration of outdoor activity provided."
+        },
+        "Warmheartedness": {
+          "facet": "Warmheartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No clear expression of warmth; sarcasm present."
+        },
+        "Boredom Susceptibility": {
+          "facet": "Boredom Susceptibility",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No explicit mention of boredom."
+        },
+        "Comfort with Vulnerability": {
+          "facet": "Comfort with Vulnerability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of vulnerability."
+        },
+        "Childhood Experiences": {
+          "facet": "Childhood Experiences",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of childhood."
+        },
+        "Desperation": {
+          "facet": "Desperation",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of desperation."
+        },
+        "Adventure-Seeking Behavior": {
+          "facet": "Adventure-Seeking Behavior",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "They run at 5am in freezing cold, showing some adventure-seeking."
+        },
+        "Caffeine intake (mg/day)": {
+          "facet": "Caffeine intake (mg/day)",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of caffeine consumption."
+        },
+        "Happiness": {
+          "facet": "Happiness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker says \"I LOVE waking up at 5am ... it's basically my favorite thing in the world.\""
+        },
+        "Caffeine sensitivity gene": {
+          "facet": "Caffeine sensitivity gene",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of caffeine sensitivity."
+        },
+        "Inversion comfort level": {
+          "facet": "Inversion comfort level",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of inversion comfort."
+        },
+        "Casual lifestyle": {
+          "facet": "Casual lifestyle",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No clear indication of a casual lifestyle."
+        },
+        "Vivacity": {
+          "facet": "Vivacity",
+          "score": 5,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker expresses enthusiasm with \"I LOVE ... it's basically my favorite thing in the world.\""
+        },
+        "Psychological construct: Psychological Safety climate": {
+          "facet": "Psychological construct: Psychological Safety climate",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of psychological safety climate."
+        },
+        "Digital-nomad months": {
+          "facet": "Digital-nomad months",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of digital nomad months."
+        },
+        "Blissfulness": {
+          "facet": "Blissfulness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker says \"it's basically my favorite thing in the world.\""
+        },
+        "Big Five facet Openness – Artistic Interests": {
+          "facet": "Big Five facet Openness – Artistic Interests",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of artistic interests."
+        },
+        "Joyfulness": {
+          "facet": "Joyfulness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "\"I LOVE waking up at 5am to go for a run in the freezing cold, it's basically my favorite thing in the world.\""
+        },
+        "Self-righteousness": {
+          "facet": "Self-righteousness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No clear expression of moral superiority or judgment of others is present."
+        },
+        "Psychological construct: Operant-Learning rate": {
+          "facet": "Psychological construct: Operant-Learning rate",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention learning from reinforcement or behavior change."
+        },
+        "Organized lifestyle": {
+          "facet": "Organized lifestyle",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "\"I hit snooze four times and rolled back to sleep, as usual.\""
+        },
+        "Openness": {
+          "facet": "Openness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No clear indication of curiosity, imagination, or willingness to try new experiences beyond the run is provided."
+        }
+      }
+    }
+  },
+  {
+    "id": 7,
+    "type": "medical_trap",
+    "conversation": "I've been getting these headaches lately, and my doctor mentioned my FSH levels looked a bit off in my last blood test. My basophil count was also flagged as high. I've also been more irritable than usual because of it.",
+    "reference_facets": [
+      "FSH level",
+      "Basophil count",
+      "Emotionalism"
+    ],
+    "ollama": {
+      "total_retrieved": 25,
+      "scored": 6,
+      "abstained": 9,
+      "parse_errors": 10,
+      "results_by_facet": {
+        "Irritability": {
+          "facet": "Irritability",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        "Anticipativeness": {
+          "facet": "Anticipativeness",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        "Vision-check frequency": {
+          "facet": "Vision-check frequency",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        "Acidity": {
+          "facet": "Acidity",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        "Attachment avoidance score": {
+          "facet": "Attachment avoidance score",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        "Drug-use history": {
+          "facet": "Drug-use history",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        "Sensitivity": {
+          "facet": "Sensitivity",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        "Chronic pain presence": {
+          "facet": "Chronic pain presence",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        "Serotonin transporter availability": {
+          "facet": "Serotonin transporter availability",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        "Merriness": {
+          "facet": "Merriness",
+          "score": null,
+          "status": "parse_error",
+          "confidence": "low",
+          "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+        },
+        "Controlling Reactions": {
+          "facet": "Controlling Reactions",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person mentions their doctor's mention of their FSH levels and basophil count without showing any signs of emotional distress or reactivity."
+        },
+        "Inversion comfort level": {
+          "facet": "Inversion comfort level",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of any unusual or unconventional thoughts or behaviors."
+        },
+        "Impulsivity": {
+          "facet": "Impulsivity",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The person's statements are calm and matter-of-fact, with no indication of impulsive behavior."
+        },
+        "Selfcontrol": {
+          "facet": "Selfcontrol",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person is able to discuss their medical test results and their emotional state in a calm and controlled manner."
+        },
+        "Negative Affect Frequency": {
+          "facet": "Negative Affect Frequency",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person mentions being more irritable than usual, indicating some negative affect."
+        },
+        "Psychological construct: Acculturative Stress score": {
+          "facet": "Psychological construct: Acculturative Stress score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of any cultural or environmental stressors."
+        },
+        "Clumsiness": {
+          "facet": "Clumsiness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of any physical accidents or mishaps."
+        },
+        "Immune-response age": {
+          "facet": "Immune-response age",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of any immune-related issues or age-related concerns."
+        },
+        "Psychological construct: Eye-Contact avoidance score": {
+          "facet": "Psychological construct: Eye-Contact avoidance score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of any difficulties with eye contact."
+        },
+        "Conventional": {
+          "facet": "Conventional",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person discusses their medical test results in a straightforward and conventional manner."
+        },
+        "Psychological construct: Executive-Function composite": {
+          "facet": "Psychological construct: Executive-Function composite",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of executive function or problem-solving in the conversation."
+        },
+        "Troubleshooting technical issues": {
+          "facet": "Troubleshooting technical issues",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention any technical issues or troubleshooting."
+        },
+        "Overprotectiveness": {
+          "facet": "Overprotectiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no indication of overprotectiveness in the conversation."
+        },
+        "Neuroticism": {
+          "facet": "Neuroticism",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker mentions being 'more irritable than usual' due to their health issues, indicating a high level of neuroticism."
+        },
+        "Sensitiveness": {
+          "facet": "Sensitiveness",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker is concerned about their health issues and mentions their doctor's comments, showing some level of sensitiveness to their well-being."
+        }
+      }
+    },
+    "groq": {
+      "total_retrieved": 25,
+      "scored": 2,
+      "abstained": 23,
+      "parse_errors": 0,
+      "results_by_facet": {
+        "Irritability": {
+          "facet": "Irritability",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker says \"I've also been more irritable than usual because of it.\""
+        },
+        "Anticipativeness": {
+          "facet": "Anticipativeness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of future planning or anticipation in the conversation."
+        },
+        "Vision-check frequency": {
+          "facet": "Vision-check frequency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains no reference to vision checks."
+        },
+        "Acidity": {
+          "facet": "Acidity",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of acidity or related symptoms."
+        },
+        "Attachment avoidance score": {
+          "facet": "Attachment avoidance score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker does not discuss attachment-related behaviors."
+        },
+        "Drug-use history": {
+          "facet": "Drug-use history",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No information about drug use is provided."
+        },
+        "Sensitivity": {
+          "facet": "Sensitivity",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not address sensitivity to stimuli or emotions beyond irritability."
+        },
+        "Chronic pain presence": {
+          "facet": "Chronic pain presence",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Headaches are mentioned, but not described as chronic or persistent over a long period."
+        },
+        "Serotonin transporter availability": {
+          "facet": "Serotonin transporter availability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of serotonin transporter or related biological factors."
+        },
+        "Merriness": {
+          "facet": "Merriness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker does not express merriness or positive affect."
+        },
+        "Controlling Reactions": {
+          "facet": "Controlling Reactions",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of controlling reactions in the conversation."
+        },
+        "Inversion comfort level": {
+          "facet": "Inversion comfort level",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of inversion comfort level in the conversation."
+        },
+        "Impulsivity": {
+          "facet": "Impulsivity",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of impulsivity in the conversation."
+        },
+        "Selfcontrol": {
+          "facet": "Selfcontrol",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of selfcontrol in the conversation."
+        },
+        "Negative Affect Frequency": {
+          "facet": "Negative Affect Frequency",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker says 'I've also been more irritable than usual because of it.'"
+        },
+        "Psychological construct: Acculturative Stress score": {
+          "facet": "Psychological construct: Acculturative Stress score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of acculturative stress in the conversation."
+        },
+        "Clumsiness": {
+          "facet": "Clumsiness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of clumsiness in the conversation."
+        },
+        "Immune-response age": {
+          "facet": "Immune-response age",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of immune-response age in the conversation."
+        },
+        "Psychological construct: Eye-Contact avoidance score": {
+          "facet": "Psychological construct: Eye-Contact avoidance score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of eye-contact avoidance in the conversation."
+        },
+        "Conventional": {
+          "facet": "Conventional",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of conventionality in the conversation."
+        },
+        "Psychological construct: Executive-Function composite": {
+          "facet": "Psychological construct: Executive-Function composite",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Conversation does not provide evidence for executive function."
+        },
+        "Troubleshooting technical issues": {
+          "facet": "Troubleshooting technical issues",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Conversation does not mention any technical issues."
+        },
+        "Overprotectiveness": {
+          "facet": "Overprotectiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Conversation does not mention any protective behavior."
+        },
+        "Neuroticism": {
+          "facet": "Neuroticism",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Conversation does not provide sufficient evidence of neurotic traits."
+        },
+        "Sensitiveness": {
+          "facet": "Sensitiveness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Conversation does not provide sufficient evidence of sensitiveness."
+        }
+      }
+    }
+  },
+  {
+    "id": 9,
+    "type": "high_emotional",
+    "conversation": "I broke down crying in the middle of the grocery store today. Everything just hit me at once -- my dad's diagnosis, the breakup, the pressure at work. I couldn't stop shaking and had to call my best friend just to breathe through it.",
+    "reference_facets": [
+      "Emotionalism",
+      "Discontentment",
+      "Peacefulness"
+    ],
+    "ollama": {
+      "total_retrieved": 25,
+      "scored": 16,
+      "abstained": 9,
+      "parse_errors": 0,
+      "results_by_facet": {
+        "Emotional Boundaries": {
+          "facet": "Emotional Boundaries",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person broke down crying in public, but also has a support system (best friend) to help them cope."
+        },
+        "Compassion Fatigue": {
+          "facet": "Compassion Fatigue",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no indication of burnout or emotional exhaustion from helping others."
+        },
+        "Irritability": {
+          "facet": "Irritability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "The person's tone is emotional and vulnerable, but not irritable."
+        },
+        "Psychological construct: Self-Compassion total": {
+          "facet": "Psychological construct: Self-Compassion total",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person acknowledges their emotional vulnerability and reaches out to a trusted friend for support."
+        },
+        "Desperation": {
+          "facet": "Desperation",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person describes feeling overwhelmed by multiple stressors, but does not express a sense of hopelessness."
+        },
+        "Managing emotions": {
+          "facet": "Managing emotions",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person recognizes their emotional limits and takes steps to manage their emotions (calling a friend for support)."
+        },
+        "Psychological construct: Hope scale": {
+          "facet": "Psychological construct: Hope scale",
+          "score": 3,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person does not express a complete loss of hope, but rather a sense of being overwhelmed."
+        },
+        "Psychological construct: Excuse-Making tendency": {
+          "facet": "Psychological construct: Excuse-Making tendency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no indication of making excuses or blaming others for their situation."
+        },
+        "Depth of Emotional Connections": {
+          "facet": "Depth of Emotional Connections",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person describes a close relationship with a best friend and is able to be vulnerable with them."
+        },
+        "Religious coping – Negative": {
+          "facet": "Religious coping – Negative",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of religion or spirituality in the conversation."
+        },
+        "Significance: Desire to make an impact": {
+          "facet": "Significance: Desire to make an impact",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention any desire to make an impact or change the situation."
+        },
+        "Stress Recovery Ability": {
+          "facet": "Stress Recovery Ability",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person was able to call their best friend to 'breathe through' the situation, indicating effective stress recovery."
+        },
+        "Compassion": {
+          "facet": "Compassion",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person was able to call their best friend, indicating a compassionate and supportive relationship."
+        },
+        "Psychological construct: Resilience-Trait score": {
+          "facet": "Psychological construct: Resilience-Trait score",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The person was able to break down in tears, but also called their best friend to cope, suggesting moderate resilience."
+        },
+        "Psychological construct: Eye-Contact avoidance score": {
+          "facet": "Psychological construct: Eye-Contact avoidance score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "Eye-contact avoidance is not mentioned or implied in the conversation."
+        },
+        "Comfort with Vulnerability": {
+          "facet": "Comfort with Vulnerability",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person broke down in tears in public, indicating a high level of comfort with vulnerability."
+        },
+        "Happiness": {
+          "facet": "Happiness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention happiness or any positive emotions."
+        },
+        "Emotionalism": {
+          "facet": "Emotionalism",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person broke down in tears, indicating a high level of emotional expression."
+        },
+        "Big-heartedness": {
+          "facet": "Big-heartedness",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person was able to call their best friend, indicating a caring and supportive nature."
+        },
+        "Control over situations": {
+          "facet": "Control over situations",
+          "score": 1,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The person broke down in tears, indicating a lack of control over their emotions and situation."
+        },
+        "Ego Dissolution Frequency": {
+          "facet": "Ego Dissolution Frequency",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker mentions breaking down crying and feeling overwhelmed, indicating a high frequency of ego dissolution."
+        },
+        "Negative Affect Frequency": {
+          "facet": "Negative Affect Frequency",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker mentions crying, shaking, and feeling overwhelmed, indicating a high frequency of negative affect."
+        },
+        "Physical-violence exposure": {
+          "facet": "Physical-violence exposure",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "medium",
+          "evidence": "There is no mention of physical violence in the conversation."
+        },
+        "Patience: Resistance to anger": {
+          "facet": "Patience: Resistance to anger",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker mentions calling their best friend to 'breathe through' their emotions, suggesting a moderate level of patience and resistance to anger."
+        },
+        "Mindfulness facet: Observing": {
+          "facet": "Mindfulness facet: Observing",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no explicit mention of observing or mindfulness in the conversation."
+        }
+      }
+    },
+    "groq": {
+      "total_retrieved": 25,
+      "scored": 8,
+      "abstained": 17,
+      "parse_errors": 0,
+      "results_by_facet": {
+        "Emotional Boundaries": {
+          "facet": "Emotional Boundaries",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of setting or maintaining emotional boundaries in the conversation."
+        },
+        "Compassion Fatigue": {
+          "facet": "Compassion Fatigue",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker discusses personal distress, not caring for others, so no evidence of compassion fatigue."
+        },
+        "Irritability": {
+          "facet": "Irritability",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no indication of irritability or anger expressed."
+        },
+        "Psychological construct: Self-Compassion total": {
+          "facet": "Psychological construct: Self-Compassion total",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker does not demonstrate self‑compassion or self‑kindness in the text."
+        },
+        "Desperation": {
+          "facet": "Desperation",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "The speaker says they \"broke down crying\" and \"couldn't stop shaking\" after multiple stressors hit at once."
+        },
+        "Managing emotions": {
+          "facet": "Managing emotions",
+          "score": 3,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "The speaker \"had to call my best friend just to breathe through it,\" indicating some attempt to manage emotions."
+        },
+        "Psychological construct: Hope scale": {
+          "facet": "Psychological construct: Hope scale",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "There is no mention of hope or optimism in the conversation."
+        },
+        "Psychological construct: Excuse-Making tendency": {
+          "facet": "Psychological construct: Excuse-Making tendency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The speaker does not provide any excuses or rationalizations for their situation."
+        },
+        "Depth of Emotional Connections": {
+          "facet": "Depth of Emotional Connections",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "While a best friend is mentioned, the depth of the emotional connection is not described."
+        },
+        "Religious coping – Negative": {
+          "facet": "Religious coping – Negative",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No religious references or negative coping related to religion are present."
+        },
+        "Significance: Desire to make an impact": {
+          "facet": "Significance: Desire to make an impact",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention any desire to make an impact."
+        },
+        "Stress Recovery Ability": {
+          "facet": "Stress Recovery Ability",
+          "score": 2,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "I couldn't stop shaking and had to call my best friend just to breathe through it."
+        },
+        "Compassion": {
+          "facet": "Compassion",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of compassion toward others in the conversation."
+        },
+        "Psychological construct: Resilience-Trait score": {
+          "facet": "Psychological construct: Resilience-Trait score",
+          "score": 1,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "I broke down crying in the middle of the grocery store today."
+        },
+        "Psychological construct: Eye-Contact avoidance score": {
+          "facet": "Psychological construct: Eye-Contact avoidance score",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation contains no reference to eye contact or avoidance."
+        },
+        "Comfort with Vulnerability": {
+          "facet": "Comfort with Vulnerability",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I couldn't stop shaking and had to call my best friend just to breathe through it."
+        },
+        "Happiness": {
+          "facet": "Happiness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not express any happiness."
+        },
+        "Emotionalism": {
+          "facet": "Emotionalism",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I broke down crying in the middle of the grocery store today."
+        },
+        "Big-heartedness": {
+          "facet": "Big-heartedness",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No indication of big-heartedness in the conversation."
+        },
+        "Control over situations": {
+          "facet": "Control over situations",
+          "score": 1,
+          "status": "scored",
+          "confidence": "medium",
+          "evidence": "I couldn't stop shaking and had to call my best friend just to breathe through it."
+        },
+        "Ego Dissolution Frequency": {
+          "facet": "Ego Dissolution Frequency",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "The conversation does not mention any experience of ego dissolution."
+        },
+        "Negative Affect Frequency": {
+          "facet": "Negative Affect Frequency",
+          "score": 5,
+          "status": "scored",
+          "confidence": "high",
+          "evidence": "I broke down crying in the middle of the grocery store today... everything just hit me at once... I couldn't stop shaking and had to call my best friend just to breathe through it."
+        },
+        "Physical-violence exposure": {
+          "facet": "Physical-violence exposure",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of physical violence in the conversation."
+        },
+        "Patience: Resistance to anger": {
+          "facet": "Patience: Resistance to anger",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of anger or patience in the conversation."
+        },
+        "Mindfulness facet: Observing": {
+          "facet": "Mindfulness facet: Observing",
+          "score": null,
+          "status": "insufficient_evidence",
+          "confidence": "low",
+          "evidence": "No mention of observing internal states or mindfulness in the conversation."
+        }
+      }
+    }
+  }
+]

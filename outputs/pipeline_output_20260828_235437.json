@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "\"I work hard yaar, but kabhi kabhi I just want to chill\"",
+  "total_facets_retrieved": 40,
+  "scored": 4,
+  "abstained": 36,
+  "results": [
+    {
+      "facet": "Hardworking",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker explicitly states \"I work hard\"."
+    },
+    {
+      "facet": "Work Styles",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about the speaker's work style."
+    },
+    {
+      "facet": "Desperation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no indication of desperation in the statement."
+    },
+    {
+      "facet": "Patience: Resistance to anger",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The speaker does not mention anger or patience."
+    },
+    {
+      "facet": "Discontentment",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement does not clearly express discontentment."
+    },
+    {
+      "facet": "Religious practice: Quran khatam cycles per year",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to religious practice is made."
+    },
+    {
+      "facet": "Satya Adherence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no evidence of truthfulness or honesty beyond the statement."
+    },
+    {
+      "facet": "Pure Challenge",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention any challenges."
+    },
+    {
+      "facet": "Genuine",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The speaker's authenticity cannot be determined from this brief statement."
+    },
+    {
+      "facet": "Warmheartedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No indication of warmth or kindness is present."
+    },
+    {
+      "facet": "Soft-skill training hours",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of training hours or soft-skill development."
+    },
+    {
+      "facet": "Desire for excellence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Only 'I work hard' is mentioned, which is ambiguous and not a clear indicator of high desire for excellence."
+    },
+    {
+      "facet": "General Mood and Attitude",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement mixes work and chill, but does not clearly indicate overall mood or attitude."
+    },
+    {
+      "facet": "Enthusiasm",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No explicit expression of enthusiasm is present."
+    },
+    {
+      "facet": "Dignity",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to dignity or self-respect."
+    },
+    {
+      "facet": "Mindfulness facet: Observing",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of observing or mindfulness."
+    },
+    {
+      "facet": "Comfort with Vulnerability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The speaker does not explicitly express vulnerability."
+    },
+    {
+      "facet": "Creativity in solutions",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No creative solutions are discussed."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Only a brief mention of wanting to chill, not enough to assess boredom susceptibility."
+    },
+    {
+      "facet": "Casual lifestyle",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The phrase 'just want to chill' hints at casualness but is not sufficient to confirm a casual lifestyle."
+    },
+    {
+      "facet": "Happiness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement only hints at wanting to relax, not a clear expression of happiness."
+    },
+    {
+      "facet": "Attitude toward learning",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of learning or education."
+    },
+    {
+      "facet": "Cooking and Culinary Arts",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to cooking or culinary topics."
+    },
+    {
+      "facet": "Managing emotions",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The speaker mentions wanting to chill after hard work, but this does not clearly demonstrate emotion regulation."
+    },
+    {
+      "facet": "Peacefulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Desire to chill suggests some calmness, but not a definitive expression of peacefulness."
+    },
+    {
+      "facet": "Language use",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "Use of informal terms like \"yaar\" and \"kabhi kabhi\" indicates moderate informal language use."
+    },
+    {
+      "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of Buddhist practice or right intention."
+    },
+    {
+      "facet": "Psychological construct: Perfectionistic Strivings",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "\"I work hard\" could imply striving, but not specifically perfectionistic."
+    },
+    {
+      "facet": "Sentence Structure",
+      "score": 2,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The sentence is simple, with a single clause and a conjunction, indicating low complexity."
+    },
+    {
+      "facet": "Desire to influence others",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No indication of wanting to influence others."
+    },
+    {
+      "facet": "Hostility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No hostility expressed in the conversation."
+    },
+    {
+      "facet": "Decision-Making Confidence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No indication of decision-making confidence is present."
+    },
+    {
+      "facet": "Troubleshooting technical issues",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention any technical troubleshooting."
+    },
+    {
+      "facet": "Big Five facet Openness – Artistic Interests",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no reference to artistic interests."
+    },
+    {
+      "facet": "Joyfulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement does not explicitly convey joy."
+    },
+    {
+      "facet": "Courageousness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No courageous behavior is described."
+    },
+    {
+      "facet": "Numeric Filing Skills",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of numeric filing skills."
+    },
+    {
+      "facet": "Volunteer Work",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Volunteer work is not referenced."
+    },
+    {
+      "facet": "High-spiritedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not indicate high-spiritedness."
+    },
+    {
+      "facet": "Perseverance",
+      "score": 4,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker says \"I work hard,\" which suggests perseverance."
+    }
+  ],
+  "parse_errors": 0
+}

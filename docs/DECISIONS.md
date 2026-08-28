@@ -267,3 +267,51 @@ updates immediately instead of waiting for some other trigger.
   of that process's life once it has fallen back, even if Ollama comes back
   up seconds later, since nothing in that code path calls
   `detect_backend(force_refresh=True)`.
+
+---
+
+## 6. Which backend to actually recommend, once Decision #5's "untested" gap got closed
+
+**The ambiguity/problem:** Decision #5 explicitly flagged that Groq's
+scoring behavior versus local `llama3.1`'s had never been measured --
+only that the *routing* worked. That's not a decision so much as an open
+question, and it stayed open for a while: which backend should someone
+actually reach for, and under what circumstances? Guessing based on
+general reasoning (local should be more private, cloud should be more
+reliable) is exactly the kind of unverified claim this whole project has
+tried not to make about its own scoring quality.
+
+**Options considered:**
+1. Reason about it from general principles and write the recommendation
+   without running anything -- fast, but exactly the kind of claim this
+   project's own docs (`HALLUCINATION_EXAMPLES.md`, `BACKEND_COMPARISON.md`)
+   exist to argue against making.
+2. Run a real side-by-side comparison on a handful of the existing
+   benchmark conversations, same `top_k`, same prompts, and record what
+   each backend actually did.
+
+**Choice made:** Option 2, via `eval/backend_comparison.py`, on 5 of the
+10 `src/benchmark.py` conversations (`clear_direct`, `contradictory`,
+`sarcastic`, `medical_trap`, `high_emotional`), `top_k=25` for both. Full
+results and findings in `docs/BACKEND_COMPARISON.md`. Worth recording
+here specifically: the first attempt at this comparison produced garbage
+(every single facet came back `parse_error` for both backends) because
+`GROQ_API_KEY` wasn't actually present in the shell that ran the script --
+an environment problem, not a finding. That run was thrown out entirely
+rather than "fixed up" or partially salvaged, and rerun properly with the
+key actually loaded. The real result: Groq had 0 parse errors across 125
+judgments, Ollama had 21 (concentrated in 2 of 5 conversations, tied to
+the known VRAM-contention crash in `DEBUGGING.md` #3), and Groq was
+somewhat more conservative in aggregate (a real but more modest
+difference than initially expected before running it).
+
+**Trade-off:** This is 5 conversations, one run, no wall-clock timing
+captured -- not a rigorous statistical comparison, and `BACKEND_COMPARISON.md`
+says so explicitly rather than presenting n=5 as more conclusive than it
+is. It's also a single snapshot: Ollama's parse-error rate is a function
+of whatever else happened to be competing for VRAM on this specific
+machine at this specific moment, not a fixed property of local inference
+in general -- a rerun on a quieter machine could look very different. I
+chose to publish it anyway, with those limitations stated plainly, because
+"5 real data points with honestly-labeled limitations" is still more
+useful than either guessing or leaving Decision #5's gap open indefinitely.

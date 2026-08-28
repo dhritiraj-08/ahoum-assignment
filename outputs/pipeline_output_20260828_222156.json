@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "I work hard yaar, but kabhi kabhi I just want to chill",
+  "total_facets_retrieved": 40,
+  "scored": 17,
+  "abstained": 23,
+  "results": [
+    {
+      "facet": "Patience: Resistance to anger",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker mentions wanting to 'chill' occasionally, suggesting a moderate level of patience."
+    },
+    {
+      "facet": "Warmheartedness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker uses a colloquial term ('yaar') and a casual tone, indicating a moderate level of warmheartedness."
+    },
+    {
+      "facet": "Hardworking",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker mentions working hard, suggesting a moderate level of hardworking."
+    },
+    {
+      "facet": "Religious practice: Quran khatam cycles per year",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of religious practice or Quran khatam cycles in the conversation."
+    },
+    {
+      "facet": "General Mood and Attitude",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker's tone is casual and relaxed, indicating a moderate general mood and attitude."
+    },
+    {
+      "facet": "Discontentment",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker mentions wanting to 'chill' occasionally, suggesting a moderate level of discontentment."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker mentions wanting to 'chill' occasionally, suggesting a moderate level of boredom susceptibility."
+    },
+    {
+      "facet": "Work Styles",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker mentions working hard, suggesting a moderate level of work styles."
+    },
+    {
+      "facet": "Genuine",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker's tone is casual and relaxed, indicating a moderate level of genuineness."
+    },
+    {
+      "facet": "Desperation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no indication of desperation in the conversation."
+    },
+    {
+      "facet": "Satya Adherence",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker expresses a desire to 'chill', indicating a willingness to relax and be themselves."
+    },
+    {
+      "facet": "Happiness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker mentions wanting to 'chill', which could imply a sense of contentment or happiness, but it's not explicitly stated."
+    },
+    {
+      "facet": "Enthusiasm",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear expression of enthusiasm in the conversation."
+    },
+    {
+      "facet": "Attitude toward learning",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention learning or any related topics."
+    },
+    {
+      "facet": "Comfort with Vulnerability",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker uses the informal term 'yaar', which could indicate a sense of comfort with vulnerability or informality."
+    },
+    {
+      "facet": "Peacefulness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker expresses a desire to 'chill', which could imply a sense of peacefulness or calmness."
+    },
+    {
+      "facet": "Mindfulness facet: Observing",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear expression of mindfulness or observing in the conversation."
+    },
+    {
+      "facet": "Pure Challenge",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention challenges or any related topics."
+    },
+    {
+      "facet": "Cooking and Culinary Arts",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention cooking or culinary arts."
+    },
+    {
+      "facet": "Hostility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear expression of hostility in the conversation."
+    },
+    {
+      "facet": "Managing emotions",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide clear evidence of emotional management."
+    },
+    {
+      "facet": "Dignity",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide clear evidence of dignity."
+    },
+    {
+      "facet": "Casual lifestyle",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker says 'I just want to chill', indicating a desire for a casual lifestyle."
+    },
+    {
+      "facet": "Joyfulness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker's tone is relaxed and casual, but there is no explicit expression of joyfulness."
+    },
+    {
+      "facet": "Soft-skill training hours",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide clear evidence of soft-skill training hours."
+    },
+    {
+      "facet": "Desire for excellence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide clear evidence of a desire for excellence."
+    },
+    {
+      "facet": "Sleep-environment temperature",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide clear evidence related to sleep-environment temperature."
+    },
+    {
+      "facet": "Irritability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide clear evidence of irritability."
+    },
+    {
+      "facet": "Religious coping – Negative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide clear evidence of negative religious coping."
+    },
+    {
+      "facet": "High-spiritedness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker's tone is relaxed and casual, but there is a hint of high-spiritedness in their desire to 'chill'."
+    },
+    {
+      "facet": "Creativity in solutions",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about creative solutions."
+    },
+    {
+      "facet": "Blissfulness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker expresses a desire to 'chill', indicating a moderate level of blissfulness."
+    },
+    {
+      "facet": "Big-heartedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about the speaker's big-heartedness."
+    },
+    {
+      "facet": "Psychological construct: Perfectionistic Strivings",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about perfectionistic strivings."
+    },
+    {
+      "facet": "Decision-Making Confidence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about decision-making confidence."
+    },
+    {
+      "facet": "Sensitiveness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about sensitiveness."
+    },
+    {
+      "facet": "Big Five facet Openness – Artistic Interests",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about artistic interests."
+    },
+    {
+      "facet": "Withdrawnness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about withdrawnness."
+    },
+    {
+      "facet": "Well-being component: Engagement",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker expresses a desire to 'chill', indicating a moderate level of engagement."
+    },
+    {
+      "facet": "Negative Affect Frequency",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about negative affect frequency."
+    }
+  ],
+  "parse_errors": 0
+}

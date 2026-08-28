@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "\"I've been feeling exhausted, my doctor said my TSH levels are abnormal\"",
+  "total_facets_retrieved": 40,
+  "scored": 0,
+  "abstained": 40,
+  "results": [
+    {
+      "facet": "Compassion Fatigue",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No information about compassion fatigue is provided."
+    },
+    {
+      "facet": "Serotonin transporter availability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No information about serotonin transporter availability is provided."
+    },
+    {
+      "facet": "Drug-use history",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No information about drug use history is provided."
+    },
+    {
+      "facet": "Merriness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No information about merriness is provided."
+    },
+    {
+      "facet": "Health-literacy level",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No clear evidence of health literacy beyond a brief mention of TSH levels."
+    },
+    {
+      "facet": "Dance-cardio sessions",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No information about dance-cardio sessions is provided."
+    },
+    {
+      "facet": "Anticipativeness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No information about anticipativeness is provided."
+    },
+    {
+      "facet": "Contentment Levels",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No information about contentment levels is provided."
+    },
+    {
+      "facet": "Troubleshooting technical issues",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No information about troubleshooting technical issues is provided."
+    },
+    {
+      "facet": "Inversion comfort level",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No information about inversion comfort level is provided."
+    },
+    {
+      "facet": "Patient care orientation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No explicit indication of patient care orientation in the conversation."
+    },
+    {
+      "facet": "Stress Recovery Ability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of stress recovery or related coping strategies."
+    },
+    {
+      "facet": "Compulsive activities",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to compulsive behaviors."
+    },
+    {
+      "facet": "Caffeine intake (mg/day)",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No information about caffeine consumption."
+    },
+    {
+      "facet": "Irritability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No expression of irritability."
+    },
+    {
+      "facet": "Specialist",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Only a general doctor is mentioned, not a specialist."
+    },
+    {
+      "facet": "Effeteness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No evidence of effectiveness or related behavior."
+    },
+    {
+      "facet": "Breakfast-skipping frequency",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of breakfast habits."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No indication of boredom or its susceptibility."
+    },
+    {
+      "facet": "Chronic pain presence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of chronic pain."
+    },
+    {
+      "facet": "Withdrawnness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of withdrawal behavior in the conversation."
+    },
+    {
+      "facet": "Satya Adherence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of truthfulness or adherence to truth in the conversation."
+    },
+    {
+      "facet": "Psychoticism",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of psychotic symptoms or behaviors in the conversation."
+    },
+    {
+      "facet": "Discontentment",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement only reports exhaustion, not explicit discontent."
+    },
+    {
+      "facet": "Cantankerousness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No indication of cantankerous or argumentative behavior in the conversation."
+    },
+    {
+      "facet": "Psychological construct: Acculturative Stress score",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to acculturation or related stressors in the conversation."
+    },
+    {
+      "facet": "Estimating Calculations",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of estimation or calculation tasks in the conversation."
+    },
+    {
+      "facet": "Data Analysis",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No discussion of data analysis or related activities in the conversation."
+    },
+    {
+      "facet": "Selfcontrol",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No evidence of self-control or lack thereof in the conversation."
+    },
+    {
+      "facet": "Comparing alphanumeric data",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of comparing alphanumeric data in the conversation."
+    },
+    {
+      "facet": "Practice frequency: Walking meditation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention walking meditation or related practice."
+    },
+    {
+      "facet": "Blissfulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention blissfulness or related feelings."
+    },
+    {
+      "facet": "Digital-nomad months",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention digital nomad months or related travel."
+    },
+    {
+      "facet": "Moroseness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention moroseness or related negative affect."
+    },
+    {
+      "facet": "Impulsivity",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention impulsive behavior or related traits."
+    },
+    {
+      "facet": "Training-cycle length",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention training cycles or related durations."
+    },
+    {
+      "facet": "Sensitivity",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention sensitivity or related emotional responsiveness."
+    },
+    {
+      "facet": "Mysteriousness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention mysteriousness or related traits."
+    },
+    {
+      "facet": "Dance rehearsal hours/week",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention dance rehearsal hours or related activity."
+    },
+    {
+      "facet": "Neuroticism",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention neuroticism or related anxiety."
+    }
+  ],
+  "parse_errors": 0
+}

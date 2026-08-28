@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "\"I'm very organized. My desk has 47 unread emails and I haven't filed taxes in 2 years\"",
+  "total_facets_retrieved": 40,
+  "scored": 6,
+  "abstained": 34,
+  "results": [
+    {
+      "facet": "Alphabetical filing skills",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of alphabetical filing."
+    },
+    {
+      "facet": "Numeric Filing Skills",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of numeric filing skills."
+    },
+    {
+      "facet": "Organized lifestyle",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker says 'I'm very organized.'"
+    },
+    {
+      "facet": "Information Retention",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of information retention."
+    },
+    {
+      "facet": "Sentence Structure",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The conversation consists of two clear sentences with proper punctuation."
+    },
+    {
+      "facet": "Museum visits/year",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of museum visits."
+    },
+    {
+      "facet": "Scripture memorization verses",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of scripture memorization."
+    },
+    {
+      "facet": "Inefficiency",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker has 47 unread emails and hasn't filed taxes in 2 years, indicating high inefficiency."
+    },
+    {
+      "facet": "Ideas generated/day",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of ideas generated."
+    },
+    {
+      "facet": "Drug-use history",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of drug use."
+    },
+    {
+      "facet": "Synthesis of information",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Conversation does not provide evidence of synthesizing information."
+    },
+    {
+      "facet": "Cognitive measure: Working Memory Index",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Conversation does not provide evidence of working memory capacity."
+    },
+    {
+      "facet": "Initiative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Conversation does not provide evidence of initiative."
+    },
+    {
+      "facet": "Rapid cognitive processing",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Conversation does not provide evidence of rapid cognitive processing."
+    },
+    {
+      "facet": "Comprehension of spoken information",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Conversation does not provide evidence of comprehension of spoken information."
+    },
+    {
+      "facet": "Inattentiveness",
+      "score": 4,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker mentions having 47 unread emails and not filing taxes for 2 years, indicating neglect and inattentiveness."
+    },
+    {
+      "facet": "Digital-nomad months",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Conversation does not provide evidence of digital-nomad months."
+    },
+    {
+      "facet": "Compulsive activities",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Conversation does not provide evidence of compulsive activities."
+    },
+    {
+      "facet": "Delegation skills",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Conversation does not provide evidence of delegation skills."
+    },
+    {
+      "facet": "Irritability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "Conversation does not provide evidence of irritability."
+    },
+    {
+      "facet": "Music-lessons years",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of music lessons in the conversation."
+    },
+    {
+      "facet": "Dishonesty",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No explicit statement indicating dishonesty."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to boredom or its susceptibility."
+    },
+    {
+      "facet": "Psychological construct: Executive-Function composite",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide clear evidence of executive function abilities or deficits."
+    },
+    {
+      "facet": "Sequential Memory Recall",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of recalling sequences or memory tasks."
+    },
+    {
+      "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to Buddhist practice or right intention."
+    },
+    {
+      "facet": "Troubleshooting technical issues",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No discussion of technical troubleshooting."
+    },
+    {
+      "facet": "Meeting Deadlines",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker says they haven't filed taxes in 2 years, indicating failure to meet deadlines."
+    },
+    {
+      "facet": "Emotional-intelligence measure: Impulsiveness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of impulsive behavior."
+    },
+    {
+      "facet": "Discernment practice hours / week",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of discernment practice or hours."
+    },
+    {
+      "facet": "Structure",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "\"I'm very organized.\""
+    },
+    {
+      "facet": "Hardworking",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of work ethic."
+    },
+    {
+      "facet": "Work Styles",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of work styles."
+    },
+    {
+      "facet": "Divided Attention Ability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of divided attention."
+    },
+    {
+      "facet": "Breakfast-skipping frequency",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of breakfast habits."
+    },
+    {
+      "facet": "Compassion Fatigue",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of compassion fatigue."
+    },
+    {
+      "facet": "Dietary Habits",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of dietary habits."
+    },
+    {
+      "facet": "Reliance on context",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of reliance on context."
+    },
+    {
+      "facet": "Ego Dissolution Frequency",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of ego dissolution."
+    },
+    {
+      "facet": "Non-Verbal Communication Skills",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of non-verbal communication."
+    }
+  ],
+  "parse_errors": 0
+}

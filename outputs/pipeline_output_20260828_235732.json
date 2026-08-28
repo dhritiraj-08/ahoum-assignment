@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "\"Things are okay I guess\"",
+  "total_facets_retrieved": 40,
+  "scored": 4,
+  "abstained": 36,
+  "results": [
+    {
+      "facet": "Discreteness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No indication of discreteness in the statement."
+    },
+    {
+      "facet": "Happiness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement is neutral and does not clearly express happiness."
+    },
+    {
+      "facet": "Troubleshooting technical issues",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of technical issues or troubleshooting."
+    },
+    {
+      "facet": "Harmfulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No harmful content is present."
+    },
+    {
+      "facet": "Decision-Making Confidence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The phrase \"I guess\" suggests uncertainty, but not enough to score."
+    },
+    {
+      "facet": "Sentence Structure",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The sentence is a simple declarative sentence with no complex clauses."
+    },
+    {
+      "facet": "Safety compliance",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No safety-related content is mentioned."
+    },
+    {
+      "facet": "Well-being component: Engagement",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement shows minimal engagement."
+    },
+    {
+      "facet": "Dietary Habits",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No dietary information is provided."
+    },
+    {
+      "facet": "Control over situations",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement does not provide evidence of control over situations."
+    },
+    {
+      "facet": "General Mood and Attitude",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No clear indication of mood or attitude beyond a vague statement."
+    },
+    {
+      "facet": "Orderliness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention any aspects of order or organization."
+    },
+    {
+      "facet": "Fearfulness: Fear of physical dangers",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of fear or danger."
+    },
+    {
+      "facet": "Childhood Experiences",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to childhood or past experiences."
+    },
+    {
+      "facet": "Contentment Levels",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement is too vague to determine contentment level."
+    },
+    {
+      "facet": "Attitude toward learning",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of learning or educational attitudes."
+    },
+    {
+      "facet": "Civility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No indication of civility or politeness."
+    },
+    {
+      "facet": "Esteem Needs",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to self-esteem or esteem needs."
+    },
+    {
+      "facet": "Exemplariness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No evidence of exemplary behavior or role modeling."
+    },
+    {
+      "facet": "Individuality",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No expression of individuality or uniqueness."
+    },
+    {
+      "facet": "Clumsiness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of clumsiness or related behavior in the conversation."
+    },
+    {
+      "facet": "Psychological construct: Hope scale",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement \"Things are okay I guess\" does not provide clear evidence of hope or lack thereof."
+    },
+    {
+      "facet": "Disagreeableness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No content indicating disagreement or disagreeableness."
+    },
+    {
+      "facet": "Self-improvement",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to self-improvement efforts or goals."
+    },
+    {
+      "facet": "Snacking Behavior",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of snacking or food consumption."
+    },
+    {
+      "facet": "High-spiritedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement is neutral and does not indicate high-spiritedness."
+    },
+    {
+      "facet": "Material properties knowledge",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No discussion of material properties."
+    },
+    {
+      "facet": "Self-Efficacy",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No expression of confidence in one's abilities."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No indication of boredom or its susceptibility."
+    },
+    {
+      "facet": "Irritability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No expression of irritability or related emotions."
+    },
+    {
+      "facet": "Connectedness: Belief in interconnections",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of interconnections."
+    },
+    {
+      "facet": "Brevity",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The utterance is concise, containing only a few words."
+    },
+    {
+      "facet": "Trust in others",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of trust."
+    },
+    {
+      "facet": "Emotional Boundaries",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No indication of emotional boundaries."
+    },
+    {
+      "facet": "Use of Nature as a Stress Reliever",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to nature."
+    },
+    {
+      "facet": "Talkativeness",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker provides only a single brief statement."
+    },
+    {
+      "facet": "Sportsmanship rating",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of sports."
+    },
+    {
+      "facet": "Negative Affect Frequency",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No clear expression of negative affect."
+    },
+    {
+      "facet": "Cordiality",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No cordial language or warmth expressed."
+    },
+    {
+      "facet": "Hesitation",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The phrase 'I guess' indicates some uncertainty or hesitation."
+    }
+  ],
+  "parse_errors": 0
+}

@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "Things are okay I guess",
+  "total_facets_retrieved": 40,
+  "scored": 6,
+  "abstained": 23,
+  "results": [
+    {
+      "facet": "Happiness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The phrase 'Things are okay I guess' suggests a neutral, average level of happiness."
+    },
+    {
+      "facet": "Troubleshooting technical issues",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of troubleshooting technical issues in the conversation."
+    },
+    {
+      "facet": "General Mood and Attitude",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The phrase 'Things are okay I guess' suggests a neutral, average general mood and attitude."
+    },
+    {
+      "facet": "Harmfulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no indication of harm or negative intent in the conversation."
+    },
+    {
+      "facet": "Orderliness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention order or organization."
+    },
+    {
+      "facet": "Safety compliance",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of safety or compliance in the conversation."
+    },
+    {
+      "facet": "Control over situations",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not suggest any level of control over situations."
+    },
+    {
+      "facet": "Discreteness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention discretion or secrecy."
+    },
+    {
+      "facet": "Contentment Levels",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The phrase 'Things are okay I guess' suggests a moderate level of contentment."
+    },
+    {
+      "facet": "Sentence Structure",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The conversation consists of a single, grammatically correct sentence with a clear subject-verb-object structure."
+    },
+    {
+      "facet": "Classiness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Well-being component: Engagement",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Doggedness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "High-spiritedness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Clumsiness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Brevity",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Big-heartedness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Talkativeness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Openness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Esteem Needs",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Big Five facet Openness – Artistic Interests",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Model did not return a result for this facet."
+    },
+    {
+      "facet": "Irritability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not express any irritation or frustration."
+    },
+    {
+      "facet": "Sportsmanship rating",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention any competitive or sporting activities."
+    },
+    {
+      "facet": "Moroseness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not express any sadness, gloominess, or despair."
+    },
+    {
+      "facet": "Disagreeableness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not express any disagreement, conflict, or contentiousness."
+    },
+    {
+      "facet": "Civility",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The conversation uses a polite and neutral tone, saying 'I guess'."
+    },
+    {
+      "facet": "Evaluating Solutions",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention any problem-solving or solution-evaluating activities."
+    },
+    {
+      "facet": "Emotional Boundaries",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not express any emotional vulnerability or boundary-pushing."
+    },
+    {
+      "facet": "Affection",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not express any affection, warmth, or emotional closeness."
+    },
+    {
+      "facet": "Fearfulness: Fear of physical dangers",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention any physical dangers or threats."
+    },
+    {
+      "facet": "Comfort with Vulnerability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any vulnerability or openness."
+    },
+    {
+      "facet": "Warmheartedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any warmth or affection."
+    },
+    {
+      "facet": "Joyfulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any joy or enthusiasm."
+    },
+    {
+      "facet": "Depth of Emotional Connections",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any emotional depth or connection."
+    },
+    {
+      "facet": "Managing emotions",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any emotional management or regulation."
+    },
+    {
+      "facet": "Religious coping – Negative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention religion or any negative coping mechanisms."
+    },
+    {
+      "facet": "Individuality",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any unique or individual perspectives."
+    },
+    {
+      "facet": "Exemplariness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any exemplary behavior or qualities."
+    },
+    {
+      "facet": "Hostility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any hostility or aggression."
+    },
+    {
+      "facet": "Peacefulness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The conversation expresses a neutral and calm tone, indicating a moderate level of peacefulness."
+    }
+  ],
+  "parse_errors": 11
+}

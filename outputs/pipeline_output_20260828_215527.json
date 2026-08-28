@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "I've been feeling exhausted, my doctor said my TSH levels are abnormal",
+  "total_facets_retrieved": 40,
+  "scored": 2,
+  "abstained": 18,
+  "results": [
+    {
+      "facet": "Serotonin transporter availability",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Compassion Fatigue",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Merriness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Stress Recovery Ability",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Drug-use history",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Caffeine intake (mg/day)",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Inversion comfort level",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Dance-cardio sessions",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Anticipativeness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Compulsive activities",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process no longer running: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application. CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Irritability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of irritability or any related emotions in the conversation."
+    },
+    {
+      "facet": "Breakfast-skipping frequency",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of breakfast or eating habits in the conversation."
+    },
+    {
+      "facet": "Psychoticism",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of psychotic or delusional thoughts in the conversation."
+    },
+    {
+      "facet": "Health-literacy level",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The conversation mentions a doctor's diagnosis and TSH levels, indicating some level of health literacy."
+    },
+    {
+      "facet": "Patient care orientation",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The conversation mentions a doctor's diagnosis, indicating a focus on patient care."
+    },
+    {
+      "facet": "Troubleshooting technical issues",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of technical issues or troubleshooting in the conversation."
+    },
+    {
+      "facet": "Withdrawnness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of withdrawn or isolated behavior in the conversation."
+    },
+    {
+      "facet": "Contentment Levels",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of contentment or happiness in the conversation."
+    },
+    {
+      "facet": "Cantankerousness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of cantankerous or disagreeable behavior in the conversation."
+    },
+    {
+      "facet": "Psychological construct: Acculturative Stress score",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of acculturative stress or related cultural issues in the conversation."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention anything related to boredom."
+    },
+    {
+      "facet": "Discontentment",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any discontentment."
+    },
+    {
+      "facet": "Effeteness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention anything related to effeteness."
+    },
+    {
+      "facet": "Blissfulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any blissfulness."
+    },
+    {
+      "facet": "Specialist",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention anything related to being a specialist."
+    },
+    {
+      "facet": "Dance rehearsal hours/week",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention anything related to dance rehearsal hours."
+    },
+    {
+      "facet": "Selfcontrol",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express anything related to self-control."
+    },
+    {
+      "facet": "Warmheartedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not express any warmheartedness."
+    },
+    {
+      "facet": "Comparing alphanumeric data",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention anything related to comparing alphanumeric data."
+    },
+    {
+      "facet": "Practice frequency: Walking meditation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention anything related to walking meditation practice frequency."
+    },
+    {
+      "facet": "Satya Adherence",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Chronic pain presence",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Data Analysis",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Wake-time consistency",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Moroseness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Estimating Calculations",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "High-spiritedness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Training-cycle length",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Emotionalism",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Enthusiasm",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    }
+  ],
+  "parse_errors": 20
+}

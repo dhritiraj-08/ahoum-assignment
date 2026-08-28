@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "Oh yes I'm VERY patient, I only yelled at three people today\n",
+  "total_facets_retrieved": 40,
+  "scored": 11,
+  "abstained": 19,
+  "results": [
+    {
+      "facet": "Patience: Resistance to anger",
+      "score": 2,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker claims to be 'VERY patient', but then immediately mentions yelling at three people, which suggests a lack of patience."
+    },
+    {
+      "facet": "Hesitation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of hesitation in the conversation."
+    },
+    {
+      "facet": "Irritability",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker mentions yelling at three people, which is a clear expression of irritability."
+    },
+    {
+      "facet": "Initiative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of initiative in the conversation."
+    },
+    {
+      "facet": "Compassion Fatigue",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of compassion fatigue in the conversation."
+    },
+    {
+      "facet": "Courageousness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of courageousness in the conversation."
+    },
+    {
+      "facet": "Inattentiveness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of inattentiveness in the conversation."
+    },
+    {
+      "facet": "Volunteer Work",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of volunteer work in the conversation."
+    },
+    {
+      "facet": "Input",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of input in the conversation."
+    },
+    {
+      "facet": "Hostility",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker mentions yelling at three people, which is a clear expression of hostility."
+    },
+    {
+      "facet": "Desperation",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker mentions yelling at three people, indicating a high level of frustration or desperation."
+    },
+    {
+      "facet": "Passive-Aggressive",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker makes a sarcastic comment about being patient, implying a passive-aggressive attitude."
+    },
+    {
+      "facet": "Bravery",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear evidence of bravery in the conversation."
+    },
+    {
+      "facet": "Troubleshooting technical issues",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention troubleshooting technical issues."
+    },
+    {
+      "facet": "Social Boldness",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker's comment about yelling at people is blunt and direct, but not necessarily bold in a social sense."
+    },
+    {
+      "facet": "Use of Mathematical Formulas",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of mathematical formulas in the conversation."
+    },
+    {
+      "facet": "Compassion",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not show any clear expression of compassion."
+    },
+    {
+      "facet": "Individuality",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker's comment about being patient is a generic statement and does not show any unique or individual perspective."
+    },
+    {
+      "facet": "Sensitiveness",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker's comment about yelling at people is blunt and does not show any sensitivity to others."
+    },
+    {
+      "facet": "General Mood and Attitude",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker's sarcastic comment and mention of yelling at people indicate a negative general mood and attitude."
+    },
+    {
+      "facet": "Encouraging participation",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Enthusiasm",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Sentence Structure",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Talkativeness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Meeting Deadlines",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "High-spiritedness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Psychological construct: Hope scale",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Structure",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Estimating Calculations",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Warmheartedness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Managing emotions",
+      "score": 2,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker claims to be 'VERY patient', but then immediately mentions yelling at three people, indicating some emotional dysregulation."
+    },
+    {
+      "facet": "Sensitivity",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no clear indication of the speaker's sensitivity in this conversation."
+    },
+    {
+      "facet": "Cooperation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not provide any information about the speaker's willingness to cooperate."
+    },
+    {
+      "facet": "Fearfulness: Fear of physical dangers",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of physical danger or fear in this conversation."
+    },
+    {
+      "facet": "Affection",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not provide any information about the speaker's affectionate nature."
+    },
+    {
+      "facet": "Collaboration",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no indication of the speaker's willingness to collaborate in this conversation."
+    },
+    {
+      "facet": "Analogies",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not involve any analogies or comparisons."
+    },
+    {
+      "facet": "Doggedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no indication of the speaker's persistence or determination in this conversation."
+    },
+    {
+      "facet": "Peacefulness",
+      "score": 2,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker claims to be 'VERY patient', but the tone is somewhat sarcastic and the mention of yelling at three people suggests a lack of peacefulness."
+    },
+    {
+      "facet": "Rapid cognitive processing",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not provide any evidence of rapid cognitive processing or complex reasoning."
+    }
+  ],
+  "parse_errors": 10
+}

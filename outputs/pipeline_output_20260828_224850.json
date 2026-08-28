@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "\"Oh yes I'm VERY patient, I only yelled at three people today\"",
+  "total_facets_retrieved": 40,
+  "scored": 7,
+  "abstained": 33,
+  "results": [
+    {
+      "facet": "Patience: Resistance to anger",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "I'm VERY patient, I only yelled at three people today"
+    },
+    {
+      "facet": "Hesitation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of hesitation in the conversation."
+    },
+    {
+      "facet": "Compassion Fatigue",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of compassion fatigue in the conversation."
+    },
+    {
+      "facet": "Courageousness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of courageousness in the conversation."
+    },
+    {
+      "facet": "Desperation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of desperation in the conversation."
+    },
+    {
+      "facet": "Volunteer Work",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of volunteer work in the conversation."
+    },
+    {
+      "facet": "Irritability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No direct mention of irritability in the conversation."
+    },
+    {
+      "facet": "Sentence Structure",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker uses a single simple sentence with a comma, indicating moderate sentence structure."
+    },
+    {
+      "facet": "Bravery",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of bravery in the conversation."
+    },
+    {
+      "facet": "Troubleshooting technical issues",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of troubleshooting technical issues in the conversation."
+    },
+    {
+      "facet": "Compassion",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention compassion."
+    },
+    {
+      "facet": "Initiative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention initiative."
+    },
+    {
+      "facet": "Inattentiveness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention inattentiveness."
+    },
+    {
+      "facet": "Social Boldness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention social boldness."
+    },
+    {
+      "facet": "Meeting Deadlines",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention meeting deadlines."
+    },
+    {
+      "facet": "Use of Mathematical Formulas",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention use of mathematical formulas."
+    },
+    {
+      "facet": "Individuality",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention individuality."
+    },
+    {
+      "facet": "Control over situations",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention control over situations."
+    },
+    {
+      "facet": "Input",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention input."
+    },
+    {
+      "facet": "Passive-Aggressive",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention passive-aggressive behavior."
+    },
+    {
+      "facet": "Mental Arithmetic Speed",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of arithmetic or calculations."
+    },
+    {
+      "facet": "Hostility",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker says they yelled at three people today."
+    },
+    {
+      "facet": "Managing emotions",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker claims to be very patient and only yelled at three people."
+    },
+    {
+      "facet": "Patient care orientation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to caring for patients."
+    },
+    {
+      "facet": "Estimating Calculations",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of estimating or calculations."
+    },
+    {
+      "facet": "Scripture memorization verses",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of scripture or memorization."
+    },
+    {
+      "facet": "Tendency Toward Compromise or Confrontation",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker says they yelled at three people, indicating confrontation."
+    },
+    {
+      "facet": "Sensitivity",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of sensitivity."
+    },
+    {
+      "facet": "Sensitiveness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of sensitiveness."
+    },
+    {
+      "facet": "Cooperation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of cooperation."
+    },
+    {
+      "facet": "Language use",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker uses descriptive language such as 'VERY patient' and 'yelled at three people', indicating moderate language use."
+    },
+    {
+      "facet": "Collaboration",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention collaboration."
+    },
+    {
+      "facet": "Analogies",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No analogies are present in the statement."
+    },
+    {
+      "facet": "Peacefulness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement indicates some patience but also mentions yelling, insufficient to determine high peacefulness."
+    },
+    {
+      "facet": "Dignity",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to dignity."
+    },
+    {
+      "facet": "Desire to influence others",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No mention of influencing others."
+    },
+    {
+      "facet": "High-spiritedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The brief statement contains minimal enthusiasm, insufficient to assess high-spiritedness."
+    },
+    {
+      "facet": "Psychological construct: Hope scale",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "No reference to hope."
+    },
+    {
+      "facet": "Negative Affect Frequency",
+      "score": 2,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker reports yelling at three people, indicating low frequency of negative affect."
+    },
+    {
+      "facet": "Enthusiasm",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The statement shows limited enthusiasm, insufficient for scoring."
+    }
+  ],
+  "parse_errors": 0
+}

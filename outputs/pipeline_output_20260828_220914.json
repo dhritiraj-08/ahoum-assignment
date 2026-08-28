@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "I'm very organized. My desk has 47 unread emails and I haven't filed taxes in 2 years\n",
+  "total_facets_retrieved": 40,
+  "scored": 9,
+  "abstained": 21,
+  "results": [
+    {
+      "facet": "Alphabetical filing skills",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of alphabetical filing skills in the conversation."
+    },
+    {
+      "facet": "Numeric Filing Skills",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person mentions having 47 unread emails, which is a clear example of numerical filing skills."
+    },
+    {
+      "facet": "Organized lifestyle",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The person claims to be very organized, but then mentions having 47 unread emails and not having filed taxes in 2 years, which contradicts this claim."
+    },
+    {
+      "facet": "Information Retention",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of information retention in the conversation."
+    },
+    {
+      "facet": "Museum visits/year",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of museum visits in the conversation."
+    },
+    {
+      "facet": "Irritability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no clear indication of irritability in the conversation."
+    },
+    {
+      "facet": "Ideas generated/day",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of ideas generated in the conversation."
+    },
+    {
+      "facet": "Cognitive measure: Working Memory Index",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no evidence of working memory index in the conversation."
+    },
+    {
+      "facet": "Scripture memorization verses",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of scripture memorization in the conversation."
+    },
+    {
+      "facet": "Initiative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no clear indication of initiative in the conversation."
+    },
+    {
+      "facet": "Rapid cognitive processing",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide clear evidence of rapid cognitive processing, and the statement about unread emails and unfilled taxes may indicate the opposite."
+    },
+    {
+      "facet": "Discernment practice hours / week",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of discernment practice hours or any related activities in the conversation."
+    },
+    {
+      "facet": "Comprehension of spoken information",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person appears to understand the concept of being organized and the implications of having unread emails and unfilled taxes."
+    },
+    {
+      "facet": "Inattentiveness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person's statement about having 47 unread emails and not filing taxes in 2 years suggests a moderate level of inattentiveness."
+    },
+    {
+      "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of Buddhist practice or the Eightfold Path in the conversation."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about the person's susceptibility to boredom."
+    },
+    {
+      "facet": "Emotional-intelligence measure: Impulsiveness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The person's statement about having 47 unread emails and not filing taxes in 2 years may indicate a moderate level of impulsiveness."
+    },
+    {
+      "facet": "Compulsive activities",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person's statement about having 47 unread emails and not filing taxes in 2 years suggests a strong indication of compulsive activities."
+    },
+    {
+      "facet": "Sentence Structure",
+      "score": 3,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person's statement is clear and concise, with a moderate level of complexity in sentence structure."
+    },
+    {
+      "facet": "Delegation skills",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of delegation skills or any related activities in the conversation."
+    },
+    {
+      "facet": "Inefficiency",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person has 47 unread emails and hasn't filed taxes in 2 years, indicating a lack of organization and time management."
+    },
+    {
+      "facet": "Synthesis of information",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no attempt to synthesize or connect information in the conversation."
+    },
+    {
+      "facet": "Psychological construct: Executive-Function composite",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person's inability to manage emails and taxes suggests difficulties with executive functions such as planning, organization, and time management."
+    },
+    {
+      "facet": "Meeting Deadlines",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person hasn't filed taxes in 2 years, indicating a failure to meet deadlines."
+    },
+    {
+      "facet": "Dishonesty",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no indication of dishonesty in the conversation."
+    },
+    {
+      "facet": "Religious practice: Quran khatam cycles per year",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of religious practice or Quran khatam cycles in the conversation."
+    },
+    {
+      "facet": "Divided Attention Ability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no indication of divided attention or multitasking in the conversation."
+    },
+    {
+      "facet": "Drug-use history",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of drug use in the conversation."
+    },
+    {
+      "facet": "Non-Verbal Communication Skills",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation is text-based and does not involve non-verbal communication."
+    },
+    {
+      "facet": "Participation in Community Activities",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of community activities or participation in the conversation."
+    },
+    {
+      "facet": "Structure",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Troubleshooting technical issues",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Auditory memory",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Sequential Memory Recall",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Quirkiness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Digital-nomad months",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Auditory Memory Recall",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Dietary Habits",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Breakfast-skipping frequency",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Learning through movement",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    }
+  ],
+  "parse_errors": 10
+}
