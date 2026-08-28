@@ -59,6 +59,20 @@ MEDICAL_KEYWORDS = [
     "respiratory rate", "genetic marker", " dna ", "biomarker", "clinical",
     "lab result", "lab value", "medication dosage", "prescription",
     "sleep apnea", "cell count", "blood cell",
+    # Clinical/psychiatric diagnostic terms. Added after finding that facets
+    # like "Depression Symptoms" and "Hysteria (Hy)" (an MMPI clinical scale
+    # name) were slipping through as personality_trait -- they contain none
+    # of the generic "diagnosis"/"disorder"/"syndrome"/"clinical" keywords
+    # above, but scoring someone's depression or hypomania level from a
+    # casual conversation is exactly the kind of unqualified clinical
+    # judgment this project is designed to refuse to make. "Symptoms" alone
+    # is included as a general signal since a facet framed as "X Symptoms"
+    # is asking for a clinical assessment by construction, regardless of
+    # which specific condition X names.
+    "symptom", "depression", "hypomania", "mania", "bipolar", "hysteria",
+    "psychopathic", "paranoia", "psychasthenia", "schizophrenia", "psychosis",
+    "burnout", "ptsd", "ocd", "panic disorder", "panic attack", "phobia",
+    "eating disorder", "personality disorder", "psychiatric", "anxiety disorder",
 ]
 
 SPIRITUAL_KEYWORDS = [

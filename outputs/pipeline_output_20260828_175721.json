@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "I've been getting headaches lately and my doctor mentioned my thyroid levels looked off. I've also been more irritable and quit my job on a whim to go travel.",
+  "total_facets_retrieved": 40,
+  "scored": 11,
+  "abstained": 19,
+  "results": [
+    {
+      "facet": "Irritability",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person mentions being 'more irritable'"
+    },
+    {
+      "facet": "Compassion Fatigue",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of compassion fatigue or related concepts"
+    },
+    {
+      "facet": "Caffeine intake (mg/day)",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of caffeine intake"
+    },
+    {
+      "facet": "Effeteness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of effeteness or related concepts"
+    },
+    {
+      "facet": "Compulsive activities",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no indication of compulsive behavior"
+    },
+    {
+      "facet": "Merriness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of merriness or related concepts"
+    },
+    {
+      "facet": "Anticipativeness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of anticipativeness or related concepts"
+    },
+    {
+      "facet": "Control over situations",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The person mentions quitting their job 'on a whim' which implies a lack of control over the situation"
+    },
+    {
+      "facet": "Comfort with Vulnerability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no indication of comfort with vulnerability"
+    },
+    {
+      "facet": "Inversion comfort level",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of inversion comfort level or related concepts"
+    },
+    {
+      "facet": "Dietary Habits",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of diet or eating habits in the conversation."
+    },
+    {
+      "facet": "Eco-tourism trips",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person mentions quitting their job to go travel, which implies a desire for travel and exploration."
+    },
+    {
+      "facet": "Neuroticism",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person mentions being more irritable and quitting their job on a whim, which suggests emotional instability and impulsivity."
+    },
+    {
+      "facet": "Patient care orientation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of the person's attitude towards patient care or healthcare in general."
+    },
+    {
+      "facet": "Health-literacy level",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The person mentions their doctor mentioning thyroid levels, which suggests some basic understanding of health and medical concepts."
+    },
+    {
+      "facet": "Controlling Reactions",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of the person's ability to control their reactions or emotions in the conversation."
+    },
+    {
+      "facet": "Psychoticism",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of delusions, hallucinations, or other symptoms of psychoticism in the conversation."
+    },
+    {
+      "facet": "Chronic pain presence",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The person mentions headaches, but it is unclear if they are chronic or acute."
+    },
+    {
+      "facet": "Sensitivity",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The person mentions being more irritable, which suggests some level of emotional sensitivity."
+    },
+    {
+      "facet": "Warmheartedness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of the person's emotional warmth or empathy towards others in the conversation."
+    },
+    {
+      "facet": "Discontentment",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker mentions quitting their job on a whim to go travel, indicating a sense of discontent with their current situation."
+    },
+    {
+      "facet": "Withdrawnness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of withdrawn behavior in the conversation."
+    },
+    {
+      "facet": "Sensitiveness",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker mentions their doctor mentioning their thyroid levels, indicating a level of awareness and concern for their health."
+    },
+    {
+      "facet": "Religious coping – Negative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of religious coping or any negative religious-related behavior in the conversation."
+    },
+    {
+      "facet": "General Mood and Attitude",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker mentions being irritable and quitting their job, indicating a negative general mood and attitude."
+    },
+    {
+      "facet": "Stress Recovery Ability",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "medium",
+      "evidence": "There is no clear indication of the speaker's ability to recover from stress in the conversation."
+    },
+    {
+      "facet": "Negative Affect Frequency",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker mentions headaches, being irritable, and quitting their job, indicating a high frequency of negative affects."
+    },
+    {
+      "facet": "Hostility",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The speaker mentions being irritable, which can be seen as a form of hostility."
+    },
+    {
+      "facet": "Breakfast-skipping frequency",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of breakfast-skipping in the conversation."
+    },
+    {
+      "facet": "Chivalrousness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of chivalrous behavior in the conversation."
+    },
+    {
+      "facet": "Sleep-environment temperature",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Psychological construct: Cultural Intelligence – Behavioral",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Serotonin transporter availability",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Psychological construct: Excuse-Making tendency",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Cantankerousness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Selfcontrol",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Troubleshooting technical issues",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Vision-check frequency",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Sustainable-transport usage",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    }
+  ],
+  "parse_errors": 10
+}

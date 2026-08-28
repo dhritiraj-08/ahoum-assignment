@@ -329,13 +329,6 @@
     "abstention_reason": ""
   },
   {
-    "facet_normalized": "Depression Symptoms",
-    "category": "personality_trait",
-    "sensitivity": "low",
-    "scoring_anchors": "1=Very low Depression Symptoms, or the opposite trait is expressed; 3=Moderate/average Depression Symptoms; 5=Very high Depression Symptoms clearly expressed in the conversation.",
-    "abstention_reason": ""
-  },
-  {
     "facet_normalized": "Spatial perception",
     "category": "personality_trait",
     "sensitivity": "low",
@@ -490,13 +483,6 @@
     "abstention_reason": ""
   },
   {
-    "facet_normalized": "Depression: Feelings of sadness and hopelessness",
-    "category": "personality_trait",
-    "sensitivity": "low",
-    "scoring_anchors": "1=Very low Depression: Feelings of sadness and hopelessness, or the opposite trait is expressed; 3=Moderate/average Depression: Feelings of sadness and hopelessness; 5=Very high Depression: Feelings of sadness and hopelessness clearly expressed in the conversation.",
-    "abstention_reason": ""
-  },
-  {
     "facet_normalized": "Synthesis of information",
     "category": "personality_trait",
     "sensitivity": "low",
@@ -585,13 +571,6 @@
     "category": "personality_trait",
     "sensitivity": "low",
     "scoring_anchors": "1=Very low Impartial-mindedness, or the opposite trait is expressed; 3=Moderate/average Impartial-mindedness; 5=Very high Impartial-mindedness clearly expressed in the conversation.",
-    "abstention_reason": ""
-  },
-  {
-    "facet_normalized": "Burnout Symptoms",
-    "category": "personality_trait",
-    "sensitivity": "low",
-    "scoring_anchors": "1=Very low Burnout Symptoms, or the opposite trait is expressed; 3=Moderate/average Burnout Symptoms; 5=Very high Burnout Symptoms clearly expressed in the conversation.",
     "abstention_reason": ""
   },
   {
@@ -1029,24 +1008,10 @@
     "abstention_reason": ""
   },
   {
-    "facet_normalized": "Depression (DEP)",
-    "category": "personality_trait",
-    "sensitivity": "low",
-    "scoring_anchors": "1=Very low Depression (DEP), or the opposite trait is expressed; 3=Moderate/average Depression (DEP); 5=Very high Depression (DEP) clearly expressed in the conversation.",
-    "abstention_reason": ""
-  },
-  {
     "facet_normalized": "Understanding Mathematical Concepts",
     "category": "personality_trait",
     "sensitivity": "low",
     "scoring_anchors": "1=Very low Understanding Mathematical Concepts, or the opposite trait is expressed; 3=Moderate/average Understanding Mathematical Concepts; 5=Very high Understanding Mathematical Concepts clearly expressed in the conversation.",
-    "abstention_reason": ""
-  },
-  {
-    "facet_normalized": "Hypomania (Ma)",
-    "category": "personality_trait",
-    "sensitivity": "low",
-    "scoring_anchors": "1=Very low Hypomania (Ma), or the opposite trait is expressed; 3=Moderate/average Hypomania (Ma); 5=Very high Hypomania (Ma) clearly expressed in the conversation.",
     "abstention_reason": ""
   },
   {
@@ -1187,13 +1152,6 @@
     "category": "personality_trait",
     "sensitivity": "low",
     "scoring_anchors": "1=Very low Concreteness, or the opposite trait is expressed; 3=Moderate/average Concreteness; 5=Very high Concreteness clearly expressed in the conversation.",
-    "abstention_reason": ""
-  },
-  {
-    "facet_normalized": "Hysteria (Hy)",
-    "category": "personality_trait",
-    "sensitivity": "low",
-    "scoring_anchors": "1=Very low Hysteria (Hy), or the opposite trait is expressed; 3=Moderate/average Hysteria (Hy); 5=Very high Hysteria (Hy) clearly expressed in the conversation.",
     "abstention_reason": ""
   },
   {
