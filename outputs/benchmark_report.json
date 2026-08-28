@@ -1,0 +1,331 @@
+{
+  "cases": [
+    {
+      "id": 1,
+      "type": "clear_direct",
+      "conversation": "I quit my stable corporate job last week to backpack solo through South America with no itinerary and barely any savings left. I've always been the one jumping off cliffs, literally and figuratively, before checking the depth of the water.",
+      "evaluations": [
+        {
+          "facet": "Risktaking",
+          "expected_status": "scored",
+          "expected_score": 5,
+          "actual_status": "scored",
+          "actual_score": 5,
+          "outcome": "exact_agreement"
+        },
+        {
+          "facet": "Adventure-Seeking Behavior",
+          "expected_status": "scored",
+          "expected_score": 5,
+          "actual_status": "scored",
+          "actual_score": 5,
+          "outcome": "exact_agreement"
+        },
+        {
+          "facet": "Common-sense",
+          "expected_status": "scored",
+          "expected_score": 2,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        }
+      ],
+      "total_retrieved": 40
+    },
+    {
+      "id": 2,
+      "type": "ambiguous",
+      "conversation": "I told my sister I'd help her move this weekend, but then again, I also said I'd finally clean out my garage, and honestly I might just end up doing neither and binge a show instead. We'll see.",
+      "evaluations": [
+        {
+          "facet": "Doggedness",
+          "expected_status": "insufficient_evidence",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention_not_retrieved"
+        },
+        {
+          "facet": "Self-Efficacy",
+          "expected_status": "insufficient_evidence",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention_not_retrieved"
+        },
+        {
+          "facet": "Common-sense",
+          "expected_status": "insufficient_evidence",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention_not_retrieved"
+        }
+      ],
+      "total_retrieved": 40
+    },
+    {
+      "id": 3,
+      "type": "contradictory",
+      "conversation": "I tell everyone I'm a very patient person who never loses his temper. But this morning I screamed at the barista for getting my order wrong, threw the cup in the trash, and stormed out still fuming twenty minutes later.",
+      "evaluations": [
+        {
+          "facet": "Patience: Resistance to anger",
+          "expected_status": "scored",
+          "expected_score": 1,
+          "actual_status": "scored",
+          "actual_score": 1,
+          "outcome": "exact_agreement"
+        },
+        {
+          "facet": "Emotionalism",
+          "expected_status": "scored",
+          "expected_score": 4,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        },
+        {
+          "facet": "Decency",
+          "expected_status": "scored",
+          "expected_score": 2,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        }
+      ],
+      "total_retrieved": 40
+    },
+    {
+      "id": 4,
+      "type": "sarcastic",
+      "conversation": "Oh sure, I LOVE waking up at 5am to go for a run in the freezing cold, it's basically my favorite thing in the world. Said no one ever. I hit snooze four times and rolled back to sleep, as usual.",
+      "evaluations": [
+        {
+          "facet": "Doggedness",
+          "expected_status": "scored",
+          "expected_score": 2,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        },
+        {
+          "facet": "Self-improvement",
+          "expected_status": "scored",
+          "expected_score": 2,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        },
+        {
+          "facet": "Discontentment",
+          "expected_status": "insufficient_evidence",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention_not_retrieved"
+        }
+      ],
+      "total_retrieved": 40
+    },
+    {
+      "id": 5,
+      "type": "low_evidence",
+      "conversation": "Yeah, work was fine today. Nothing much happened.",
+      "evaluations": [
+        {
+          "facet": "Compassion",
+          "expected_status": "insufficient_evidence",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention_not_retrieved"
+        },
+        {
+          "facet": "Risktaking",
+          "expected_status": "insufficient_evidence",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention_not_retrieved"
+        },
+        {
+          "facet": "Emotionalism",
+          "expected_status": "insufficient_evidence",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention_not_retrieved"
+        }
+      ],
+      "total_retrieved": 40
+    },
+    {
+      "id": 6,
+      "type": "code_switched",
+      "conversation": "Yaar, I told my roommate ki main uska kaam bhi kar dunga along with mine, even though I already had a packed week. I just can't say no when a dost asks for help, even if it stresses me out.",
+      "evaluations": [
+        {
+          "facet": "Compassion",
+          "expected_status": "scored",
+          "expected_score": 4,
+          "actual_status": "scored",
+          "actual_score": 5,
+          "outcome": "close_agreement"
+        },
+        {
+          "facet": "Unassertiveness",
+          "expected_status": "scored",
+          "expected_score": 4,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        },
+        {
+          "facet": "Assertiveness and control in relationships",
+          "expected_status": "scored",
+          "expected_score": 2,
+          "actual_status": "scored",
+          "actual_score": 3,
+          "outcome": "close_agreement"
+        }
+      ],
+      "total_retrieved": 40
+    },
+    {
+      "id": 7,
+      "type": "medical_trap",
+      "conversation": "I've been getting these headaches lately, and my doctor mentioned my FSH levels looked a bit off in my last blood test. My basophil count was also flagged as high. I've also been more irritable than usual because of it.",
+      "evaluations": [
+        {
+          "facet": "FSH level",
+          "expected_status": "not_observable",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention"
+        },
+        {
+          "facet": "Basophil count",
+          "expected_status": "not_observable",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention"
+        },
+        {
+          "facet": "Emotionalism",
+          "expected_status": "scored",
+          "expected_score": 3,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        }
+      ],
+      "total_retrieved": 40
+    },
+    {
+      "id": 8,
+      "type": "spiritual_trap",
+      "conversation": "I've started doing a short mindfulness session every morning before work, just five minutes of breathing. Sometimes I also check my I Ching hexagram reading for fun when I'm feeling stuck on a decision, though I don't take it too seriously.",
+      "evaluations": [
+        {
+          "facet": "Types of Mindfulness Techniques Used",
+          "expected_status": "not_observable",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention"
+        },
+        {
+          "facet": "Self-improvement",
+          "expected_status": "scored",
+          "expected_score": 3,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        },
+        {
+          "facet": "Peacefulness",
+          "expected_status": "scored",
+          "expected_score": 3,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        }
+      ],
+      "total_retrieved": 40
+    },
+    {
+      "id": 9,
+      "type": "high_emotional",
+      "conversation": "I broke down crying in the middle of the grocery store today. Everything just hit me at once -- my dad's diagnosis, the breakup, the pressure at work. I couldn't stop shaking and had to call my best friend just to breathe through it.",
+      "evaluations": [
+        {
+          "facet": "Emotionalism",
+          "expected_status": "scored",
+          "expected_score": 5,
+          "actual_status": "scored",
+          "actual_score": 5,
+          "outcome": "exact_agreement"
+        },
+        {
+          "facet": "Discontentment",
+          "expected_status": "scored",
+          "expected_score": 4,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        },
+        {
+          "facet": "Peacefulness",
+          "expected_status": "scored",
+          "expected_score": 1,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        }
+      ],
+      "total_retrieved": 40
+    },
+    {
+      "id": 10,
+      "type": "professional_formal",
+      "conversation": "Per our discussion yesterday, I have finalized the quarterly report and cross-verified the statistical projections against last year's figures. Please let me know if the committee requires further clarification before Thursday's review.",
+      "evaluations": [
+        {
+          "facet": "Statistical Reasoning",
+          "expected_status": "scored",
+          "expected_score": 4,
+          "actual_status": "scored",
+          "actual_score": 5,
+          "outcome": "close_agreement"
+        },
+        {
+          "facet": "Cordiality",
+          "expected_status": "scored",
+          "expected_score": 3,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "retrieval_miss"
+        },
+        {
+          "facet": "Common-sense",
+          "expected_status": "insufficient_evidence",
+          "expected_score": null,
+          "actual_status": "not_retrieved",
+          "actual_score": null,
+          "outcome": "correct_abstention_not_retrieved"
+        }
+      ],
+      "total_retrieved": 40
+    }
+  ],
+  "outcome_counts": {
+    "exact_agreement": 4,
+    "retrieval_miss": 12,
+    "correct_abstention_not_retrieved": 8,
+    "close_agreement": 3,
+    "correct_abstention": 3
+  }
+}

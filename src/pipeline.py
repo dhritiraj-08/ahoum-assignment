@@ -24,7 +24,7 @@ except ImportError:
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 
-TOP_K_DEFAULT = 25
+TOP_K_DEFAULT = 40
 
 
 def run_pipeline(conversation: str, top_k: int = TOP_K_DEFAULT, save_output: bool = True) -> dict:
