@@ -176,7 +176,20 @@ def _retrievable_reference_items() -> list:
     return items
 
 
-def run_ablation() -> dict:
+def run_ablation(k_values: list = None) -> dict:
+    """
+    Runs all 4 approaches at every k in k_values (default [10, 25, 40, 100]
+    -- chosen to bracket the actual top_k values used elsewhere in this
+    project: 10 is below any real usage, 25 was the original pipeline
+    default, 40 is the current one, 100 is well above anything used today,
+    to see whether a wider window changes which approach wins). Each
+    approach's index is built exactly once and reused across all k values
+    -- index construction doesn't depend on k, only the search step does,
+    so this avoids rebuilding 4 indexes 4 times over for no reason.
+    """
+    if k_values is None:
+        k_values = [10, 25, 40, 100]
+
     df = _load_observable_df()
     model = _get_model()
     retrievable_items = _retrievable_reference_items()
@@ -184,57 +197,63 @@ def run_ablation() -> dict:
 
     print(f"Observable facets indexed per approach: {len(df)}")
     print(f"Retrievable reference facets being measured: {total_retrievable}")
-    print(f"top_k: {TOP_K}\n")
+    print(f"k values: {k_values}\n")
 
-    results = {}
+    # results[approach_key][k] = {naturally_retrieved, recall, misses}
+    results: dict = {}
     for approach in APPROACHES:
         print(f"Building index -- {approach['label']} ...")
         index, meta = _build_index_for_approach(df, approach["build_text"])
 
-        naturally_retrieved = 0
-        misses = []
-        for case in BENCHMARK_CASES:
-            retrieved_names = _retrieve_names(index, meta, model, case["conversation"], TOP_K)
-            for ref in case["reference"]:
-                if ref["expected_status"] == "not_observable":
-                    continue
-                if ref["facet"] in retrieved_names:
-                    naturally_retrieved += 1
-                else:
-                    misses.append({"conversation_id": case["id"], "conversation_type": case["type"], "facet": ref["facet"]})
+        per_k = {}
+        for k in k_values:
+            naturally_retrieved = 0
+            misses = []
+            for case in BENCHMARK_CASES:
+                retrieved_names = _retrieve_names(index, meta, model, case["conversation"], k)
+                for ref in case["reference"]:
+                    if ref["expected_status"] == "not_observable":
+                        continue
+                    if ref["facet"] in retrieved_names:
+                        naturally_retrieved += 1
+                    else:
+                        misses.append({"conversation_id": case["id"], "conversation_type": case["type"], "facet": ref["facet"]})
 
-        recall = naturally_retrieved / total_retrievable if total_retrievable else 0.0
-        results[approach["key"]] = {
-            "label": approach["label"],
-            "naturally_retrieved": naturally_retrieved,
-            "total_retrievable": total_retrievable,
-            "recall": recall,
-            "misses": misses,
-        }
-        print(f"  recall: {recall * 100:.0f}%  ({naturally_retrieved}/{total_retrievable})\n")
+            recall = naturally_retrieved / total_retrievable if total_retrievable else 0.0
+            per_k[k] = {
+                "naturally_retrieved": naturally_retrieved,
+                "total_retrievable": total_retrievable,
+                "recall": recall,
+                "misses": misses,
+            }
+            print(f"  k={k:<4} recall: {recall * 100:.0f}%  ({naturally_retrieved}/{total_retrievable})")
 
-    _write_report(results, total_retrievable, len(df))
+        results[approach["key"]] = {"label": approach["label"], "per_k": per_k}
+        print()
+
+    _write_report(results, k_values, total_retrievable, len(df))
     print(f"Saved report to {REPORT_PATH}")
     return results
 
 
-def _write_report(results: dict, total_retrievable: int, n_facets_indexed: int) -> None:
+def _write_report(results: dict, k_values: list, total_retrievable: int, n_facets_indexed: int) -> None:
     ordered_keys = [a["key"] for a in APPROACHES]
-    best_key = max(ordered_keys, key=lambda k: results[k]["recall"])
     baseline_key = "name_plus_anchors"
+    detail_k = 25 if 25 in k_values else k_values[len(k_values) // 2]  # k to show detailed misses for
 
     lines = []
     lines.append("# Retrieval Ablation: Does Embedding Text Format Change Recall?")
     lines.append("")
     lines.append(
         f"Tests 4 embedding-text formats for the same **{n_facets_indexed}** "
-        f"conversation-observable facets, retrieving at **top_k={TOP_K}** "
-        "against the same 10 benchmark conversations `src/benchmark.py` "
-        f"uses, measured against the same **{total_retrievable}** retrievable "
+        f"conversation-observable facets, at **k in {k_values}**, against "
+        "the same 10 benchmark conversations `src/benchmark.py` uses, "
+        f"measured against the same **{total_retrievable}** retrievable "
         "reference facets its force-include mechanism tracks. No LLM calls "
         "anywhere in this script -- pure FAISS/sentence-transformers "
         "retrieval, same model (`all-MiniLM-L6-v2`) as production, just 4 "
-        "different text formats instead of 1."
+        "different text formats instead of 1, checked across multiple "
+        "candidate-window sizes so a conclusion doesn't rest on a single k."
     )
     lines.append("")
     lines.append(
@@ -242,64 +261,77 @@ def _write_report(results: dict, total_retrievable: int, n_facets_indexed: int) 
         "#1 both concluded that embedding-text quality, not `top_k`, is the "
         "root cause of retrieval misses -- widening `top_k` from 25 to 40 "
         "only recovered 1 of 13 misses. That conclusion was inferred, never "
-        "directly tested. This script tests it."
+        "directly tested. This script tests it, and now tests it across "
+        "multiple k values (10/25/40/100) rather than just one, so a claim "
+        "like \"approach 3 wins\" can say at *which* k, or all of them."
     )
     lines.append("")
-    lines.append("## Results")
+    lines.append("## Results: recall by approach x k")
     lines.append("")
-    lines.append("| Approach | Recall | Naturally retrieved |")
-    lines.append("|---|---|---|")
+    header = "| Approach | " + " | ".join(f"k={k}" for k in k_values) + " |"
+    sep = "|---|" + "|".join(["---"] * len(k_values)) + "|"
+    lines.append(header)
+    lines.append(sep)
+
+    wins_per_k = {k: max(ordered_keys, key=lambda key: results[key]["per_k"][k]["recall"]) for k in k_values}
     for key in ordered_keys:
-        r = results[key]
-        marker = " 🏆" if key == best_key else ""
-        lines.append(f"| {r['label']} | **{r['recall'] * 100:.0f}%**{marker} | {r['naturally_retrieved']}/{r['total_retrievable']} |")
+        row_cells = []
+        for k in k_values:
+            r = results[key]["per_k"][k]
+            marker = " 🏆" if wins_per_k[k] == key else ""
+            row_cells.append(f"{r['recall'] * 100:.0f}%{marker}")
+        lines.append(f"| {results[key]['label']} | " + " | ".join(row_cells) + " |")
     lines.append("")
 
-    baseline_recall = results[baseline_key]["recall"]
-    best_recall = results[best_key]["recall"]
-    delta = (best_recall - baseline_recall) * 100
+    approach3_wins_all_k = all(wins_per_k[k] == baseline_key for k in k_values)
 
     lines.append("## Reading the result")
     lines.append("")
-    if best_key == baseline_key:
+    if approach3_wins_all_k:
         lines.append(
-            "The current implementation (approach 3) came out on top -- none "
-            "of the alternative text formats beat it. That's a real, useful "
-            "negative result: it means the retrieval-miss problem documented "
-            "in `DECISIONS.md` #1 isn't fixed by simply changing what generic "
-            "text gets embedded alongside the facet name. The fix, if there "
-            "is one at this embedding-model scale, likely needs richer, more "
-            "conversation-like example text than the crude template in "
-            "approach 4 -- or a fundamentally different retrieval strategy "
-            "(a cross-encoder reranker, per `README.md` item 4)."
+            f"**Approach 3 (current implementation) wins at every k tested "
+            f"({', '.join(str(k) for k in k_values)})** -- none of the "
+            "alternative text formats beat it at any candidate-window size. "
+            "That's a real, useful negative result, and a stronger one than "
+            "a single-k test could give: it means the retrieval-miss problem "
+            "documented in `DECISIONS.md` #1 isn't fixed by simply changing "
+            "what generic text gets embedded alongside the facet name, "
+            "regardless of how wide the retrieval window is. In particular, "
+            "**approach 4 (name + anchors + template example phrasings) "
+            "scored WORSE than approach 3 at every k** -- the hypothesis "
+            "that adding example phrasings would help was wrong, not just "
+            "unproven; see `DEBUGGING.md` #5 for the root cause. The fix, if "
+            "there is one at this embedding-model scale, likely needs "
+            "example text generated from real conversational phrasing "
+            "rather than a template, or a fundamentally different retrieval "
+            "strategy (a cross-encoder reranker, per `README.md`)."
         )
     else:
+        winners = {k: results[wins_per_k[k]]["label"] for k in k_values}
         lines.append(
-            f"**{results[best_key]['label']}** beat the current implementation "
-            f"(approach 3) by **{delta:.0f} percentage points** "
-            f"({results[best_key]['recall']*100:.0f}% vs. "
-            f"{baseline_recall*100:.0f}%). This is real evidence, not just a "
-            "hypothesis, that the embedding text format materially affects "
-            "retrieval recall independent of top_k -- consistent with what "
-            "`DECISIONS.md` #1 predicted but never directly measured. Worth "
-            "promoting this format into `src/embeddings.py`'s real "
-            "`build_index()` and re-running the full benchmark to confirm "
-            "the effect holds beyond this smaller top_k=25 ablation."
+            "The winning approach isn't consistent across every k tested -- "
+            + "; ".join(f"at k={k}, **{winners[k]}** wins" for k in k_values)
+            + ". That itself is worth knowing: it means the choice of "
+            "embedding text format and the choice of retrieval window "
+            "interact, rather than one strictly dominating regardless of "
+            "the other."
         )
     lines.append("")
 
-    lines.append("## Per-approach misses")
+    lines.append(f"## Per-approach misses at k={detail_k}")
     lines.append("")
     lines.append(
-        "Reference facets each approach failed to naturally retrieve -- "
-        "useful for spotting whether the SAME facets keep missing across "
-        "every approach (a harder retrieval problem) or whether different "
-        "approaches miss different facets (more sensitive to phrasing)."
+        f"Detailed miss list at k={detail_k} only (to keep this readable -- "
+        f"the summary table above already covers all {len(k_values)} k "
+        "values). Useful for spotting whether the SAME facets keep missing "
+        "across every approach (a harder retrieval problem) or whether "
+        "different approaches miss different facets (more sensitive to "
+        "phrasing)."
     )
     lines.append("")
     for approach in APPROACHES:
-        r = results[approach["key"]]
-        lines.append(f"**{r['label']}** -- {len(r['misses'])} miss(es):")
+        r = results[approach["key"]]["per_k"][detail_k]
+        lines.append(f"**{results[approach['key']]['label']}** -- {len(r['misses'])} miss(es):")
         if not r["misses"]:
             lines.append("- _none_")
         else:
@@ -307,11 +339,9 @@ def _write_report(results: dict, total_retrievable: int, n_facets_indexed: int) 
                 lines.append(f"- `{m['facet']}` (conversation {m['conversation_id']}: {m['conversation_type']})")
         lines.append("")
 
-    # Facets that missed under every single approach -- the most useful
-    # diagnostic signal here: these aren't a phrasing problem at all.
-    miss_sets = [set(m["facet"] for m in results[a["key"]]["misses"]) for a in APPROACHES]
+    miss_sets = [set(m["facet"] for m in results[a["key"]]["per_k"][detail_k]["misses"]) for a in APPROACHES]
     always_missed = set.intersection(*miss_sets) if miss_sets else set()
-    lines.append("## Facets that missed under every approach")
+    lines.append(f"## Facets that missed under every approach (at k={detail_k})")
     lines.append("")
     if always_missed:
         lines.append(

@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "I quit my job to backpack across South America with no plan.",
+  "total_facets_retrieved": 40,
+  "scored": 8,
+  "abstained": 22,
+  "results": [
+    {
+      "facet": "Eco-tourism trips",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention eco-tourism trips or any related activities."
+    },
+    {
+      "facet": "Digital-nomad months",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention digital nomadism or remote work."
+    },
+    {
+      "facet": "Sustainable-transport usage",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention sustainable transportation or any specific transportation method."
+    },
+    {
+      "facet": "Organized lifestyle",
+      "score": 1,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker mentions quitting their job with 'no plan', indicating a lack of organization."
+    },
+    {
+      "facet": "Patriotism",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention patriotism or any related sentiments."
+    },
+    {
+      "facet": "Casual lifestyle",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker mentions quitting their job to backpack across South America with 'no plan', indicating a very casual lifestyle."
+    },
+    {
+      "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention Buddhist practice or the Eightfold Path."
+    },
+    {
+      "facet": "Risktaking",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker mentions quitting their job with 'no plan', indicating a high level of risk-taking."
+    },
+    {
+      "facet": "Volunteer Work",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The conversation does not mention volunteer work or any related activities."
+    },
+    {
+      "facet": "Courageousness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The speaker mentions quitting their job to backpack across South America with 'no plan', indicating a high level of courageousness."
+    },
+    {
+      "facet": "Travel-companions diversity",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of travel companions in the conversation."
+    },
+    {
+      "facet": "Adventure-Seeking Behavior",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person quit their job to backpack across South America with no plan, indicating a strong desire for adventure."
+    },
+    {
+      "facet": "Creative resilience",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no clear indication of the person's ability to cope with challenges or uncertainty."
+    },
+    {
+      "facet": "Withdrawnness",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The person's decision to quit their job and travel alone does not necessarily indicate withdrawnness."
+    },
+    {
+      "facet": "Public-transport km/week",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of public transportation in the conversation."
+    },
+    {
+      "facet": "Psychological construct: Cultural Intelligence – Behavioral",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no indication of the person's ability to adapt to cultural differences or navigate unfamiliar situations."
+    },
+    {
+      "facet": "Desperation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "The person's decision to quit their job and travel alone does not necessarily indicate desperation."
+    },
+    {
+      "facet": "Creative risk-taking tendency",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person quit their job to backpack across South America with no plan, indicating a willingness to take creative risks."
+    },
+    {
+      "facet": "Participation in Community Activities",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no mention of the person's participation in community activities."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "high",
+      "evidence": "There is no indication of the person's susceptibility to boredom."
+    },
+    {
+      "facet": "Information Retention",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Initiative",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Contribution to Group Goals",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Psychological construct: Psychological Safety climate",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Drug-use history",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Religious coping – Negative",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Psychological construct: Perfectionistic Strivings",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Auditory Memory Recall",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Rebelliousness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Decision-Making Confidence",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Practice frequency: Walking meditation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of walking meditation in the conversation."
+    },
+    {
+      "facet": "Psychological construct: Hope scale",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person expresses a desire to backpack across South America with no plan, indicating a hopeful attitude."
+    },
+    {
+      "facet": "Inefficiency",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person quit their job without a plan, which can be seen as inefficient."
+    },
+    {
+      "facet": "Perseverance",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of the person's perseverance in the conversation."
+    },
+    {
+      "facet": "Reliance on context",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide enough context to assess the person's reliance on context."
+    },
+    {
+      "facet": "Choir participation years",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of choir participation in the conversation."
+    },
+    {
+      "facet": "Work Styles",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide enough information to assess the person's work styles."
+    },
+    {
+      "facet": "Ethical practices",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear indication of the person's ethical practices in the conversation."
+    },
+    {
+      "facet": "Encouraging participation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide enough context to assess the person's encouraging participation."
+    },
+    {
+      "facet": "Sequential Memory Recall",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no clear evidence of sequential memory recall in the conversation."
+    }
+  ],
+  "parse_errors": 10
+}

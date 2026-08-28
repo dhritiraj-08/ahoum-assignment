@@ -220,3 +220,109 @@ exact counts vary run-to-run due to VRAM-contention timing and normal
 LLM sampling variance) is itself a real, useful thing to know about this
 system's behavior -- more useful than either blindly trusting the given
 numbers or silently overwriting them.
+
+---
+
+## Entry 4 -- 2026-08-29 -- Streamlit UI, hallucination demo, Groq fallback, Docker
+
+**Tool:** Claude Code
+
+**Prompt summary:** Four separate prompts asking Claude Code to build:
+(1) a Streamlit web app over the same pipeline with status badges,
+color-coded results table, outcome distribution chart, and graceful
+error handling; (2) `hallucination_demo/` with `naive_baseline.py` and
+`run_comparison.py` comparing naive vs. safe scoring on 3 trap
+conversations; (3) hybrid Ollama→Groq fallback in `src/scorer.py` with
+`detect_backend()`/`_call_llm()` dispatch, 5 new pytest tests, and a
+`--test-groq` CLI flag; (4) `Dockerfile` + `docker-compose.yml` with
+CPU-only torch optimization.
+
+**What I used:** All four features as built. The Streamlit app,
+hallucination demo, Groq fallback architecture, and Docker setup were
+all kept without major structural changes.
+
+**What I changed or rejected:**
+- Groq model name: original default was `llama-3.1-8b-instant`, which
+  became enterprise-only and started 404ing on developer accounts.
+  Changed to `openai/gpt-oss-20b` after testing confirmed it works on
+  the free tier.
+- Docker image size: first build was 9.44GB due to full CUDA torch.
+  Added a CPU-only torch pre-install step, reducing to 2.9GB (69%
+  smaller).
+- `GROQ_API_KEY` security: the real key ended up committed directly in
+  a tracked `.env` file (`.gitignore`'s `.env` line had gotten corrupted
+  into unmatched characters, so the exclusion silently never took
+  effect) -- and that commit had **already been pushed to `origin/main`
+  on GitHub** by the time it was found, discovered while working on an
+  unrelated Docker task by fetching the remote and comparing it to
+  local `HEAD`. This was not caught before committing; it was found
+  after the fact, already on GitHub. I fixed the corrupted `.gitignore`
+  and untracked `.env` going forward (`git rm --cached`), rotated the
+  key on Groq's dashboard immediately, and left the question of
+  rewriting git history (which would need a force-push) to be decided
+  separately rather than doing it unilaterally.
+
+**What AI got wrong / what I corrected:**
+- The Groq model deprecation wasn't something Claude Code could have
+  predicted -- `llama-3.1-8b-instant`'s enterprise-tier restriction
+  postdates its training data. But testing with `--test-groq` before
+  relying on it is exactly why that flag exists, and running it caught
+  the 404 immediately.
+- First Docker build: Claude Code's `Dockerfile` used a standard
+  `pip install torch`, which pulled the CUDA build by default. Caught by
+  checking the built image size (9.44GB is obviously wrong for a
+  CPU-inference container) and tracing it to the torch layer. The fix
+  (pre-installing from the CPU wheel index) was mine to identify and
+  request.
+- The `.env` exposure itself was a real miss -- a corrupted `.gitignore`
+  silently defeated the one safeguard meant to prevent exactly this, and
+  it wasn't caught until after a push, not before one. Recording the
+  severity accurately here rather than as a near-miss matters: this was
+  a real key on a real, already-public commit, not a close call that
+  got stopped in time.
+
+---
+
+## Entry 5 -- 2026-08-29 -- Retrieval ablation, force-include benchmark, backend comparison
+
+**Tool:** Claude Code
+
+**Prompt summary:** Three prompts asking Claude Code to build:
+(1) `eval/retrieval_ablation.py` testing 4 embedding-text approaches
+against benchmark recall; (2) a force-include mechanism in
+`src/benchmark.py` separating retrieval recall from scoring accuracy;
+(3) `eval/backend_comparison.py` running real Groq vs. Ollama
+side-by-side on 5 benchmark conversations.
+
+**What I used:** All three scripts as built. The ablation study,
+benchmark methodology change, and backend comparison are all in the
+final submission.
+
+**What I changed or rejected:**
+- Backend comparison: first attempt ran with neither Ollama running nor
+  `GROQ_API_KEY` set -- all 125 facets came back `parse_error` for both
+  backends. Caught by checking the actual error messages (not trusting
+  the summary counts), diagnosed as an environment problem, and re-ran
+  properly. The garbage run was thrown out entirely.
+- Specific numbers described for the UI testing documentation didn't
+  match real runs -- parse error counts varied between runs due to VRAM
+  contention timing. Claude Code correctly refused to write the numbers
+  described without running the comparison itself, ran it for real, and
+  wrote what actually happened. This is the right call and consistent
+  with the project's own standards.
+- The retrieval ablation's "approach 3 wins at every k tested" claim
+  didn't survive testing across k=10/25/40/100 either -- approach 1
+  (bare facet name) actually wins at k=10, k=40, and k=100, with
+  approach 3 winning cleanly only at k=25. The narrower, correct claim
+  (approach 4's template examples never beat approach 3 at any k) does
+  hold up. Both the original overstatement and the corrected version are
+  worth having on record.
+
+**What AI got wrong / what I corrected:**
+- The ablation study's approach 4 (template examples) was predicted to
+  improve recall. It made things worse (19% vs. 22% at k=25, and never
+  better than approach 3 at any k tested). Neither the prompt nor Claude
+  Code caught this from reasoning alone -- it required actually running
+  the ablation and reading the output. The lesson is in `DEBUGGING.md`
+  #5, including the correction to the "wins at every k" overstatement
+  once the ablation was actually extended to test more than one k.

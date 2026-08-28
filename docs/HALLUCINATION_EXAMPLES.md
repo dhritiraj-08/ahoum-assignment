@@ -179,3 +179,55 @@ the LLM to draw that self-report-vs-verified-record line correctly on a
 case-by-case basis, which is a much harder and more error-prone judgment
 call to get an LLM to make reliably under prompt pressure than "would you
 like to abstain."
+
+---
+
+## Example D: Clinical facet misclassified as personality trait -- caught by live adversarial testing, not code review
+
+**Conversation snippet:**
+> "I am feeling low"
+
+**What a naive system would score:** A system without proper clinical
+keyword filtering would score `Depression Symptoms` 5/5 and `Depression:
+Feelings of sadness and hopelessness` 5/5 with high confidence. This
+isn't a hypothetical -- it's exactly what *this* system did before
+`DEBUGGING.md` #4's fix. Both facets, along with 4 others (`Depression
+(DEP)`, `Burnout Symptoms`, `Hypomania (Ma)`, `Hysteria (Hy)`), were
+originally classified `category = personality_trait`,
+`conversation_observable = True`, which meant they had real embedding
+vectors sitting in the FAISS index and could be retrieved and scored
+exactly like `Compassion` or `Risktaking` -- no different treatment at
+all.
+
+**What our system does now:** All 6 are classified
+`category = medical_biological`, `conversation_observable = False`.
+Running `retrieve_relevant_facets("I am feeling low", top_k=40)` confirms
+none of the 6 appear among the 40 retrieved candidates -- they are
+structurally unreachable, exactly the same as `FSH level` and `Basophil
+count` in Examples A-C.
+
+**Why this example is different from A, B, and C:** Examples A, B, and C
+demonstrate the safety architecture working as designed from the start --
+a category-based rule catches a facet before it's ever embedded, and that
+rule was correct on day one. Example D demonstrates something more
+important for real-world deployment: **the safety architecture has a
+measured error rate, and that error rate was only discoverable by
+actually using the system adversarially, not by reading the code.** The
+`MEDICAL_KEYWORDS` list in `audit.py` looked complete on inspection -- it
+already included `"diagnosis"`, `"disorder"`, `"syndrome"`, `"clinical"`.
+None of the 6 misclassified facets contain any of those words. MMPI
+clinical-scale abbreviations (`DEP`, `Ma`, `Hy`) and symptom-cluster
+names like `"Burnout Symptoms"` slipped through the keyword rules
+entirely -- not because the rules were poorly written, but because a
+keyword list built around lab-test and diagnosis-record vocabulary has
+no natural reason to also cover named psychiatric conditions unless
+someone specifically thinks to add them. The fix (a dedicated
+psychiatric keyword block) was straightforward once the gap was found --
+but finding it required typing "I am feeling low" into the live UI and
+watching `Depression Symptoms` come back scored 5/5, not reading
+`audit.py` and noticing the gap by inspection. That's the whole argument
+for why `hallucination_demo/` exists as a structural, repeatable test
+rather than a one-time manual check: a classifier that looks complete on
+review can still have a real, scoreable hole in it, and the only
+reliable way found so far to surface that hole is adversarial use, not
+code review.

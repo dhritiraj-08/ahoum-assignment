@@ -2,10 +2,10 @@
 
 ![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)
 ![Model: Llama 3.1 8B](https://img.shields.io/badge/model-Llama%203.1%208B-green.svg)
-![Tests: 42 passing](https://img.shields.io/badge/tests-42%20passing-brightgreen.svg)
+![Tests: 44 passing](https://img.shields.io/badge/tests-44%20passing-brightgreen.svg)
 ![Scoring accuracy: 59%](https://img.shields.io/badge/scoring%20accuracy-59%25-yellow.svg)
 ![Retrieval recall: 26%](https://img.shields.io/badge/retrieval%20recall-26%25-red.svg)
-![Hallucinations: 0](https://img.shields.io/badge/hallucinations-0%2F3-brightgreen.svg)
+![Hallucinations: 0/3 traps](https://img.shields.io/badge/hallucinations-0%2F3%20traps-brightgreen.svg)
 ![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 
 **Scoring accuracy (59%) and retrieval recall (26%) are reported as two
@@ -18,6 +18,20 @@ actually gives evidence for -- out of a 399-facet taxonomy -- using a local
 LLM (Ollama + llama3.1), retrieval-first so the model never sees all 399
 facets in one prompt, and abstaining explicitly ("insufficient_evidence")
 whenever the conversation doesn't support a judgment.
+
+## What this does (30 seconds)
+
+- **Input:** paste any conversation into the Streamlit UI or CLI.
+- **Output:** scored personality facets with evidence, confidence, and
+  explicit abstentions -- never a bare number with no justification.
+- **Safety:** medical/clinical/spiritual facets are structurally blocked
+  from retrieval -- not just prompted away. See `docs/HALLUCINATION_EXAMPLES.md`
+  for what that actually prevents.
+- **Runs locally** on Ollama (`llama3.1`, tested on an RTX 4050) or falls
+  back to Groq cloud automatically if Ollama isn't reachable.
+- **Honest about failures:** retrieval recall (26%) and scoring accuracy
+  (59%) are reported as separate numbers, not blended into one score --
+  see "Benchmark methodology" below.
 
 ## Setup
 
@@ -90,6 +104,45 @@ python main.py --test-groq   # verify GROQ_API_KEY + GROQ_MODEL_NAME work, bypas
 
 `--audit` and `--embed` only need to be re-run when `data/Facets_Assignment.csv`
 changes. `--score` and `--benchmark` reuse the saved index.
+
+## Sample output
+
+Running:
+
+```bash
+python main.py --score "I quit my job to backpack across South America with no plan."
+```
+
+Real scored results from an actual run (`outputs/pipeline_output_20260829_012625.json`):
+
+| Facet | Score | Status | Confidence | Evidence |
+|---|---|---|---|---|
+| Risktaking | 5 | scored | high | "The speaker mentions quitting their job with 'no plan', indicating a high level of risk-taking." |
+| Adventure-Seeking Behavior | 5 | scored | high | "The person quit their job to backpack across South America with no plan, indicating a strong desire for adventure." |
+| Organized lifestyle | 1 | scored | high | "The speaker mentions quitting their job with 'no plan', indicating a lack of organization." |
+| Courageousness | 5 | scored | high | "The speaker mentions quitting their job to backpack across South America with 'no plan', indicating a high level of courageousness." |
+| Inefficiency | 5 | scored | high | "The person quit their job without a plan, which can be seen as inefficient." |
+
+That same run retrieved 40 candidate facets total, scored 8, abstained on
+22, and hit 10 `parse_error`s (the VRAM-contention crash documented in
+`DEBUGGING.md` #3) -- included here honestly rather than cherry-picking a
+crash-free run, since that's a real and fairly common outcome on this
+hardware, not an edge case.
+
+**What you will never see in a `results` list, for any conversation:**
+facets like `FSH level` or `Passport-stamps count` don't appear with a
+`not_observable` status row the way a medical-trap facet caught by the
+scorer's hard block might -- they're excluded from the FAISS index
+*before* retrieval even runs, so they're never candidates in the first
+place, for this conversation or any other. Their real `abstention_reason`
+from `outputs/enriched_facets.csv`, for reference:
+
+- `FSH level` (`medical_biological`): "Requires a clinical measurement, lab
+  test, or diagnosis record; cannot be responsibly inferred from
+  conversational text alone."
+- `Passport-stamps count` (`social_demographic`): "Requires a factual/
+  demographic record (counts, logs, official data) rather than something
+  inferable from conversational tone or content."
 
 ## Benchmark methodology: why two numbers, not one
 
@@ -199,32 +252,40 @@ picked up immediately -- no image rebuild needed for either.
 
 ## Architecture
 
+```mermaid
+flowchart TD
+    A["📄 Facets_Assignment.csv\n399 raw facets"] -->|"src/audit.py\nnormalize · classify · flag"| B["📊 enriched_facets.csv\n316 observable · 83 blocked"]
+
+    B -->|"src/embeddings.py\nall-MiniLM-L6-v2 · FAISS"| C[("🗂️ faiss_index.bin\n316 vectors")]
+
+    D["💬 Conversation input"] --> E["🔍 retrieve_relevant_facets()\ntop_k=40"]
+    C --> E
+
+    E --> F{"🚦 Safety Gate\nconversation_observable?"}
+
+    F -->|"❌ False\nmedical · spiritual\nbiographical · malformed"| G["🛑 not_observable\nno LLM call ever made"]
+
+    F -->|"✅ True"| H["📦 Batch scorer\n10 facets per Ollama call\n4 batches per conversation"]
+
+    H -->|"🦙 llama3.1 8B\nvia Ollama local\nOR Groq cloud fallback"| I["🔒 Hard block\nmedical_biological\nforced not_observable"]
+
+    I --> J["✅ Structured output\nscore · status · confidence · evidence"]
+    G --> J
+
+    J --> K["💾 pipeline_output_{timestamp}.json"]
+    J --> L["🖥️ Streamlit UI\napp.py"]
+
+    style F fill:#2f6a68,color:#fff
+    style G fill:#8b0000,color:#fff
+    style I fill:#8b4500,color:#fff
+    style J fill:#1a5c1a,color:#fff
+    style L fill:#1a3a6b,color:#fff
 ```
-data/Facets_Assignment.csv
-        |
-        v
-  src/audit.py            -- clean/normalize facet names, classify into 7
-        |                     categories, flag observable vs not, assign
-        |                     sensitivity + abstention_reason + scoring anchors
-        v
-outputs/enriched_facets.csv
-        |
-        v
-  src/embeddings.py       -- embed only conversation-observable facets
-        |                     (all-MiniLM-L6-v2) into a FAISS index
-        v
-outputs/faiss_index.bin + observable_facets.json
-        |
-        v
-  src/pipeline.py --------> retrieve_relevant_facets(conversation, top_k=40)
-        |                          |
-        |                          v
-        |                   src/scorer.py -- split into batches of 10,
-        |                     one focused Ollama prompt per batch, robust
-        |                     JSON parsing, hard-block on medical facets
-        v
-outputs/pipeline_output_{timestamp}.json
-```
+
+(Facet counts above are current as of `docs/DEBUGGING.md` #4's fix -- 6
+clinical facets that were originally misclassified as scorable
+`personality_trait` are now correctly excluded, moving the observable
+count from an earlier 322 down to 316.)
 
 Two safety layers keep the system from hallucinating on facets it has no
 business judging from a short chat:
@@ -435,15 +496,22 @@ problem -- many conversations scored per minute rather than one at a time
    is the right point on the reliability/throughput curve for llama3.1 on
    this specific hardware -- I just never saw a failure at 10, which isn't
    the same as knowing where the failures start.)
-10. **Run the full benchmark against the Groq backend specifically**
-    (stop Ollama, set `GROQ_API_KEY`, re-run `python main.py --benchmark`)
-    to check whether Groq's `openai/gpt-oss-20b` abstains as conservatively
-    as the locally-run `llama3.1` did. This is flagged honestly as untested in
-    `DECISIONS.md` #5 -- the hybrid backend was built and verified to
-    *route* correctly (5 passing tests confirm the dispatch logic), but
-    nothing has verified the *scoring behavior* is equivalent between the
-    two models. Given the retrieval-recall/scoring-accuracy split this
-    project now reports (see "Benchmark methodology" above), it would be
-    easy to end up comparing Groq's scoring accuracy against Ollama's on
-    the exact same 27 force-included reference facets -- a clean,
-    already-built apples-to-apples comparison that just hasn't been run yet.
+10. **Run the full force-include benchmark against the Groq backend
+    specifically** (force Ollama detection off the way `main.py
+    --test-groq` does, re-run `python main.py --benchmark` against Groq)
+    to check whether Groq's `openai/gpt-oss-20b` abstains as
+    conservatively as the locally-run `llama3.1` did. `eval/
+    backend_comparison.py` already did a smaller, ad-hoc version of this
+    -- 5 of the 10 benchmark conversations, `top_k=25`, no force-include
+    -- and found Groq more conservative but roughly comparable in
+    quality (see `docs/BACKEND_COMPARISON.md`). What's still missing is
+    the *rigorous* version: running all 10 conversations through
+    `src/benchmark.py`'s actual force-include mechanism against Groq,
+    which would produce a real "Groq scoring accuracy: X%" number
+    directly comparable to Ollama's measured 59% on the exact same 27
+    reference facets, instead of the looser 5-conversation comparison
+    that exists today. `DECISIONS.md` #5 flags this as the honest
+    remaining gap; the hybrid backend's *routing* is fully tested (7
+    passing dispatch/detection tests), but a rigorous scoring-quality
+    comparison at the same standard as the Ollama benchmark isn't done
+    yet.

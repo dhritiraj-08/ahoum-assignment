@@ -1,0 +1,289 @@
+{
+  "conversation_snippet": "I quit my job to backpack across South America with no plan.",
+  "total_facets_retrieved": 40,
+  "scored": 7,
+  "abstained": 13,
+  "results": [
+    {
+      "facet": "Eco-tourism trips",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Digital-nomad months",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Sustainable-transport usage",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Organized lifestyle",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Patriotism",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Casual lifestyle",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Buddhist practice: Eightfold Path – Right Intention level",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Risktaking",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Volunteer Work",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Courageousness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "LLM call failed: llama-server process has terminated: exit status 0xc0000409: The system detected an overrun of a stack-based buffer in this application. This overrun could potentially allow a malicious user to gain control of this application.: CUDA error: shared object initialization failed\nCUDA error (status code: 500)"
+    },
+    {
+      "facet": "Travel-companions diversity",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Adventure-Seeking Behavior",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Creative resilience",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Withdrawnness",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Public-transport km/week",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Psychological construct: Cultural Intelligence – Behavioral",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Desperation",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Creative risk-taking tendency",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Participation in Community Activities",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Boredom Susceptibility",
+      "score": null,
+      "status": "parse_error",
+      "confidence": "low",
+      "evidence": "Could not parse model output as JSON: No JSON array found in model output."
+    },
+    {
+      "facet": "Information Retention",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person mentions quitting their job and backpacking across South America, showing they can recall specific details."
+    },
+    {
+      "facet": "Initiative",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person has quit their job to pursue a spontaneous adventure, demonstrating high initiative."
+    },
+    {
+      "facet": "Contribution to Group Goals",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of group goals or contributions."
+    },
+    {
+      "facet": "Psychological construct: Psychological Safety climate",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not provide any information about the person's psychological safety climate."
+    },
+    {
+      "facet": "Drug-use history",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of drug use or history."
+    },
+    {
+      "facet": "Religious coping – Negative",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not mention any negative religious coping mechanisms."
+    },
+    {
+      "facet": "Psychological construct: Perfectionistic Strivings",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no indication of perfectionistic strivings or a desire for perfection."
+    },
+    {
+      "facet": "Auditory Memory Recall",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "The conversation does not require or demonstrate auditory memory recall."
+    },
+    {
+      "facet": "Rebelliousness",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person has quit their job without a plan, showing a willingness to challenge authority and norms."
+    },
+    {
+      "facet": "Decision-Making Confidence",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person has made a significant decision to quit their job and pursue a spontaneous adventure, demonstrating high decision-making confidence."
+    },
+    {
+      "facet": "Practice frequency: Walking meditation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of walking meditation in the conversation."
+    },
+    {
+      "facet": "Psychological construct: Hope scale",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person has quit their job to backpack across South America with no plan, indicating a high level of hope and optimism."
+    },
+    {
+      "facet": "Inefficiency",
+      "score": 5,
+      "status": "scored",
+      "confidence": "high",
+      "evidence": "The person has quit their job without a plan, which is a clear example of inefficient behavior."
+    },
+    {
+      "facet": "Perseverance",
+      "score": 3,
+      "status": "scored",
+      "confidence": "medium",
+      "evidence": "The person has quit their job, but it's unclear if they have a plan to succeed in their backpacking trip."
+    },
+    {
+      "facet": "Reliance on context",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of the person relying on context in the conversation."
+    },
+    {
+      "facet": "Choir participation years",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of choir participation in the conversation."
+    },
+    {
+      "facet": "Work Styles",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of work styles in the conversation."
+    },
+    {
+      "facet": "Ethical practices",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of ethical practices in the conversation."
+    },
+    {
+      "facet": "Encouraging participation",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of encouraging participation in the conversation."
+    },
+    {
+      "facet": "Sequential Memory Recall",
+      "score": null,
+      "status": "insufficient_evidence",
+      "confidence": "low",
+      "evidence": "There is no mention of sequential memory recall in the conversation."
+    }
+  ],
+  "parse_errors": 20
+}

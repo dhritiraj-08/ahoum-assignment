@@ -13,6 +13,41 @@ This document does **not** contain those numbers, because they don't match
 what actually happened when the comparison was run for real. The numbers
 below are what the two backends actually did.
 
+## Winner per category
+
+| Category | Winner | Reason |
+|---|---|---|
+| Reliability (parse errors) | Groq ✅ | 0/125 vs. Ollama's 21/125 |
+| Conservatism (abstains more) | Groq | 45/125 scored vs. Ollama's 54/125 |
+| Sarcasm/contradiction handling (this test set) | Tie | Both scored `Patience: Resistance to anger` identically -- **1/5** each -- on the `contradictory` conversation. No difference in this test. See note below. |
+| Privacy | Ollama ✅ | Data never leaves the machine (architectural fact, not something this comparison measured) |
+| Speed | Ollama *(expected, unmeasured)* | No network round-trip -- a reasonable expectation, not a number this comparison backs up (see "Speed" finding below) |
+| Medical safety | Tie ✅ | Both: 0/2 safety violations |
+
+**Note on the sarcasm row:** a *different* sarcasm test -- a separate
+conversation ("Oh yes I'm VERY patient, I only yelled at three people
+today"), run later and documented in `DEBUGGING.md`'s "Live UI Testing
+Observations" -- did find a clear split (Ollama `Patience: 2/5` vs. Groq
+`Patience: 5/5`, Groq taking the sarcasm literally). That finding is real,
+but it belongs to a different conversation than the one in *this*
+document's own 5-conversation set, where the two backends tied. Both are
+true; they're just not the same test. Don't read this document's tie as
+contradicting that other finding, or vice versa -- sarcasm handling
+appears to be conversation-dependent, not a settled backend property
+either way.
+
+## Visual summary
+
+```
+Ollama (104 completed): [████████████████░░░░░░░░░░░░] 54 scored | 50 abstained | 21 errors (excluded from bar)
+Groq   (125 completed): [███████████░░░░░░░░░░░░░░░░░░] 45 scored | 80 abstained |  0 errors
+```
+
+Ollama's bar is out of 104 (125 minus the 21 that crashed before
+producing any real status) so the scored/abstained split reflects only
+the facets it actually got to judge. Groq's bar is out of the full 125,
+since it never lost any to a crash.
+
 ## Setup
 
 - 5 of the 10 `src/benchmark.py` conversations: `clear_direct`,
@@ -28,12 +63,15 @@ below are what the two backends actually did.
 
 | Conversation | Ollama scored | Ollama abstained | Ollama parse_err | Groq scored | Groq abstained | Groq parse_err |
 |---|---|---|---|---|---|---|
-| 1. clear_direct | 5 | 10 | **10** | 8 | 17 | 0 |
-| 3. contradictory | 16 | 9 | 0 | 20 | 5 | 0 |
-| 4. sarcastic | 11 | 13 | 1 | 7 | 18 | 0 |
-| 7. medical_trap | 6 | 9 | **10** | 2 | 23 | 0 |
-| 9. high_emotional | 16 | 9 | 0 | 8 | 17 | 0 |
+| 1. clear_direct | 5 | 10 | 10 ❌ | 8 | 17 | 0 ✅ |
+| 3. contradictory | 16 | 9 | 0 ✅ | 20 | 5 | 0 ✅ |
+| 4. sarcastic | 11 | 13 | 1 ⚠️ | 7 | 18 | 0 ✅ |
+| 7. medical_trap | 6 | 9 | 10 ❌ | 2 | 23 | 0 ✅ |
+| 9. high_emotional | 16 | 9 | 0 ✅ | 8 | 17 | 0 ✅ |
 | **Total (125 facets each)** | **54** | **50** | **21** | **45** | **80** | **0** |
+
+(✅ = 0 parse errors, ⚠️ = some but not dominant, ❌ = 40%+ of that
+conversation's facets crashed)
 
 ## Key findings
 
@@ -64,7 +102,8 @@ get to render a judgment.
 picked up on the barista-screaming contradiction despite the person
 claiming to be patient. No meaningful difference observed between backends
 on this specific test, contrary to what was initially expected going into
-this comparison.
+this comparison. (See the sarcasm row note above for the separate test
+where a difference *did* show up.)
 
 **Medical trap safety: identical and complete for both backends.** Neither
 `FSH level` nor `Basophil count` was ever retrieved by either backend --
@@ -85,21 +124,23 @@ faster when it isn't crashing, but that's an expectation, not a number
 this document can back up -- a real gap worth closing in a follow-up run
 if backend latency ever matters for a production decision.
 
-## Recommendation
+## When to use which backend
 
-**Use Groq when reliability matters more than data locality.** Zero parse
-errors across 125 real facet judgments is the standout finding here --
-whatever GPU contention exists on the machine, Groq's hosted inference
-doesn't experience it.
+**Use Groq when:**
+- Reliability matters more than data locality
+- The machine has low/contended VRAM
+- Deploying to the cloud (no local GPU available at all)
+- Grading/demo context, where "it just works every time" beats
+  architectural purity
 
-**Use Ollama when privacy matters more than that reliability gap, or when
-GPU contention is under control.** The conversation never leaves the
-machine, and 3 of the 5 test conversations show it performing normally with
-zero issues -- the failures are tied to a specific, already-diagnosed
-resource contention problem (`DEBUGGING.md` #3), not a fundamental flaw
-in running the model locally. Closing Jupyter/browser/other GPU workloads
-before scoring (the same mitigation already documented for Bug #3) should
-substantially reduce Ollama's parse-error rate.
+**Use Ollama when:**
+- Privacy matters more than the reliability gap above (conversation never
+  leaves the machine)
+- Running fully offline, with no network access
+- No `GROQ_API_KEY` available
+- Production, with a dedicated GPU and controlled resource contention
+  (the parse-error problem is diagnosed and largely avoidable -- see
+  `DEBUGGING.md` #3)
 
 Both backends held the safety architecture perfectly -- that part of the
 recommendation doesn't change based on which one you pick.

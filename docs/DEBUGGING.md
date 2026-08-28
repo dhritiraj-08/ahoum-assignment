@@ -383,6 +383,111 @@ didn't show up as a distinctly-scored facet for either.
 
 ---
 
+## 5. Retrieval ablation: template examples made recall WORSE, not better -- and "approach 3 wins" needed correcting once tested at more than one k
+
+**Symptom:** Expected that adding 2 example phrasings per facet to the
+embedding text (approach 4) would improve retrieval recall over the
+current implementation (approach 3: facet name + scoring anchors alone).
+`eval/retrieval_ablation.py` at `k=25` showed approach 4 at 19% recall vs.
+approach 3's 22% -- the "improvement" made things worse.
+
+**Diagnosis:** Re-ran the ablation across `k=10/25/40/100` (extended
+`eval/retrieval_ablation.py` to loop over multiple k values in one run,
+reusing each approach's index across all of them) rather than trusting
+the single `k=25` result. That turned out to matter: approach 4 stayed at
+or below approach 3 at every single k (11%≈11%, 19%<22%, 19%<26%,
+56%≈56%) -- the core finding holds up robustly. But a first draft of this
+entry claimed "approach 3 wins at every k tested," and that part was
+**wrong** once actually checked: **approach 1 (bare facet name, no anchor
+text at all) outright beats approach 3 at k=10, k=40, and k=100** --
+scoring anchors only win cleanly at k=25. See
+`outputs/retrieval_ablation_report.md` for the full k=10/25/40/100 table.
+
+**Root cause:** Two separate things, not one. (1) The template examples
+were generated from the facet's own name/category, not from real
+conversation phrasing -- for `Collaboration`, the generated example reads
+like "someone high in Collaboration would show this clearly through what
+they say and do" (the actual mechanical template in
+`_build_example_phrasings()`), not anything resembling how a real
+conversation would describe collaborating. Abstract, facet-name-derived
+language is further from real conversational text than the anchor alone,
+so adding it diluted the embedding rather than enriching it. (2) The
+"approach 3 wins outright" claim was an overgeneralization from a single
+k value -- scoring anchors help retrieval find things bare names miss at
+a *moderate* window (k=25), but at a very narrow window (k=10) or a very
+wide one (k=100), the anchor's generic rubric language dilutes the
+signal enough that the bare name alone ranks better. Neither approach is
+simply "the best" independent of k.
+
+**Fix:** Kept approach 3 (name + scoring anchors) as the shipped default
+in `src/embeddings.py` -- it's still the best-performing approach at the
+`top_k=40` this project actually runs in production, even though it
+isn't the best at every k in the abstract. Documented approach 4 as a
+failed hypothesis, and the k-dependence finding, in
+`outputs/retrieval_ablation_report.md` rather than quietly dropping
+either.
+
+**Verification:** `retrieval_ablation_report.md`'s `k=10/25/40/100`
+table is the verification -- approach 4 never beats approach 3 at any
+k tested, confirming the core "examples hurt, don't help" finding is
+robust, not a k=25 artifact. The "approach 3 wins outright" claim did
+NOT survive the same check, and the entry above reflects the corrected
+version, not the original one.
+
+**Lesson:** Test assumptions with blind evaluation across more than one
+condition, not a hand-validated example checked at a single setting. The
+hand-picked example measured the ceiling of the idea; the k=25-only
+ablation measured the actual method at one point; only the multi-k
+ablation was enough to say which part of the original claim was solid
+(examples hurt) and which part wasn't (approach 3 being universally
+best) -- both are useful to know, and neither would have surfaced from
+a single run.
+
+---
+
+## 6. Docker image was 9.44GB due to CUDA torch being installed by default
+
+**Symptom:** First `docker compose build` produced a 9.44GB image -- far
+too large for a pipeline whose container has no GPU at all.
+
+**Diagnosis:** Checked the build layers (`docker images` size, and the
+`pip install` log). The torch installation dominated the image size,
+pulling in a full NVIDIA CUDA toolkit (`nvidia-cublas`, `cudnn`, `nccl`,
+`triton`, `cuda-toolkit`, and more) that the container would never use.
+
+**Root cause:** `pip install torch` (as a `sentence-transformers`
+dependency, pulled in transitively via `requirements.txt`) resolves to
+the full CUDA-enabled build by default on Linux. The container has no
+GPU -- Ollama runs on the host machine, and the container reaches it via
+`host.docker.internal` (see `docker-compose.yml`'s `extra_hosts` entry).
+The CUDA libraries are completely useless inside the container and added
+roughly 6.5GB for zero benefit.
+
+**Fix:** Added a pre-install step in the `Dockerfile` that explicitly
+installs CPU-only torch from PyTorch's dedicated CPU wheel index
+(`--index-url https://download.pytorch.org/whl/cpu`) before
+`requirements.txt` runs, so when `sentence-transformers` later asks for
+`torch>=2.2`, a CPU build already satisfies it and pip doesn't reach for
+the CUDA one.
+
+**Verification:** Rebuilt image measured at 2.9GB -- 69% smaller. Ran
+`docker compose run --rm facet-pipeline python main.py --help`,
+`--audit`, `--embed`, `--setup` (confirmed the container reached Ollama
+on the host via `host.docker.internal`), and `--score "..."` inside the
+container after the rebuild -- all commands completed with exit code 0
+and produced normal output (`--audit`: 316 observable / 83 not, matching
+the host; `--score`: real scored facets with sensible evidence text).
+Also confirmed `.env` is genuinely absent from the built image
+(`.dockerignore` working) while `.env.example` is present as expected.
+
+**Lesson:** Always check what torch variant `pip` installs by default
+when building a Docker image that includes it as a dependency -- the
+CUDA build is the default even on machines/containers with no GPU at
+all, and the size difference (9.44GB vs. 2.9GB here) is large enough to
+matter for build time, registry storage, and pull time alike.
+
+---
+
 ### Things still worth stress-testing
 
 - Skim `outputs/enriched_facets.csv` for more misclassified facets beyond
