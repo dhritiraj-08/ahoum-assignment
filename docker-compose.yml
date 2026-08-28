@@ -1,0 +1,53 @@
+# docker-compose.yml
+# ------------------
+# Runs the pipeline in a container. Ollama itself is NOT part of this
+# compose file -- it must already be running on the HOST machine (see
+# Dockerfile and docs/README.md "Docker" section). This file wires the
+# container up to reach it anyway, plus the Groq cloud fallback.
+services:
+  facet-pipeline:
+    build: .
+    container_name: facet-pipeline
+
+    environment:
+      # Groq cloud fallback -- read from the .env file below via compose's
+      # built-in ${VAR} substitution. Both are optional: if Ollama on the
+      # host is reachable, GROQ_API_KEY is never used at all (see
+      # src/scorer.py detect_backend()).
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GROQ_MODEL_NAME=${GROQ_MODEL_NAME}
+      # NOT a secret, so set directly here rather than via .env: inside
+      # the container "localhost" means the container itself, so reaching
+      # Ollama on the host needs this instead. Paired with extra_hosts
+      # below, which is what makes host.docker.internal resolve on Linux
+      # (Docker Desktop on Mac/Windows already provides it out of the box).
+      - OLLAMA_HOST=http://host.docker.internal:11434
+
+    # Loads any other variables from .env into the container as well (in
+    # addition to the explicit GROQ_* substitution above) -- harmless if
+    # .env only has the two keys this project actually uses.
+    env_file:
+      - .env
+
+    volumes:
+      # Results (enriched_facets.csv, the FAISS index, pipeline/benchmark
+      # JSON output) land on the host, not just inside the ephemeral
+      # container -- same outputs/ directory the non-Docker CLI writes to.
+      - ./outputs:/app/outputs
+      # The raw facets CSV lives here -- mounted read/write so a newer CSV
+      # dropped on the host is picked up without rebuilding the image.
+      - ./data:/app/data
+
+    extra_hosts:
+      # Makes host.docker.internal resolve to the host machine's gateway
+      # IP on Linux (Docker Desktop on Mac/Windows maps this automatically
+      # already, but this entry is harmless there too). This is what lets
+      # OLLAMA_HOST above actually reach Ollama running on the host.
+      - "host.docker.internal:host-gateway"
+
+    # No `command:` override here -- defaults to the Dockerfile's CMD
+    # (`python main.py --help`). Override per-invocation instead:
+    #   docker compose run --rm facet-pipeline python main.py --audit
+    #   docker compose run --rm facet-pipeline python main.py --score "..."
+    stdin_open: true
+    tty: true

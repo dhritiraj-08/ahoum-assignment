@@ -163,6 +163,40 @@ detected, a password-masked `GROQ_API_KEY` field appears so you can paste a
 key directly into the browser instead of setting an environment variable
 and restarting.
 
+## Docker
+
+```bash
+docker compose build
+docker compose run --rm facet-pipeline python main.py --audit
+docker compose run --rm facet-pipeline python main.py --embed
+docker compose run --rm facet-pipeline python main.py --score "I quit my job to backpack across South America with no plan."
+docker compose run --rm facet-pipeline python main.py --benchmark
+```
+
+`docker compose up` alone just runs the Dockerfile's default command
+(`python main.py --help`) and exits -- use `docker compose run --rm
+facet-pipeline <command>` for anything real, same as you'd run it locally
+but through the container.
+
+**Ollama runs on the host, not in the container.** This project needs a
+GPU for local inference to be worth anything, and containerizing that is
+its own project -- so `docker-compose.yml` instead points the container at
+Ollama running on your actual machine via `OLLAMA_HOST=http://host.docker.internal:11434`,
+made to resolve correctly on Linux by the `extra_hosts: host.docker.internal:host-gateway`
+entry (Docker Desktop on Mac/Windows provides this mapping automatically
+already). Start Ollama on the host as usual before running any container
+command that needs to score something -- `--audit` and `--embed` don't
+need Ollama at all (they're pure data processing / embedding), only
+`--score` and `--benchmark` do.
+
+If Ollama on the host isn't reachable from inside the container for some
+reason, the Groq cloud fallback still works normally -- set `GROQ_API_KEY`
+(and optionally `GROQ_MODEL_NAME`) in a `.env` file next to
+`docker-compose.yml` (see `.env.example`); compose passes both through to
+the container automatically. `./outputs` and `./data` are volume-mounted,
+so results land on your host filesystem and CSV changes on the host are
+picked up immediately -- no image rebuild needed for either.
+
 ## Architecture
 
 ```

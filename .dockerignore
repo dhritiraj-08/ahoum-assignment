@@ -1,0 +1,9 @@
+# .dockerignore
+# Keeps secrets and build artifacts out of the image build context.
+.env
+__pycache__/
+**/__pycache__/
+*.pyc
+**/*.pyc
+outputs/*.bin
+.git

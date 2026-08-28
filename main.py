@@ -33,13 +33,17 @@ def cmd_setup():
     """
     import ollama
 
+    # Same OLLAMA_HOST override as src/scorer.py -- "localhost" only works
+    # when this runs on the same machine as Ollama; inside Docker it needs
+    # to be set to something like http://host.docker.internal:11434.
+    ollama_host = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
     console.print("[bold cyan]Checking Ollama setup...[/bold cyan]")
 
     try:
-        client = ollama.Client(host="http://localhost:11434")
+        client = ollama.Client(host=ollama_host)
         models_response = client.list()
     except Exception as e:
-        console.print(f"[bold red]Could not connect to Ollama at http://localhost:11434[/bold red]")
+        console.print(f"[bold red]Could not connect to Ollama at {ollama_host}[/bold red]")
         console.print(f"  Error: {e}")
         console.print("\n[yellow]Is Ollama running?[/yellow] Start it, then re-run --setup.")
         console.print("  Windows: Ollama should run as a background app after install (check the system tray),")

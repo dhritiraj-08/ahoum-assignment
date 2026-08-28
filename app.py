@@ -36,7 +36,10 @@ def check_ollama_status() -> tuple[bool, str]:
     """
     try:
         import ollama
-        client = ollama.Client(host="http://localhost:11434")
+        # Same OLLAMA_HOST override as src/scorer.py -- needed if this app
+        # is ever run inside Docker (see docs/README.md "Docker" section).
+        ollama_host = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+        client = ollama.Client(host=ollama_host)
         models_response = client.list()
         models = models_response.get("models", []) if isinstance(models_response, dict) else models_response.models
         model_names = []
@@ -49,7 +52,7 @@ def check_ollama_status() -> tuple[bool, str]:
         return False, "Ollama is running, but llama3.1 isn't pulled yet. Run: ollama pull llama3.1"
     except Exception as e:
         return False, (
-            "Can't reach Ollama at http://localhost:11434 -- is it running? "
+            f"Can't reach Ollama at {ollama_host} -- is it running? "
             f"(details: {e})"
         )
 

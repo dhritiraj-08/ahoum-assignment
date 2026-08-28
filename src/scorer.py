@@ -41,7 +41,13 @@ try:
 except ImportError as e:
     raise ImportError("ollama package not installed. Run: pip install -r requirements.txt") from e
 
-OLLAMA_HOST = "http://localhost:11434"
+# Overridable via env var: "localhost" only resolves to the Ollama server
+# when this process runs on the same machine as Ollama. Inside a Docker
+# container, "localhost" means the container itself -- reaching a host-run
+# Ollama needs a different address (e.g. http://host.docker.internal:11434
+# on Docker Desktop, or the docker-compose extra_hosts mapping on Linux).
+# See docker-compose.yml / docs/README.md "Docker" section.
+OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 MODEL_NAME = "llama3.1"
 # Overridable via env var on purpose: Groq deprecates/decommissions model
 # IDs over time (e.g. "llama3-8b-8192" was shut down 2025-08-30), and access
