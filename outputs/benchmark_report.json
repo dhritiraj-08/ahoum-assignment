@@ -102,7 +102,7 @@
           "expected_status": "insufficient_evidence",
           "expected_score": null,
           "actual_status": "scored",
-          "actual_score": 3,
+          "actual_score": 5,
           "naturally_retrieved": false,
           "force_added": true,
           "retrieval_outcome": "retrieval_miss",

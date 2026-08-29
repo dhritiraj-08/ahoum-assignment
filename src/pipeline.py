@@ -34,7 +34,11 @@ def run_pipeline(conversation: str, top_k: int = TOP_K_DEFAULT, save_output: boo
     Steps:
       1. Retrieve top_k semantically relevant, conversation-observable facets
          via FAISS (embeddings.py). This is what keeps us from ever sending
-         all 399 facets to the LLM.
+         all 399 facets to the LLM. (A FAISS+BM25 hybrid retriever,
+         retrieve_hybrid(), also exists in embeddings.py -- tested and kept
+         available, but NOT used here by default: it measurably regressed
+         both retrieval recall and scoring accuracy in real benchmark
+         testing. See docs/DEBUGGING.md #6 for the full writeup.)
       2. Split into batches of <=10 and score each batch with scorer.py.
       3. Deduplicate results by facet name (in case retrieval or batching
          ever produces a repeat).

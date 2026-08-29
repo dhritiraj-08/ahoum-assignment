@@ -13,3 +13,4 @@ streamlit
 pytest
 groq
 python-dotenv
+rank-bm25

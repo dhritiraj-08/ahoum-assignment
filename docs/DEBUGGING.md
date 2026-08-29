@@ -445,7 +445,90 @@ a single run.
 
 ---
 
-## 6. Docker image was 9.44GB due to CUDA torch being installed by default
+## 6. BM25 hybrid retrieval was hoped to raise recall from 26% toward 40%+ -- it made recall WORSE at every k tested
+
+**Symptom:** Added `retrieve_hybrid()` to `src/embeddings.py` -- FAISS
+(dense/semantic) and BM25 (lexical/keyword) candidates combined via
+Reciprocal Rank Fusion, on the hypothesis that BM25's exact-keyword
+matching would catch relevant facets FAISS's embedding similarity was
+missing, raising the measured 26% retrieval recall toward 40%+. Wired it
+into `src/pipeline.py` and `src/benchmark.py` as instructed and re-ran the
+real 10-conversation benchmark: retrieval recall went from **26% (7/27)
+to 22% (6/27)**, and scoring accuracy followed it down from **59% (16/27)
+to 56% (15/27)**. Hybrid retrieval made the actual, shipped system worse,
+not better.
+
+**Diagnosis:** Before assuming this was a fluke of one benchmark run,
+extended `eval/retrieval_ablation.py` to add BM25 hybrid as a 5th
+approach, measured directly against the real production `retrieve_hybrid()`
+(not a re-derived approximation) at `k=10/25/40/100`:
+
+| k | Baseline (FAISS, approach 3) | BM25 hybrid |
+|---|---|---|
+| 10 | 11% (3/27) | 11% (3/27) -- tied |
+| 25 | 22% (6/27) | 19% (5/27) -- worse |
+| 40 | 26% (7/27) | 22% (6/27) -- worse, matches the real benchmark exactly |
+| 100 | 56% (15/27) | 44% (12/27) -- worse, and by the widest margin |
+
+Hybrid never beat the FAISS-only baseline at any k, and the gap gets
+*larger* as k grows, not smaller. This is consistent, not a one-off --
+the k=40 ablation number (22%) exactly reproduces what the real benchmark
+found independently.
+
+**Root cause:** BM25 is a pure lexical/keyword-overlap method -- it scores
+a facet based on shared *words* with the query, with no notion of
+paraphrase or semantic similarity at all. The text BM25 was built to
+search over is the same generic templated scoring-anchor text already
+diagnosed as a problem in `DEBUGGING.md` #1 and #5 (e.g. "1=Very low X;
+3=Moderate X; 5=Very high X clearly expressed in the conversation"). That
+templated rubric language barely overlaps, word-for-word, with how a real
+conversation actually talks about a trait -- so BM25's own candidate list
+for a given conversation is mostly low-relevance noise, built from
+whichever facets happen to share a stray word with the conversation
+(names, common verbs, etc.) rather than genuinely related facets. Because
+Reciprocal Rank Fusion gives every facet in *either* candidate list a
+share of the combined score, and does so with **equal, unweighted
+credit** for a high BM25 rank as for a high FAISS rank, mixing in a noisy
+BM25 ranking doesn't add a second useful signal here -- it dilutes the
+one good signal (FAISS) already had, displacing genuinely-relevant
+FAISS-ranked facets with BM25 noise-matches in the final fused top-k.
+This is the same underlying problem (generic, non-conversational anchor
+text) undermining a *second*, unrelated attempt at improving retrieval,
+not a new and different failure mode.
+
+**Fix:** Reverted `src/pipeline.py` and `src/benchmark.py` to use
+`retrieve_relevant_facets()` (pure FAISS) as the default again --
+shipping a change that measurably makes the product worse isn't
+something to do just because the code runs without errors. Kept
+`retrieve_hybrid()` itself in `src/embeddings.py`, fully built and
+tested (8 passing tests, including a hand-computed RRF-math unit test and
+a real fallback-to-FAISS test), as a real, callable, documented
+experiment rather than deleting the work -- it's available for future
+tuning (e.g. weighting FAISS's contribution higher than BM25's in the RRF
+formula, or building BM25 over richer, more conversational per-facet
+text) even though it isn't the shipped default today.
+
+**Verification:** Re-ran `python main.py --benchmark` after reverting --
+confirmed retrieval recall and scoring accuracy returned to the original
+26% (7/27) and 59% (16/27), matching the pre-hybrid numbers exactly, not
+just "close." Full 52-test suite (44 original + 8 new for
+`retrieve_hybrid`/RRF) still passes with the revert in place.
+
+**Lesson:** A retrieval-augmentation technique being standard practice
+(RRF fusion of dense + lexical retrieval is a well-established RAG
+pattern) doesn't mean it helps on *this specific* corpus -- if the
+lexical method's input text is itself low-signal (the same generic
+anchor-text problem already diagnosed twice), fusing it in can hurt more
+than the dense method alone, especially with naive equal-weight fusion
+that has no way to discount a source it should trust less. Measure the
+actual before/after on the real benchmark before assuming a textbook
+technique will generalize to a specific, already-diagnosed-as-unusual
+dataset -- and when it doesn't, revert rather than keep a regression
+just because the feature was fully built and tested.
+
+---
+
+## 7. Docker image was 9.44GB due to CUDA torch being installed by default
 
 **Symptom:** First `docker compose build` produced a 9.44GB image -- far
 too large for a pipeline whose container has no GPU at all.

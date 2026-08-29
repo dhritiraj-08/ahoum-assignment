@@ -44,6 +44,7 @@ except ImportError as e:
     raise ImportError("sentence-transformers is not installed. Run: pip install -r requirements.txt") from e
 
 from src.benchmark import BENCHMARK_CASES
+from src import embeddings as embeddings_module
 
 ENRICHED_CSV_PATH = PROJECT_ROOT / "outputs" / "enriched_facets.csv"
 REPORT_PATH = PROJECT_ROOT / "outputs" / "retrieval_ablation_report.md"
@@ -231,29 +232,74 @@ def run_ablation(k_values: list = None) -> dict:
         results[approach["key"]] = {"label": approach["label"], "per_k": per_k}
         print()
 
+    # Approach 5: BM25 hybrid (FAISS + BM25 via RRF). Unlike approaches 1-4,
+    # this doesn't build its own ablation-local index -- it calls the REAL
+    # production src.embeddings.retrieve_hybrid() against the real indexes
+    # on disk (outputs/faiss_index.bin + outputs/bm25_index.pkl, built by
+    # `python main.py --embed`), using the exact same "name + scoring
+    # anchors" text as approach 3 (that's what build_index() actually
+    # embeds). This measures what's actually shipped, not a re-derived
+    # approximation of it, at the cost of requiring --embed to have been
+    # run with the current src/embeddings.py first.
+    print("Measuring -- 5. BM25 hybrid (FAISS + BM25 via RRF, production retrieve_hybrid()) ...")
+    hybrid_per_k = {}
+    try:
+        for k in k_values:
+            naturally_retrieved = 0
+            misses = []
+            for case in BENCHMARK_CASES:
+                retrieved = embeddings_module.retrieve_hybrid(case["conversation"], top_k=k)
+                retrieved_names = {f["facet_normalized"] for f in retrieved}
+                for ref in case["reference"]:
+                    if ref["expected_status"] == "not_observable":
+                        continue
+                    if ref["facet"] in retrieved_names:
+                        naturally_retrieved += 1
+                    else:
+                        misses.append({"conversation_id": case["id"], "conversation_type": case["type"], "facet": ref["facet"]})
+
+            recall = naturally_retrieved / total_retrievable if total_retrievable else 0.0
+            hybrid_per_k[k] = {
+                "naturally_retrieved": naturally_retrieved,
+                "total_retrievable": total_retrievable,
+                "recall": recall,
+                "misses": misses,
+            }
+            print(f"  k={k:<4} recall: {recall * 100:.0f}%  ({naturally_retrieved}/{total_retrievable})")
+        results["bm25_hybrid"] = {"label": "5. BM25 hybrid (FAISS + BM25, RRF)", "per_k": hybrid_per_k}
+    except FileNotFoundError as e:
+        print(f"  SKIPPED -- {e}")
+    print()
+
     _write_report(results, k_values, total_retrievable, len(df))
     print(f"Saved report to {REPORT_PATH}")
     return results
 
 
 def _write_report(results: dict, k_values: list, total_retrievable: int, n_facets_indexed: int) -> None:
-    ordered_keys = [a["key"] for a in APPROACHES]
+    ordered_keys = [a["key"] for a in APPROACHES if a["key"] in results]
+    has_hybrid = "bm25_hybrid" in results
+    if has_hybrid:
+        ordered_keys = ordered_keys + ["bm25_hybrid"]
     baseline_key = "name_plus_anchors"
     detail_k = 25 if 25 in k_values else k_values[len(k_values) // 2]  # k to show detailed misses for
 
     lines = []
     lines.append("# Retrieval Ablation: Does Embedding Text Format Change Recall?")
     lines.append("")
+    approach_count = len(ordered_keys)
     lines.append(
-        f"Tests 4 embedding-text formats for the same **{n_facets_indexed}** "
-        f"conversation-observable facets, at **k in {k_values}**, against "
-        "the same 10 benchmark conversations `src/benchmark.py` uses, "
-        f"measured against the same **{total_retrievable}** retrievable "
-        "reference facets its force-include mechanism tracks. No LLM calls "
-        "anywhere in this script -- pure FAISS/sentence-transformers "
-        "retrieval, same model (`all-MiniLM-L6-v2`) as production, just 4 "
-        "different text formats instead of 1, checked across multiple "
-        "candidate-window sizes so a conclusion doesn't rest on a single k."
+        f"Tests {approach_count} retrieval approaches for the same "
+        f"**{n_facets_indexed}** conversation-observable facets, at "
+        f"**k in {k_values}**, against the same 10 benchmark conversations "
+        f"`src/benchmark.py` uses, measured against the same "
+        f"**{total_retrievable}** retrievable reference facets its "
+        "force-include mechanism tracks. Approaches 1-4 are pure "
+        "FAISS/sentence-transformers retrieval (no LLM calls), each with a "
+        "different embedding-text format. Approach 5, if present, is the "
+        "real production `retrieve_hybrid()` -- FAISS + BM25 combined via "
+        "Reciprocal Rank Fusion -- measured against the actual indexes on "
+        "disk, not a re-derived approximation."
     )
     lines.append("")
     lines.append(
@@ -318,6 +364,20 @@ def _write_report(results: dict, k_values: list, total_retrievable: int, n_facet
         )
     lines.append("")
 
+    if has_hybrid:
+        lines.append("## BM25 hybrid vs. baseline (approach 3), directly")
+        lines.append("")
+        for k in k_values:
+            baseline_recall = results[baseline_key]["per_k"][k]["recall"] * 100
+            hybrid_recall = results["bm25_hybrid"]["per_k"][k]["recall"] * 100
+            delta = hybrid_recall - baseline_recall
+            direction = "better" if delta > 0 else ("worse" if delta < 0 else "unchanged")
+            lines.append(
+                f"- k={k}: baseline {baseline_recall:.0f}% -> hybrid "
+                f"{hybrid_recall:.0f}% ({delta:+.0f} points, {direction})"
+            )
+        lines.append("")
+
     lines.append(f"## Per-approach misses at k={detail_k}")
     lines.append("")
     lines.append(
@@ -329,9 +389,9 @@ def _write_report(results: dict, k_values: list, total_retrievable: int, n_facet
         "phrasing)."
     )
     lines.append("")
-    for approach in APPROACHES:
-        r = results[approach["key"]]["per_k"][detail_k]
-        lines.append(f"**{results[approach['key']]['label']}** -- {len(r['misses'])} miss(es):")
+    for key in ordered_keys:
+        r = results[key]["per_k"][detail_k]
+        lines.append(f"**{results[key]['label']}** -- {len(r['misses'])} miss(es):")
         if not r["misses"]:
             lines.append("- _none_")
         else:
@@ -339,7 +399,7 @@ def _write_report(results: dict, k_values: list, total_retrievable: int, n_facet
                 lines.append(f"- `{m['facet']}` (conversation {m['conversation_id']}: {m['conversation_type']})")
         lines.append("")
 
-    miss_sets = [set(m["facet"] for m in results[a["key"]]["per_k"][detail_k]["misses"]) for a in APPROACHES]
+    miss_sets = [set(m["facet"] for m in results[key]["per_k"][detail_k]["misses"]) for key in ordered_keys]
     always_missed = set.intersection(*miss_sets) if miss_sets else set()
     lines.append(f"## Facets that missed under every approach (at k={detail_k})")
     lines.append("")

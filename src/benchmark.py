@@ -254,6 +254,11 @@ def _retrieve_with_force_include(conversation: str, reference: list[dict], obser
     place (src/audit.py never marks them observable), so there's nothing to
     force-add even if this function wanted to.
 
+    Uses pure FAISS (retrieve_relevant_facets), not the FAISS+BM25 hybrid
+    retrieve_hybrid() -- the hybrid retriever measurably regressed both
+    retrieval recall and scoring accuracy when tested for real; see
+    docs/DEBUGGING.md #6.
+
     Returns a dict with the combined facet list to score, plus bookkeeping
     of which reference facets were naturally retrieved vs. force-added.
     """
